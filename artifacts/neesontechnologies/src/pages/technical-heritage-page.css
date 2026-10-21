@@ -19,9 +19,9 @@
 .technical-heritage [data-reveal].is-visible { animation: th-reveal .65s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--step, 0) * 65ms); }
 @keyframes th-reveal { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 .th-hero { position: relative; isolation: isolate; min-height: 570px; display: flex; align-items: center; overflow: hidden; color: #f6f9fc; background: #061b2a; }
-.th-hero-image { position: absolute; z-index: -2; inset: 0 0 0 36%; }
-.th-hero-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #061b2a 0%, rgba(6,27,42,.84) 12%, rgba(6,27,42,.2) 62%, rgba(6,27,42,.1)), linear-gradient(0deg, rgba(6,27,42,.54), transparent 48%, rgba(6,27,42,.12)); }
-.th-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 52% 50%; opacity: .78; }
+.th-hero-image { position: absolute; z-index: -2; inset: 0 0 0 36%; background: #0a2640; }
+.th-hero-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #061b2a 0%, rgba(6,27,42,.7) 12%, rgba(6,27,42,.08) 58%, transparent 78%), linear-gradient(0deg, rgba(6,27,42,.25), transparent 50%, rgba(6,27,42,.04)); }
+.th-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 52% 50%; opacity: .96; filter: saturate(1.12) contrast(1.04) brightness(1.08); }
 .th-hero-content { position: relative; z-index: 2; padding-block: 78px 66px; }
 .technical-heritage .th-hero .th-eyebrow { color: #ffd16a; }
 .th-hero h1 { max-width: 950px; margin: 0; font: 800 clamp(3.4rem, 5.4vw, 5rem)/.98 var(--app-font-serif); letter-spacing: -.07em; }
@@ -187,7 +187,7 @@
   .technical-heritage .wrap { width: calc(100% - 40px); }
   .th-hero { min-height: auto; align-items: flex-end; }
   .th-hero-image { inset: 0; height: 58%; }
-  .th-hero-image::after { background: linear-gradient(0deg, #061b2a 0%, rgba(6,27,42,.48) 48%, rgba(6,27,42,.1)), linear-gradient(90deg, rgba(6,27,42,.25), transparent); }
+  .th-hero-image::after { background: linear-gradient(0deg, #061b2a 0%, rgba(6,27,42,.35) 48%, rgba(6,27,42,.04)), linear-gradient(90deg, rgba(6,27,42,.12), transparent); }
   .th-hero-image img { object-position: 57% 48%; }
   .th-hero-content { padding-block: 255px 39px; }
   .th-hero h1 { font-size: clamp(2.3rem, 8.2vw, 3.25rem); }
