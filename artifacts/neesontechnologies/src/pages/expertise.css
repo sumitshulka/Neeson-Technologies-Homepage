@@ -512,3 +512,354 @@
     transition-duration: .01ms !important;
   }
 }
+
+/* Page 3 refinement — align the longer expertise narrative with the lighter,
+   more measured rhythm of the shared Neeson pages. */
+.neeson-extract .ex-page {
+  --ex-ink: var(--ink);
+  --ex-muted: var(--muted-ink);
+  --ex-line: var(--line);
+  --ex-blue: var(--blue);
+  --ex-purple: var(--violet);
+  --ex-pink: var(--pink);
+  --ex-orange: var(--gold);
+  background: var(--paper);
+}
+
+.neeson-extract .ex-page .eyebrow { color: #2e78bc; }
+.neeson-extract .ex-hero {
+  min-height: 0;
+  background:
+    radial-gradient(ellipse at 78% 42%, rgba(91, 65, 172, .34), transparent 39%),
+    linear-gradient(115deg, #061b2a 1%, #0b2340 56%, #211843 100%);
+}
+.neeson-extract .ex-hero-grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr);
+  min-height: 450px;
+  gap: clamp(22px, 4vw, 56px);
+  padding-block: 30px 32px;
+}
+.neeson-extract .ex-hero-copy { padding-block: 12px; }
+.neeson-extract .ex-hero-intro .eyebrow { color: #9ac8e6; margin-bottom: 14px; }
+.neeson-extract .ex-hero h1 {
+  max-width: 620px;
+  font-size: clamp(2.8rem, 4.1vw, 3.8rem);
+  line-height: 1.01;
+  letter-spacing: -.06em;
+}
+.neeson-extract .ex-hero h1 span {
+  background: linear-gradient(95deg, #7dcaff 0%, #ad9aff 58%, #ef92cf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.neeson-extract .ex-hero-lede {
+  max-width: 520px;
+  margin: 17px 0 18px;
+  color: #d1dfeb;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.neeson-extract .ex-hero-meta { margin-top: 23px; }
+.neeson-extract .ex-molecular {
+  min-height: 360px;
+  border: 0;
+  background: radial-gradient(ellipse at 56% 45%, rgba(68, 80, 168, .29), transparent 63%);
+  mask-image: radial-gradient(ellipse at center, #000 66%, transparent 100%);
+}
+.neeson-extract .ex-visual-grid { opacity: .27; }
+.neeson-extract .ex-molecule { width: min(100%, 480px); }
+.neeson-extract .ex-hero-bottom .wrap {
+  padding-block: 13px;
+  color: #9fb6c7;
+}
+
+.neeson-extract .ex-trust-strip { background: #fff; border-color: #e6edf2; }
+.neeson-extract .ex-trust-grid article { min-height: 78px; padding-block: 14px; }
+.neeson-extract .ex-areas { padding-block: 70px 76px; background: #f6f8fa; }
+.neeson-extract .ex-areas-heading { margin-bottom: 30px; }
+.neeson-extract .ex-areas-heading h2 {
+  font-size: clamp(2rem, 3.1vw, 2.55rem);
+  letter-spacing: -.05em;
+}
+.neeson-extract .ex-area-grid { gap: 14px; }
+.neeson-extract .ex-area-grid article {
+  border-color: #dce6ed;
+  border-radius: 6px;
+  box-shadow: 0 6px 22px rgba(11, 39, 60, .035);
+}
+.neeson-extract .ex-area-visual { height: 125px; }
+.neeson-extract .visual-material {
+  background: radial-gradient(ellipse at 50% 50%, rgba(27, 144, 224, .58), transparent 48%), linear-gradient(135deg, #0d2d47, #1a4664);
+}
+.neeson-extract .visual-qualification {
+  background: radial-gradient(ellipse at 70% 36%, rgba(227, 82, 164, .34), transparent 48%), linear-gradient(135deg, #142d48, #283a63);
+}
+.neeson-extract .visual-product {
+  background: radial-gradient(ellipse at 26% 70%, rgba(255, 177, 46, .3), transparent 42%), linear-gradient(135deg, #133750, #276184);
+}
+.neeson-extract .visual-advanced {
+  background: radial-gradient(ellipse at 56% 50%, rgba(127, 85, 213, .48), transparent 48%), linear-gradient(135deg, #1c2d4e, #343a70);
+}
+.neeson-extract .ex-area-copy { padding: 17px 16px 19px; }
+.neeson-extract .ex-area-copy h3 { font-size: 15px; }
+.neeson-extract .ex-area-copy p { font-size: 11px; line-height: 1.62; }
+.neeson-extract .ex-area-copy li { font-size: 9px; }
+
+.neeson-extract .ex-core-section { padding-block: 76px 82px; background: #fff; }
+.neeson-extract .ex-section-head { margin-bottom: 32px; }
+.neeson-extract .ex-section-head h2,
+.neeson-extract .ex-radiation h2,
+.neeson-extract .ex-nano-head h2,
+.neeson-extract .ex-experience h2,
+.neeson-extract .ex-journey h2,
+.neeson-extract .ex-evidence h2,
+.neeson-extract .ex-specialist h2,
+.neeson-extract .ex-boundaries h2,
+.neeson-extract .ex-final-cta h2 {
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  letter-spacing: -.055em;
+}
+.neeson-extract .ex-core-diagram {
+  gap: 22px;
+  padding: 30px 30px 82px;
+  border: 1px solid #d5e1e9;
+  border-radius: 7px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(117, 72, 232, .07), transparent 49%),
+    linear-gradient(135deg, #f3f8fc, #eaf2f8);
+  box-shadow: 0 18px 42px rgba(12, 44, 67, .08);
+}
+.neeson-extract .ex-core-side {
+  min-height: 192px;
+  border-color: #d8e3eb;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(17, 54, 78, .045);
+}
+.neeson-extract .ex-core-side h3 { font-size: 23px; }
+.neeson-extract .ex-core-outcome {
+  min-height: 54px;
+  color: #a9c2d4;
+  border-top-color: rgba(183, 207, 226, .16);
+  background: linear-gradient(105deg, #09263b, #142b4b 68%, #262348);
+}
+.neeson-extract .ex-core-outcome strong { color: #ffd06b; }
+.neeson-extract .ex-connection-caption { color: #4f6d82; }
+
+.neeson-extract .ex-radiation {
+  padding-block: 78px;
+  background:
+    radial-gradient(ellipse at 12% 92%, rgba(117, 72, 232, .06), transparent 35%),
+    linear-gradient(115deg, #eef4f8, #e8f0f6);
+}
+.neeson-extract .ex-radiation-grid { gap: clamp(40px, 6vw, 78px); }
+.neeson-extract .ex-material-visual {
+  min-height: 355px;
+  border-color: rgba(59, 103, 139, .2);
+  border-radius: 6px;
+  background:
+    radial-gradient(ellipse at 50% 52%, rgba(70, 137, 191, .22), transparent 58%),
+    linear-gradient(135deg, #0c2941, #162e4d 66%, #28264f);
+  box-shadow: 14px 17px 0 rgba(18, 60, 92, .055), 0 20px 40px rgba(18, 50, 74, .12);
+}
+.neeson-extract .ex-plate-layer {
+  box-shadow: inset 0 1px rgba(236, 246, 255, .08), 0 8px 15px rgba(2, 16, 29, .13);
+}
+.neeson-extract .ex-capacity-chain { margin-top: 22px; }
+
+.neeson-extract .ex-nano-section {
+  padding-block: 76px 82px;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 87% 2%, rgba(117, 72, 232, .09), transparent 36%),
+    linear-gradient(115deg, #f7f9fc, #eef4f9 58%, #f7f1f8);
+}
+.neeson-extract .ex-nano-head { margin-bottom: 32px; }
+.neeson-extract .ex-nano-head .eyebrow { color: #2e78bc; }
+.neeson-extract .ex-nano-head > p { color: #526b7a; }
+.neeson-extract .ex-nano-card {
+  min-height: 300px;
+  padding: 18px 17px 22px;
+  border-color: #d7e2ea;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 8px 22px rgba(13, 44, 68, .045);
+}
+.neeson-extract .ex-nano-card:hover {
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(13, 44, 68, .1);
+}
+.neeson-extract .ex-nano-card-top { color: #718697; }
+.neeson-extract .ex-nano-card h3 { color: #19384e; font-size: 16px; }
+.neeson-extract .ex-nano-card p { color: #5e7484; font-size: 11px; line-height: 1.65; }
+.neeson-extract .nano-graphic {
+  border-color: #dce6ed;
+  background:
+    radial-gradient(ellipse at center, rgba(117, 72, 232, .09), transparent 70%),
+    linear-gradient(135deg, #f6f9fc, #eef4f9);
+}
+.neeson-extract .nano-graphic.spectrum::before { background: rgba(94, 125, 148, .32); }
+
+.neeson-extract .ex-experience { padding-block: 76px 82px; }
+.neeson-extract .ex-experience-head { margin-bottom: 30px; }
+.neeson-extract .ex-tile {
+  min-height: 190px;
+  padding: 21px 21px 19px;
+  background: linear-gradient(145deg, #fff, #fbfdff);
+  transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+}
+.neeson-extract .ex-tile:hover {
+  transform: translateY(-2px);
+  background: #f6faff;
+  box-shadow: inset 0 2px 0 rgba(22, 140, 255, .34);
+}
+.neeson-extract .ex-tile h3 { font-size: 14px; }
+
+.neeson-extract .ex-journey {
+  position: relative;
+  overflow: hidden;
+  padding-block: 75px 72px;
+  color: #f4f8fb;
+  background:
+    radial-gradient(ellipse at 83% 12%, rgba(117, 72, 232, .29), transparent 35%),
+    linear-gradient(112deg, #071e30, #102b49 64%, #211f49);
+}
+.neeson-extract .ex-journey::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  opacity: .36;
+  background-image: linear-gradient(rgba(157, 192, 218, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(157, 192, 218, .07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(90deg, transparent, #000 30%, #000);
+}
+.neeson-extract .ex-journey .wrap { position: relative; z-index: 1; }
+.neeson-extract .ex-journey .eyebrow { color: #9ac8e6; }
+.neeson-extract .ex-journey h2 { color: #f4f8fb; }
+.neeson-extract .ex-journey-head { margin-bottom: 43px; }
+.neeson-extract .ex-journey-line { gap: 0; }
+.neeson-extract .ex-journey-icon {
+  width: 52px;
+  height: 52px;
+  border-color: color-mix(in srgb, var(--step-accent), white 22%);
+  color: var(--step-accent);
+  background: rgba(255, 255, 255, .07);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, .045), 0 10px 26px rgba(3, 16, 29, .2);
+}
+.neeson-extract .ex-journey-num { margin-top: 19px; color: #8ea7ba; }
+.neeson-extract .ex-journey-step strong { color: #e1ebf2; font-size: 8px; }
+.neeson-extract .ex-journey-connector {
+  top: 26px;
+  left: calc(50% + 28px);
+  width: calc(100% - 52px);
+  background: linear-gradient(90deg, rgba(22, 140, 255, .62), rgba(117, 72, 232, .72), rgba(241, 91, 181, .7), rgba(255, 181, 46, .58));
+}
+.neeson-extract .ex-journey-step:not(:last-child) .ex-journey-connector::after { border-color: #e6bd62; }
+
+.neeson-extract .ex-evidence {
+  padding-block: 73px 77px;
+  background:
+    radial-gradient(ellipse at 86% 40%, rgba(86, 57, 155, .25), transparent 36%),
+    linear-gradient(112deg, #071d2d, #0d2941 66%, #1d2044);
+}
+.neeson-extract .ex-evidence-grid { gap: clamp(42px, 7vw, 90px); }
+.neeson-extract .ex-evidence-intro > p:last-child { font-size: 11px; line-height: 1.75; }
+.neeson-extract .ex-evidence-list article { padding-block: 18px; }
+.neeson-extract .ex-evidence-symbol { width: 42px; height: 42px; }
+.neeson-extract .ex-evidence-list h3 { font-size: 14px; }
+
+.neeson-extract .ex-specialist { padding-block: 76px; background: #fff; }
+.neeson-extract .ex-network {
+  border-color: #d7e3eb;
+  border-radius: 5px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(22, 140, 255, .055), transparent 52%),
+    linear-gradient(135deg, #f7fafc, #edf4f9);
+}
+.neeson-extract .ex-network-branches > div { box-shadow: 0 5px 15px rgba(13, 45, 68, .035); }
+
+.neeson-extract .ex-boundaries { padding-block: 72px 76px; background: #edf3f7; }
+.neeson-extract .ex-boundary-head { margin-bottom: 27px; }
+.neeson-extract .ex-boundary-grid {
+  border-color: #d7e2e9;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(13, 44, 68, .035);
+}
+.neeson-extract .ex-boundary-grid article { min-height: 158px; padding: 18px 17px; }
+.neeson-extract .ex-boundary-grid article:not(:last-child) { border-color: #e1e9ee; }
+.neeson-extract .ex-boundary-grid svg { color: #438bb9; }
+.neeson-extract .ex-boundary-foot { padding-top: 18px; }
+.neeson-extract .ex-independent { padding-block: 55px; }
+.neeson-extract .ex-final-cta { padding-block: 58px 61px; }
+
+@media (max-width: 1000px) {
+  .neeson-extract .ex-hero-grid {
+    grid-template-columns: minmax(0, .95fr) minmax(300px, 1.05fr);
+    min-height: 420px;
+    gap: 22px;
+  }
+  .neeson-extract .ex-molecular { min-height: 330px; }
+}
+@media (max-width: 800px) {
+  .neeson-extract .ex-hero-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 0;
+    padding-block: 18px 20px;
+  }
+  .neeson-extract .ex-hero-intro { padding-top: 17px; }
+  .neeson-extract .ex-hero h1 { font-size: clamp(2.65rem, 7.7vw, 3.55rem); }
+  .neeson-extract .ex-hero-lede { margin-block: 15px; }
+  .neeson-extract .ex-molecular { min-height: 300px; margin: 0 -10px; }
+  .neeson-extract .ex-hero-bottom .wrap { row-gap: 8px; }
+  .neeson-extract .ex-area-grid { gap: 12px; }
+  .neeson-extract .ex-core-section,
+  .neeson-extract .ex-experience,
+  .neeson-extract .ex-nano-section,
+  .neeson-extract .ex-specialist { padding-block: 60px; }
+  .neeson-extract .ex-radiation { padding-block: 60px; }
+  .neeson-extract .ex-journey { padding-block: 60px; }
+  .neeson-extract .ex-journey::before { opacity: .2; }
+  .neeson-extract .ex-journey-step strong { font-size: 9px; }
+  .neeson-extract .ex-evidence { padding-block: 60px; }
+  .neeson-extract .ex-boundaries { padding-block: 56px; }
+}
+@media (max-width: 520px) {
+  .neeson-extract .ex-page .wrap { width: calc(100% - 40px); }
+  .neeson-extract .ex-hero-grid { padding-top: 12px; }
+  .neeson-extract .ex-hero-intro { padding-top: 14px; }
+  .neeson-extract .ex-hero h1 { font-size: clamp(2.2rem, 9.2vw, 2.75rem); line-height: 1.03; }
+  .neeson-extract .ex-hero-lede { font-size: 12px; line-height: 1.66; margin-block: 13px; }
+  .neeson-extract .ex-molecular { min-height: 226px; margin: 1px -15px 0; }
+  .neeson-extract .ex-molecule { width: 100%; max-width: 390px; }
+  .neeson-extract .ex-hero-meta { margin-top: 14px; font-size: 6px; }
+  .neeson-extract .ex-hero-bottom .wrap { column-gap: 14px; }
+  .neeson-extract .ex-areas { padding-block: 46px; }
+  .neeson-extract .ex-area-visual { min-height: 100%; }
+  .neeson-extract .ex-area-copy p { font-size: 9px; }
+  .neeson-extract .ex-journey { padding-block: 50px; }
+  .neeson-extract .ex-journey-head { margin-bottom: 28px; }
+  .neeson-extract .ex-journey-step { min-height: 69px; }
+  .neeson-extract .ex-journey-icon { box-shadow: 0 0 0 5px rgba(255, 255, 255, .045); }
+  .neeson-extract .ex-evidence { padding-block: 50px; }
+  .neeson-extract .ex-boundaries { padding-block: 48px; }
+}
+@media (max-width: 360px) {
+  .neeson-extract .ex-page .wrap { width: calc(100% - 32px); }
+  .neeson-extract .ex-hero h1 { font-size: 2.08rem; }
+  .neeson-extract .ex-hero-actions { gap: 9px; }
+  .neeson-extract .ex-molecular { min-height: 205px; margin-inline: -12px; }
+  .neeson-extract .ex-label-top { font-size: 6px; }
+  .neeson-extract .ex-label-bottom { font-size: 5px; letter-spacing: .08em; }
+  .neeson-extract .ex-area-grid article { grid-template-columns: minmax(76px, .58fr) 1.42fr; }
+  .neeson-extract .ex-area-copy { padding-inline: 8px; }
+  .neeson-extract .ex-area-copy h3 { font-size: 12px; }
+  .neeson-extract .ex-area-copy li { gap: 4px; font-size: 7px; }
+  .neeson-extract .ex-core-diagram { padding-inline: 10px; }
+  .neeson-extract .ex-core-side { padding-inline: 13px; }
+  .neeson-extract .ex-core-outcome { gap: 4px; font-size: 5px; }
+  .neeson-extract .ex-boundary-grid article { padding-inline: 9px; }
+}
