@@ -45,7 +45,7 @@ import {
 } from 'wouter';
 
 const queryClient = new QueryClient();
-const logo = `${import.meta.env.BASE_URL}neeson-logo-reference.png`;
+const logo = `${import.meta.env.BASE_URL}neeson-logo-horizontal.png`;
 const heroVisual = `${import.meta.env.BASE_URL}materials-hero.png`;
 
 const navItems = [

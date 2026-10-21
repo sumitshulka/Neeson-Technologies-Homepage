@@ -3,8 +3,8 @@ name: Neeson logo asset
 description: Preserve the supplied raster wordmark unless a clean transparent source is provided.
 ---
 
-Keep the complete existing wordmark asset for the shared header and footer. Do not use an automatic background-removed derivative; it erases parts of the white lettering. Replace it only when a clean transparent brand source is available.
+Use the approved high-resolution transparent horizontal lockup in the shared header and footer. Preserve the complete wordmark, and do not use an automatic background-removed derivative; it erases parts of the white lettering.
 
-**Why:** The supplied low-resolution logo sits on a navy rectangle, and automatic background removal damaged the wordmark rather than cleanly isolating it.
+**Why:** A clean transparent brand source is now available, so the old low-resolution logo with a navy tile is no longer needed.
 
-**How to apply:** Preserve the original logo in all shared site shells. If a transparent version is needed, request or locate a higher-quality source before editing.
+**How to apply:** Keep the approved horizontal lockup consistent across shared site shells. If it needs to change later, use a supplied clean brand source rather than reconstructing it with background removal.
