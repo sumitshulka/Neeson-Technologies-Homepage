@@ -48,7 +48,7 @@ export const submitContactEnquiryBodyTimingMax = 160;
 
 export const submitContactEnquiryBodyWebsiteMax = 200;
 
-export const submitContactEnquiryBodyTurnstileTokenMax = 2048;
+export const submitContactEnquiryBodyRecaptchaTokenMax = 2048;
 
 
 
@@ -60,7 +60,7 @@ export const SubmitContactEnquiryBody = zod.object({
   "question": zod.string().min(submitContactEnquiryBodyQuestionMin).max(submitContactEnquiryBodyQuestionMax),
   "timing": zod.string().max(submitContactEnquiryBodyTimingMax).optional(),
   "website": zod.string().max(submitContactEnquiryBodyWebsiteMax).optional().describe('Hidden honeypot field. Non-empty values are not forwarded.'),
-  "turnstileToken": zod.string().min(1).max(submitContactEnquiryBodyTurnstileTokenMax)
+  "recaptchaToken": zod.string().min(1).max(submitContactEnquiryBodyRecaptchaTokenMax)
 })
 
 export const SubmitContactEnquiryResponse = zod.object({

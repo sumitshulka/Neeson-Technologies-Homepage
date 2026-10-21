@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -30,34 +30,27 @@ const callbackSchema = z.object({
 });
 type CallbackValues = z.infer<typeof callbackSchema>;
 
-type TurnstileStatus = 'loading' | 'ready' | 'error';
-type TurnstileRenderOptions = {
-  sitekey: string;
-  action: string;
-  theme: 'light';
-  size: 'flexible';
-  callback: (token: string) => void;
-  'expired-callback': () => void;
-  'error-callback': () => void;
-  'timeout-callback': () => void;
-};
-type TurnstileApi = {
-  render: (container: HTMLElement, options: TurnstileRenderOptions) => string;
-  reset: (widgetId: string) => void;
-  remove: (widgetId: string) => void;
+type CaptchaStatus = 'loading' | 'ready' | 'error';
+type GoogleRecaptchaApi = {
+  ready: (callback: () => void) => void;
+  execute: (siteKey: string, options: { action: string }) => Promise<string>;
 };
 
 declare global {
   interface Window {
-    turnstile?: TurnstileApi;
+    grecaptcha?: GoogleRecaptchaApi;
   }
 }
 
-function loadTurnstileScript(): Promise<void> {
-  if (window.turnstile) return Promise.resolve();
+function loadRecaptchaScript(siteKey: string): Promise<void> {
+  if (window.grecaptcha) return Promise.resolve();
 
   return new Promise((resolve, reject) => {
-    const existing = document.getElementById('neeson-turnstile-script') as HTMLScriptElement | null;
+    let existing = document.getElementById('neeson-recaptcha-v3-script') as HTMLScriptElement | null;
+    if (existing && (existing.dataset.siteKey !== siteKey || existing.dataset.failed === 'true')) {
+      existing.remove();
+      existing = null;
+    }
     const script = existing ?? document.createElement('script');
     let timeoutId = 0;
 
@@ -69,29 +62,32 @@ function loadTurnstileScript(): Promise<void> {
     const handleLoad = () => {
       script.dataset.loaded = 'true';
       cleanup();
-      if (window.turnstile) resolve();
-      else reject(new Error('Turnstile did not initialize.'));
+      if (window.grecaptcha) resolve();
+      else reject(new Error('Google reCAPTCHA did not initialize.'));
     };
     const handleError = () => {
+      script.dataset.failed = 'true';
       cleanup();
-      reject(new Error('Turnstile script failed to load.'));
+      reject(new Error('Google reCAPTCHA failed to load.'));
     };
 
     if (existing?.dataset.loaded === 'true') {
-      reject(new Error('Turnstile did not initialize.'));
+      reject(new Error('Google reCAPTCHA did not initialize.'));
       return;
     }
 
     script.addEventListener('load', handleLoad, { once: true });
     script.addEventListener('error', handleError, { once: true });
     timeoutId = window.setTimeout(() => {
+      script.dataset.failed = 'true';
       cleanup();
-      reject(new Error('Turnstile script timed out.'));
+      reject(new Error('Google reCAPTCHA script timed out.'));
     }, 12_000);
 
     if (!existing) {
-      script.id = 'neeson-turnstile-script';
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.id = 'neeson-recaptcha-v3-script';
+      script.dataset.siteKey = siteKey;
+      script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
       script.async = true;
       script.defer = true;
       document.head.appendChild(script);
@@ -99,73 +95,35 @@ function loadTurnstileScript(): Promise<void> {
   });
 }
 
-function TurnstileWidget({
-  siteKey,
-  resetKey,
-  onTokenChange,
-  onStatusChange,
-}: {
-  siteKey: string;
-  resetKey: number;
-  onTokenChange: (token: string) => void;
-  onStatusChange: (status: TurnstileStatus, message?: string) => void;
-}) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
-  const callbacksRef = useRef({ onTokenChange, onStatusChange });
-  callbacksRef.current = { onTokenChange, onStatusChange };
-
-  useEffect(() => {
-    let active = true;
-    callbacksRef.current.onStatusChange('loading', '');
-
-    loadTurnstileScript()
-      .then(() => {
-        if (!active) return;
-        if (!containerRef.current || !window.turnstile) {
-          throw new Error('Turnstile is unavailable.');
+function executeRecaptcha(siteKey: string): Promise<string> {
+  return loadRecaptchaScript(siteKey).then(
+    () =>
+      new Promise((resolve, reject) => {
+        const recaptcha = window.grecaptcha;
+        if (!recaptcha) {
+          reject(new Error('Google reCAPTCHA is unavailable.'));
+          return;
         }
 
-        widgetIdRef.current = window.turnstile.render(containerRef.current, {
-          sitekey: siteKey,
-          action: 'contact_enquiry',
-          theme: 'light',
-          size: 'flexible',
-          callback: (token) => {
-            callbacksRef.current.onTokenChange(token);
-            callbacksRef.current.onStatusChange('ready', '');
-          },
-          'expired-callback': () => {
-            callbacksRef.current.onTokenChange('');
-            callbacksRef.current.onStatusChange('ready', 'The security check expired. Please complete it again.');
-          },
-          'error-callback': () => {
-            callbacksRef.current.onTokenChange('');
-            callbacksRef.current.onStatusChange('ready', 'The security check could not be completed. Please try again.');
-          },
-          'timeout-callback': () => {
-            callbacksRef.current.onTokenChange('');
-            callbacksRef.current.onStatusChange('ready', 'The security check timed out. Please try again.');
-          },
+        const timeoutId = window.setTimeout(
+          () => reject(new Error('Google reCAPTCHA timed out.')),
+          12_000,
+        );
+        recaptcha.ready(() => {
+          recaptcha
+            .execute(siteKey, { action: 'contact_enquiry' })
+            .then((token) => {
+              window.clearTimeout(timeoutId);
+              if (token) resolve(token);
+              else reject(new Error('Google reCAPTCHA returned an empty token.'));
+            })
+            .catch((error: unknown) => {
+              window.clearTimeout(timeoutId);
+              reject(error);
+            });
         });
-        callbacksRef.current.onStatusChange('ready', '');
-      })
-      .catch(() => {
-        if (!active) return;
-        callbacksRef.current.onTokenChange('');
-        callbacksRef.current.onStatusChange('error', 'The security check could not be loaded. Refresh the page and try again.');
-      });
-
-    return () => {
-      active = false;
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.remove(widgetIdRef.current);
-        widgetIdRef.current = null;
-      }
-    };
-  }, [siteKey, resetKey]);
-
-  return <div className="cp-turnstile" ref={containerRef} aria-label="Human verification" />;
+      }),
+  );
 }
 
 function readApiError(error: unknown): { status?: number; code?: string } {
@@ -189,10 +147,8 @@ function ContactAction({ href, children, className = '' }: { href: string; child
 function EnquiryForm() {
   const [state, setState] = useState<'idle' | 'sending' | 'setup' | 'success' | 'error'>('idle');
   const [captchaConfig, setCaptchaConfig] = useState<ContactCaptchaConfig | null>(null);
-  const [captchaStatus, setCaptchaStatus] = useState<TurnstileStatus>('loading');
+  const [captchaStatus, setCaptchaStatus] = useState<CaptchaStatus>('loading');
   const [captchaMessage, setCaptchaMessage] = useState('');
-  const [captchaToken, setCaptchaToken] = useState('');
-  const [captchaResetKey, setCaptchaResetKey] = useState(0);
   const form = useForm<EnquiryValues>({
     resolver: zodResolver(enquirySchema),
     defaultValues: { name: '', email: '', company: '', role: '', question: '', timing: '', website: '' },
@@ -206,7 +162,9 @@ function EnquiryForm() {
         setCaptchaConfig(config);
         if (!config.captchaConfigured || !config.siteKey) {
           setCaptchaStatus('error');
-          setCaptchaMessage('Security verification is not configured yet. Enquiries are disabled.');
+          setCaptchaMessage('Google reCAPTCHA is not configured yet. Enquiries are disabled.');
+        } else {
+          setCaptchaStatus('ready');
         }
       })
       .catch((error: unknown) => {
@@ -215,8 +173,8 @@ function EnquiryForm() {
         setCaptchaStatus('error');
         setCaptchaMessage(
           code === 'captcha_not_configured'
-            ? 'Security verification is not configured yet. Enquiries are disabled.'
-            : 'The security check is unavailable. Please try again later.',
+            ? 'Google reCAPTCHA is not configured yet. Enquiries are disabled.'
+            : 'Google reCAPTCHA configuration is unavailable. Please try again later.',
         );
       });
 
@@ -225,42 +183,49 @@ function EnquiryForm() {
     };
   }, []);
 
-  function handleCaptchaStatus(status: TurnstileStatus, message = '') {
-    setCaptchaStatus(status);
-    setCaptchaMessage(message);
-  }
-
   async function submit(values: EnquiryValues) {
-    if (!captchaConfig?.deliveryConfigured) { setState('setup'); return; }
-    if (!captchaToken) {
-      setCaptchaMessage('Complete the security check before sending your enquiry.');
+    if (!captchaConfig?.captchaConfigured || !captchaConfig.siteKey) {
+      setCaptchaMessage('Google reCAPTCHA is not configured yet. Enquiries are disabled.');
       return;
     }
+    if (!captchaConfig.deliveryConfigured) { setState('setup'); return; }
 
     setState('sending');
+    setCaptchaStatus('loading');
+    setCaptchaMessage('');
     try {
+      const recaptchaToken = await executeRecaptcha(captchaConfig.siteKey);
       await submitContactEnquiry({
         ...values,
-        turnstileToken: captchaToken,
+        recaptchaToken,
       });
       setState('success');
       form.reset();
     } catch (error: unknown) {
-      const { code } = readApiError(error);
+      const { code, status } = readApiError(error);
       if (code === 'captcha_invalid') {
         setState('idle');
-        setCaptchaMessage('The security check could not be verified. Please complete it again.');
+        setCaptchaStatus('ready');
+        setCaptchaMessage('Google reCAPTCHA could not verify this submission. Please try again.');
       } else if (code === 'captcha_verification_unavailable') {
         setState('idle');
-        setCaptchaMessage('The security check is temporarily unavailable. Please try again.');
+        setCaptchaStatus('ready');
+        setCaptchaMessage('Google reCAPTCHA is temporarily unavailable. Please try again.');
+      } else if (code === 'captcha_not_configured') {
+        setState('idle');
+        setCaptchaStatus('error');
+        setCaptchaMessage('Google reCAPTCHA is not configured yet. Enquiries are disabled.');
       } else if (code === 'contact_delivery_not_configured') {
         setState('setup');
+        setCaptchaStatus('ready');
+      } else if (status === undefined) {
+        setState('idle');
+        setCaptchaStatus('ready');
+        setCaptchaMessage('Google reCAPTCHA could not load or issue a token. Please try again.');
       } else {
         setState('error');
+        setCaptchaStatus('ready');
       }
-    } finally {
-      setCaptchaToken('');
-      setCaptchaResetKey((key) => key + 1);
     }
   }
   return <Form {...form}>
@@ -278,27 +243,21 @@ function EnquiryForm() {
         <div className="cp-confidential" role="note"><ShieldCheck size={19} /><p><strong>Please do not include confidential technical details or upload documents at this stage.</strong><span>Document review and substantive technical advice are undertaken through an agreed paid engagement.</span></p></div>
         <div className="cp-captcha" aria-live="polite">
           {captchaConfig?.captchaConfigured && captchaConfig.siteKey ? <>
-            <TurnstileWidget
-              siteKey={captchaConfig.siteKey}
-              resetKey={captchaResetKey}
-              onTokenChange={setCaptchaToken}
-              onStatusChange={handleCaptchaStatus}
-            />
-            {captchaStatus === 'loading' && <p className="cp-captcha-message">Loading security check…</p>}
-            {captchaStatus === 'ready' && !captchaToken && <p className="cp-captcha-message">Complete the security check to enable sending.</p>}
-            {captchaToken && <p className="cp-captcha-message cp-captcha-verified">Security check complete.</p>}
+            {captchaStatus === 'loading' && <p className="cp-captcha-message">Google reCAPTCHA is checking this submission…</p>}
+            {captchaStatus === 'ready' && <p className="cp-captcha-message">Google reCAPTCHA v3 runs in the background when you send this enquiry.</p>}
             {captchaMessage && <p className={`cp-captcha-message ${captchaStatus === 'error' ? 'error' : ''}`} role={captchaStatus === 'error' ? 'alert' : 'status'}>{captchaMessage}</p>}
-            {!captchaConfig.deliveryConfigured && <p className="cp-captcha-message warning" role="status">CAPTCHA is configured, but email delivery is not connected. No enquiry can be sent yet.</p>}
+            <p className="cp-captcha-legal">This site is protected by reCAPTCHA. Google <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.</p>
+            {!captchaConfig.deliveryConfigured && <p className="cp-captcha-message warning" role="status">Google reCAPTCHA is configured, but email delivery is not connected. No enquiry can be sent yet.</p>}
           </> : <>
             <p className={`cp-captcha-message ${captchaStatus === 'error' ? 'error' : ''}`} role={captchaStatus === 'error' ? 'alert' : 'status'}>
-              {captchaMessage || 'Loading security check…'}
+              {captchaMessage || 'Loading Google reCAPTCHA…'}
             </p>
             {captchaConfig && !captchaConfig.deliveryConfigured && <p className="cp-captcha-message warning" role="status">Email delivery is not connected. No enquiry can be sent yet.</p>}
           </>}
         </div>
         {state === 'setup' && <p className="cp-form-result setup" role="status"><strong>Delivery setup required.</strong> No information was sent. Email delivery is not connected yet.</p>}
         {state === 'error' && <p className="cp-form-result error" role="alert">We could not submit this enquiry. Please try again later.</p>}
-        <button className="button button-gold cp-submit" type="submit" disabled={state === 'sending' || captchaStatus !== 'ready' || !captchaToken || !captchaConfig?.deliveryConfigured}>{state === 'sending' ? <><LoaderCircle size={16} className="cp-spin" />Sending…</> : <>Send enquiry <ArrowRight size={16} /></>}</button>
+        <button className="button button-gold cp-submit" type="submit" disabled={state === 'sending' || captchaStatus !== 'ready' || !captchaConfig?.captchaConfigured || !captchaConfig?.deliveryConfigured}>{state === 'sending' ? <><LoaderCircle size={16} className="cp-spin" />Sending…</> : <>Send enquiry <ArrowRight size={16} /></>}</button>
         <p className="cp-privacy">By submitting an enquiry, you agree to our <Link href="/privacy">privacy notice <ArrowRight size={12} /></Link></p>
         <p className="cp-response">{contactConfig.typicalResponse}</p>
       </>}

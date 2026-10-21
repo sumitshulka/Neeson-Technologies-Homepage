@@ -72,11 +72,11 @@
 .cp-confidential p { display:grid;gap:4px;margin:0;font-size:10px;line-height:1.55; }
 .cp-confidential strong { color:#5a492a; }.cp-confidential span { color:#77684c; }
 .cp-captcha { display:grid;gap:6px;max-width:100%;margin:13px 0 12px;padding:11px 12px;border:1px solid #dce6ed;background:#f8fbfd; }
-.cp-turnstile { width:100%;max-width:100%;min-height:65px;display:flex;align-items:center; }
 .cp-captcha-message { margin:0;color:#647988;font-size:10px;line-height:1.5; }
 .cp-captcha-message.warning { padding:8px 10px;color:#705727;background:#fff8e9;border-left:2px solid #dfad42; }
 .cp-captcha-message.error { color:#923e39; }
-.cp-captcha-verified { color:#246448; }
+.cp-captcha-legal { margin:0;color:#647988;font-size:9px;line-height:1.5; }
+.cp-captcha-legal a { color:#286f9d;font-weight:700;text-decoration:underline;text-underline-offset:2px; }
 .cp-submit { min-width:160px; }
 .cp-submit:disabled { opacity:.58;cursor:not-allowed; }
 .cp-callback-form button:disabled { opacity:.72;cursor:wait; }

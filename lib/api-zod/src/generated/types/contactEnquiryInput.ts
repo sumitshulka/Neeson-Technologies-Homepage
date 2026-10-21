@@ -37,5 +37,5 @@ export interface ContactEnquiryInput {
      * @minLength 1
      * @maxLength 2048
      */
-  turnstileToken: string;
+  recaptchaToken: string;
 }

@@ -125,7 +125,7 @@ components:
           type: string
           maxLength: 200
           description: Hidden honeypot field. Non-empty values are not forwarded.
-        turnstileToken:
+        recaptchaToken:
           type: string
           minLength: 1
           maxLength: 2048
@@ -134,7 +134,7 @@ components:
         - email
         - company
         - question
-        - turnstileToken
+        - recaptchaToken
     ContactEnquiryAccepted:
       type: object
       properties:

@@ -5,15 +5,17 @@ import {
   SubmitContactEnquiryResponse,
 } from "@workspace/api-zod";
 
-type TurnstileValidation = {
+type RecaptchaValidation = {
   success?: boolean;
+  score?: number;
   action?: string;
   hostname?: string;
   "error-codes"?: string[];
 };
 
 const router: IRouter = Router();
-const TURNSTILE_SITEVERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+const RECAPTCHA_SITEVERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
+const RECAPTCHA_MIN_SCORE = 0.5;
 
 function getContactReceiver(): URL | null {
   const raw = process.env.CONTACT_FORM_ENDPOINT?.trim();
@@ -28,8 +30,8 @@ function getContactReceiver(): URL | null {
 }
 
 router.get("/contact/captcha-config", (_req, res): void => {
-  const siteKey = process.env.TURNSTILE_SITE_KEY?.trim();
-  const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim();
+  const siteKey = process.env.RECAPTCHA_SITE_KEY?.trim();
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY?.trim();
 
   res.json(
     GetContactCaptchaConfigResponse.parse({
@@ -66,8 +68,8 @@ router.post("/contact/enquiries", async (req, res): Promise<void> => {
     return;
   }
 
-  const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim();
-  const siteKey = process.env.TURNSTILE_SITE_KEY?.trim();
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY?.trim();
+  const siteKey = process.env.RECAPTCHA_SITE_KEY?.trim();
   if (!secretKey || !siteKey) {
     res.status(503).json({ error: "captcha_not_configured" });
     return;
@@ -79,32 +81,44 @@ router.post("/contact/enquiries", async (req, res): Promise<void> => {
     return;
   }
 
-  let validation: TurnstileValidation;
+  let validation: RecaptchaValidation;
   try {
-    const response = await fetch(TURNSTILE_SITEVERIFY_URL, {
+    const response = await fetch(RECAPTCHA_SITEVERIFY_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ secret: secretKey, response: enquiry.turnstileToken }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: secretKey,
+        response: enquiry.recaptchaToken,
+      }),
       signal: AbortSignal.timeout(8_000),
     });
 
     if (!response.ok) {
-      req.log.warn({ statusCode: response.status }, "Turnstile verification request failed");
+      req.log.warn({ statusCode: response.status }, "Google reCAPTCHA verification request failed");
       res.status(503).json({ error: "captcha_verification_unavailable" });
       return;
     }
 
-    validation = (await response.json()) as TurnstileValidation;
+    validation = (await response.json()) as RecaptchaValidation;
   } catch (error) {
-    req.log.error({ err: error }, "Turnstile verification unavailable");
+    req.log.error({ err: error }, "Google reCAPTCHA verification unavailable");
     res.status(503).json({ error: "captcha_verification_unavailable" });
     return;
   }
 
-  if (!validation.success || validation.action !== "contact_enquiry") {
+  if (
+    !validation.success ||
+    validation.action !== "contact_enquiry" ||
+    typeof validation.score !== "number" ||
+    validation.score < RECAPTCHA_MIN_SCORE
+  ) {
     req.log.warn(
-      { errorCodes: validation["error-codes"] ?? [] },
-      "Turnstile rejected contact enquiry",
+      {
+        score: validation.score,
+        action: validation.action,
+        errorCodes: validation["error-codes"] ?? [],
+      },
+      "Google reCAPTCHA rejected contact enquiry",
     );
     res.status(400).json({ error: "captcha_invalid" });
     return;
