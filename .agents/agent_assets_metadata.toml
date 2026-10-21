@@ -1,0 +1,44 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "SiVxBgOHSLO7kaRV9JRmz"
+uri = "file://generated-artifacts/neeson-logo/neeson-logo-square-4096.png"
+type = "image"
+title = "Neeson logo — 4096×4096 transparent PNG"
+description = "Full Neeson Technologies lockup with transparent background; white wordmark and cyan/electric-blue molecular beam mark for dark surfaces."
+logical_id = "07cf9411-1563-4934-b0b4-20d6cb5763d0"
+content_hash = "sha256:a4bd1c61e7422a1350e687450707c14b0c5f5ecb773bb06f40b293604fc12596"
+size = 551919
+mtime_ms = 1792585076167
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/07cf9411-1563-4934-b0b4-20d6cb5763d0/671556c1-9011-4494-ad5f-dabacdb6ecc3"
+storage_version_token = "1792585186985491"
+content_type = "image/png"
+
+[[outputs]]
+id = "LQZPpP0hB80dbXT6Z7h2W"
+uri = "file://generated-artifacts/neeson-logo/neeson-logo-square-4096-navy.png"
+type = "image"
+title = "Neeson logo — 4096×4096 navy PNG"
+description = "Square high-resolution presentation version on deep navy, ready to preview or use as a standalone tile."
+logical_id = "b9c10506-3ef8-4526-9ccc-3a13c0a29323"
+content_hash = "sha256:b1c593ddf9a8e4f8b8ea4a13d908621cf4c63b9a3e545bb34f9245561f70c475"
+size = 510053
+mtime_ms = 1792585079715
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/b9c10506-3ef8-4526-9ccc-3a13c0a29323/3538f02c-0558-42be-900b-f9bc25e15b62"
+storage_version_token = "1792585188301971"
+content_type = "image/png"
+
+[[outputs]]
+id = "Zg26khYd_p9evjgEd5bAm"
+uri = "file://generated-artifacts/neeson-logo/neeson-logo-horizontal-4096x1024.png"
+type = "image"
+title = "Neeson logo — 4096×1024 horizontal PNG"
+description = "Transparent horizontal lockup sized for headers, footers, and wide placements."
+logical_id = "0f4dac25-ac98-4fa6-b231-fd54f576cbb9"
+content_hash = "sha256:4705e5f481425f0919b3cbcb0201846560b6beb261dc1ee1514b4b85e2fa9255"
+size = 279762
+mtime_ms = 1792585076715
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/0f4dac25-ac98-4fa6-b231-fd54f576cbb9/78abfd85-08fc-458e-864a-a51bef3a9639"
+storage_version_token = "1792585189594340"
+content_type = "image/png"

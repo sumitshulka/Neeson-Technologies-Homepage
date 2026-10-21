@@ -34,7 +34,7 @@
 .hw-hero-actions > span { color: #b5c9d7; font-size: 11px; }
 .hw-hero-visual { height: 360px; position: relative; margin: 0 -62px 0 0; overflow: hidden; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .hw-hero-visual::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 58% 50%, transparent 38%, rgba(8,29,49,.36) 72%, #0b2340 100%); pointer-events: none; }
-.hw-hero-visual img { width: 112%; height: 360px; display: block; object-fit: cover; object-position: 57% center; opacity: .88; mix-blend-mode: screen; -webkit-mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); }
+.hw-hero-visual img { width: 112%; height: 360px; display: block; object-fit: cover; object-position: 60% center; opacity: .96; filter: saturate(1.08) contrast(1.04); -webkit-mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); }
 .hw-visual-caption { position: absolute; z-index: 1; right: 8%; bottom: 28px; display: grid; gap: 7px; color: #d6e6f1; font: 8px/1.4 var(--app-font-mono); letter-spacing: .12em; text-align: right; }
 .hw-visual-caption span:first-child { color: #90ceff; }
 .hw-visual-crosshair { position: absolute; z-index: 1; width: 62px; height: 62px; top: 29%; left: 46%; border: 1px solid rgba(180,212,255,.52); border-radius: 50%; box-shadow: 0 0 0 17px rgba(112,145,237,.06), 0 0 0 34px rgba(112,145,237,.04); }

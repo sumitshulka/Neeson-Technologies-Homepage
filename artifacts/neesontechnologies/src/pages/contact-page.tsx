@@ -129,7 +129,7 @@ export function ContactPageContent() {
           <div className="cp-hero-actions"><a className="button button-gold" href="#booking">Choose a time <ArrowRight size={15} /></a><a className="cp-text-link" href="#enquiry">Prefer email? Send an enquiry <ArrowRight size={14} /></a></div>
         </div>
         <div className="cp-hero-visual">
-          <img src={`${import.meta.env.BASE_URL}materials-hero.png`} alt="Scientific visualization of a layered cable with an e-beam path" />
+          <img src={`${import.meta.env.BASE_URL}contact-hero.jpg`} alt="Two people reviewing a cable sample beside a notebook during a technical discussion" />
           <div className="cp-visual-shade" />
           <span className="cp-visual-label">MATERIAL RESPONSE / E-BEAM</span>
           <div className="cp-visual-flow"><span>QUESTION</span><i /><span>EVIDENCE</span><i /><span>DECISION</span></div>

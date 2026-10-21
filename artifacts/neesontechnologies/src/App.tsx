@@ -458,8 +458,8 @@ function HowWeHelpPage() {
             <p className="hw-hero-sub">The starting point is a product, material, specification or investment decision that needs better evidence.</p>
             <div className="hw-hero-actions"><BookLink>Book a 30-minute discovery call</BookLink><span>Start with one live question.</span></div>
           </div>
-          <div className="hw-hero-visual" role="img" aria-label="Scientific visualization of a layered cable and precise e-beam path">
-            <img src={`${import.meta.env.BASE_URL}materials-hero.png`} alt="" />
+          <div className="hw-hero-visual" role="img" aria-label="Materials scientist examining a polymer-insulated cable sample through a microscope">
+            <img src={`${import.meta.env.BASE_URL}how-we-help-hero.jpg`} alt="" />
             <div className="hw-visual-caption"><span>01 / QUESTION</span><span>02 / MATERIAL RESPONSE</span><span>03 / EVIDENCE</span></div>
             <div className="hw-visual-crosshair" />
           </div>
