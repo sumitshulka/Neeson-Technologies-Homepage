@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -7,6 +7,7 @@ import {
   ArrowDownRight, ArrowRight, CalendarDays, Check, Clock3, FileText, Mail,
   MessageCircle, ShieldCheck, UserRound, Linkedin, PhoneCall, LoaderCircle,
 } from 'lucide-react';
+import { getContactCaptchaConfig, submitContactEnquiry, type ContactCaptchaConfig } from '@workspace/api-client-react';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { contactConfig, getBookingUrl } from './contact-config';
 import './contact-page.css';
@@ -29,29 +30,238 @@ const callbackSchema = z.object({
 });
 type CallbackValues = z.infer<typeof callbackSchema>;
 
+type TurnstileStatus = 'loading' | 'ready' | 'error';
+type TurnstileRenderOptions = {
+  sitekey: string;
+  action: string;
+  theme: 'light';
+  size: 'flexible';
+  callback: (token: string) => void;
+  'expired-callback': () => void;
+  'error-callback': () => void;
+  'timeout-callback': () => void;
+};
+type TurnstileApi = {
+  render: (container: HTMLElement, options: TurnstileRenderOptions) => string;
+  reset: (widgetId: string) => void;
+  remove: (widgetId: string) => void;
+};
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
+function loadTurnstileScript(): Promise<void> {
+  if (window.turnstile) return Promise.resolve();
+
+  return new Promise((resolve, reject) => {
+    const existing = document.getElementById('neeson-turnstile-script') as HTMLScriptElement | null;
+    const script = existing ?? document.createElement('script');
+    let timeoutId = 0;
+
+    const cleanup = () => {
+      window.clearTimeout(timeoutId);
+      script.removeEventListener('load', handleLoad);
+      script.removeEventListener('error', handleError);
+    };
+    const handleLoad = () => {
+      script.dataset.loaded = 'true';
+      cleanup();
+      if (window.turnstile) resolve();
+      else reject(new Error('Turnstile did not initialize.'));
+    };
+    const handleError = () => {
+      cleanup();
+      reject(new Error('Turnstile script failed to load.'));
+    };
+
+    if (existing?.dataset.loaded === 'true') {
+      reject(new Error('Turnstile did not initialize.'));
+      return;
+    }
+
+    script.addEventListener('load', handleLoad, { once: true });
+    script.addEventListener('error', handleError, { once: true });
+    timeoutId = window.setTimeout(() => {
+      cleanup();
+      reject(new Error('Turnstile script timed out.'));
+    }, 12_000);
+
+    if (!existing) {
+      script.id = 'neeson-turnstile-script';
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  });
+}
+
+function TurnstileWidget({
+  siteKey,
+  resetKey,
+  onTokenChange,
+  onStatusChange,
+}: {
+  siteKey: string;
+  resetKey: number;
+  onTokenChange: (token: string) => void;
+  onStatusChange: (status: TurnstileStatus, message?: string) => void;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+  const callbacksRef = useRef({ onTokenChange, onStatusChange });
+  callbacksRef.current = { onTokenChange, onStatusChange };
+
+  useEffect(() => {
+    let active = true;
+    callbacksRef.current.onStatusChange('loading', '');
+
+    loadTurnstileScript()
+      .then(() => {
+        if (!active) return;
+        if (!containerRef.current || !window.turnstile) {
+          throw new Error('Turnstile is unavailable.');
+        }
+
+        widgetIdRef.current = window.turnstile.render(containerRef.current, {
+          sitekey: siteKey,
+          action: 'contact_enquiry',
+          theme: 'light',
+          size: 'flexible',
+          callback: (token) => {
+            callbacksRef.current.onTokenChange(token);
+            callbacksRef.current.onStatusChange('ready', '');
+          },
+          'expired-callback': () => {
+            callbacksRef.current.onTokenChange('');
+            callbacksRef.current.onStatusChange('ready', 'The security check expired. Please complete it again.');
+          },
+          'error-callback': () => {
+            callbacksRef.current.onTokenChange('');
+            callbacksRef.current.onStatusChange('ready', 'The security check could not be completed. Please try again.');
+          },
+          'timeout-callback': () => {
+            callbacksRef.current.onTokenChange('');
+            callbacksRef.current.onStatusChange('ready', 'The security check timed out. Please try again.');
+          },
+        });
+        callbacksRef.current.onStatusChange('ready', '');
+      })
+      .catch(() => {
+        if (!active) return;
+        callbacksRef.current.onTokenChange('');
+        callbacksRef.current.onStatusChange('error', 'The security check could not be loaded. Refresh the page and try again.');
+      });
+
+    return () => {
+      active = false;
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.remove(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
+    };
+  }, [siteKey, resetKey]);
+
+  return <div className="cp-turnstile" ref={containerRef} aria-label="Human verification" />;
+}
+
+function readApiError(error: unknown): { status?: number; code?: string } {
+  if (!error || typeof error !== 'object') return {};
+  const candidate = error as { status?: unknown; data?: unknown };
+  const data = candidate.data;
+  const code = data && typeof data === 'object' && 'error' in data
+    ? (data as { error?: unknown }).error
+    : undefined;
+
+  return {
+    status: typeof candidate.status === 'number' ? candidate.status : undefined,
+    code: typeof code === 'string' ? code : undefined,
+  };
+}
+
 function ContactAction({ href, children, className = '' }: { href: string; children: ReactNode; className?: string }) {
   return <a className={`cp-action ${className}`} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}>{children}<ArrowRight size={15} /></a>;
 }
 
 function EnquiryForm() {
   const [state, setState] = useState<'idle' | 'sending' | 'setup' | 'success' | 'error'>('idle');
+  const [captchaConfig, setCaptchaConfig] = useState<ContactCaptchaConfig | null>(null);
+  const [captchaStatus, setCaptchaStatus] = useState<TurnstileStatus>('loading');
+  const [captchaMessage, setCaptchaMessage] = useState('');
+  const [captchaToken, setCaptchaToken] = useState('');
+  const [captchaResetKey, setCaptchaResetKey] = useState(0);
   const form = useForm<EnquiryValues>({
     resolver: zodResolver(enquirySchema),
     defaultValues: { name: '', email: '', company: '', role: '', question: '', timing: '', website: '' },
   });
+
+  useEffect(() => {
+    let active = true;
+    getContactCaptchaConfig()
+      .then((config) => {
+        if (!active) return;
+        setCaptchaConfig(config);
+        if (!config.captchaConfigured || !config.siteKey) {
+          setCaptchaStatus('error');
+          setCaptchaMessage('Security verification is not configured yet. Enquiries are disabled.');
+        }
+      })
+      .catch((error: unknown) => {
+        if (!active) return;
+        const { code } = readApiError(error);
+        setCaptchaStatus('error');
+        setCaptchaMessage(
+          code === 'captcha_not_configured'
+            ? 'Security verification is not configured yet. Enquiries are disabled.'
+            : 'The security check is unavailable. Please try again later.',
+        );
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  function handleCaptchaStatus(status: TurnstileStatus, message = '') {
+    setCaptchaStatus(status);
+    setCaptchaMessage(message);
+  }
+
   async function submit(values: EnquiryValues) {
-    if (values.website) { setState('setup'); return; }
-    if (!contactConfig.forms.endpoint) { setState('setup'); return; }
+    if (!captchaConfig?.deliveryConfigured) { setState('setup'); return; }
+    if (!captchaToken) {
+      setCaptchaMessage('Complete the security check before sending your enquiry.');
+      return;
+    }
+
     setState('sending');
     try {
-      const response = await fetch(contactConfig.forms.endpoint, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: values.name, email: values.email, company: values.company, role: values.role, question: values.question, timing: values.timing }),
+      await submitContactEnquiry({
+        ...values,
+        turnstileToken: captchaToken,
       });
-      if (!response.ok) throw new Error('Submission failed');
       setState('success');
       form.reset();
-    } catch { setState('error'); }
+    } catch (error: unknown) {
+      const { code } = readApiError(error);
+      if (code === 'captcha_invalid') {
+        setState('idle');
+        setCaptchaMessage('The security check could not be verified. Please complete it again.');
+      } else if (code === 'captcha_verification_unavailable') {
+        setState('idle');
+        setCaptchaMessage('The security check is temporarily unavailable. Please try again.');
+      } else if (code === 'contact_delivery_not_configured') {
+        setState('setup');
+      } else {
+        setState('error');
+      }
+    } finally {
+      setCaptchaToken('');
+      setCaptchaResetKey((key) => key + 1);
+    }
   }
   return <Form {...form}>
     <form className="cp-form" onSubmit={form.handleSubmit(submit)} noValidate>
@@ -66,9 +276,29 @@ function EnquiryForm() {
           <FormField control={form.control} name="website" render={({ field }) => <FormItem className="cp-honeypot" aria-hidden="true"><FormLabel>Website</FormLabel><FormControl><input tabIndex={-1} autoComplete="off" {...field} /></FormControl></FormItem>} />
         </div>
         <div className="cp-confidential" role="note"><ShieldCheck size={19} /><p><strong>Please do not include confidential technical details or upload documents at this stage.</strong><span>Document review and substantive technical advice are undertaken through an agreed paid engagement.</span></p></div>
-        {state === 'setup' && <p className="cp-form-result setup" role="status"><strong>Form setup required.</strong> No information was sent. Please use another configured contact route when available.</p>}
+        <div className="cp-captcha" aria-live="polite">
+          {captchaConfig?.captchaConfigured && captchaConfig.siteKey ? <>
+            <TurnstileWidget
+              siteKey={captchaConfig.siteKey}
+              resetKey={captchaResetKey}
+              onTokenChange={setCaptchaToken}
+              onStatusChange={handleCaptchaStatus}
+            />
+            {captchaStatus === 'loading' && <p className="cp-captcha-message">Loading security check…</p>}
+            {captchaStatus === 'ready' && !captchaToken && <p className="cp-captcha-message">Complete the security check to enable sending.</p>}
+            {captchaToken && <p className="cp-captcha-message cp-captcha-verified">Security check complete.</p>}
+            {captchaMessage && <p className={`cp-captcha-message ${captchaStatus === 'error' ? 'error' : ''}`} role={captchaStatus === 'error' ? 'alert' : 'status'}>{captchaMessage}</p>}
+            {!captchaConfig.deliveryConfigured && <p className="cp-captcha-message warning" role="status">CAPTCHA is configured, but email delivery is not connected. No enquiry can be sent yet.</p>}
+          </> : <>
+            <p className={`cp-captcha-message ${captchaStatus === 'error' ? 'error' : ''}`} role={captchaStatus === 'error' ? 'alert' : 'status'}>
+              {captchaMessage || 'Loading security check…'}
+            </p>
+            {captchaConfig && !captchaConfig.deliveryConfigured && <p className="cp-captcha-message warning" role="status">Email delivery is not connected. No enquiry can be sent yet.</p>}
+          </>}
+        </div>
+        {state === 'setup' && <p className="cp-form-result setup" role="status"><strong>Delivery setup required.</strong> No information was sent. Email delivery is not connected yet.</p>}
         {state === 'error' && <p className="cp-form-result error" role="alert">We could not submit this enquiry. Please try again later.</p>}
-        <button className="button button-gold cp-submit" type="submit" disabled={state === 'sending'}>{state === 'sending' ? <><LoaderCircle size={16} className="cp-spin" />Sending…</> : <>Send enquiry <ArrowRight size={16} /></>}</button>
+        <button className="button button-gold cp-submit" type="submit" disabled={state === 'sending' || captchaStatus !== 'ready' || !captchaToken || !captchaConfig?.deliveryConfigured}>{state === 'sending' ? <><LoaderCircle size={16} className="cp-spin" />Sending…</> : <>Send enquiry <ArrowRight size={16} /></>}</button>
         <p className="cp-privacy">By submitting an enquiry, you agree to our <Link href="/privacy">privacy notice <ArrowRight size={12} /></Link></p>
         <p className="cp-response">{contactConfig.typicalResponse}</p>
       </>}
