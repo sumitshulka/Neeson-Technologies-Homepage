@@ -35,7 +35,7 @@ const industries = [
   ['SOLAR', Sun],
   ['INDUSTRIAL', Factory],
 ] as const;
-const properties = ['Thermal Resistance', 'Mechanical Strength', 'Electrical Insulation', 'Chemical Resistance', 'Abrasion Resistance', 'Dimensional Stability'];
+const properties = ['THERMAL RESISTANCE', 'MECHANICAL STRENGTH', 'ELECTRICAL PERFORMANCE', 'CHEMICAL RESISTANCE', 'ABRASION RESISTANCE', 'SERVICE LIFE'];
 const journey = ['RESEARCH', 'RADIATION SCIENCE', 'MATERIAL DEVELOPMENT', 'PROCESS DEVELOPMENT', 'CABLE APPLICATION', 'INDUSTRIAL ADOPTION'];
 const studyAreas = ['Accelerator Parameters', 'Dose Optimisation', 'Dose Uniformity', 'Cable Handling', 'Material Formulation', 'Product Performance'];
 const platforms = [
@@ -119,7 +119,10 @@ function TechnicalHeritagePage({ BookLink }: { BookLink: ComponentType<{ childre
         </div>
       </section>
 
-      <section className="th-evolution th-dark">
+      <section
+        className="th-evolution th-dark"
+        style={{ '--th-evolution-image': `url("${asset('technical-heritage-accelerator.jpg')}")` } as React.CSSProperties}
+      >
         <div className="wrap">
           <div className="th-evolution-top">
             <div>
@@ -128,13 +131,12 @@ function TechnicalHeritagePage({ BookLink }: { BookLink: ComponentType<{ childre
             </div>
             <figure className="th-evolution-image" data-reveal><img src={asset('technical-heritage-accelerator.jpg')} alt="Industrial electron-beam accelerator equipment" /><figcaption>PROCESSING TECHNOLOGY / INDUSTRIAL CONTEXT</figcaption></figure>
           </div>
-          <div className="th-evolution-cards">
-            {evolution.map(([title, text, Icon], index) => <article className="th-evolution-card" key={title} data-reveal style={{ '--step': index } as React.CSSProperties}>
-              <span className="th-card-number">0{index + 1}</span><Icon size={23} strokeWidth={1.5} aria-hidden="true" /><h3>{title}</h3><p>{text}</p>
+          <div className="th-evolution-timeline" aria-label={evolStages.join(' to ')}>
+            {evolution.map(([title, text, Icon], index) => <article className="th-evolution-entry" key={title} data-reveal style={{ '--step': index } as React.CSSProperties}>
+              <div className="th-evolution-entry-top"><span className="th-card-number">0{index + 1}</span><Icon size={17} strokeWidth={1.5} aria-hidden="true" /><span className="th-evolution-stage">{evolStages[index]}</span></div>
+              <h3>{title}</h3><p>{text}</p>
+              {index < evolution.length - 1 && <ArrowRight className="th-evolution-entry-arrow" size={16} aria-hidden="true" />}
             </article>)}
-          </div>
-          <div className="th-evolution-line" aria-label={evolStages.join(' to ')}>
-            {evolStages.map((stage, index) => <div className="th-evolution-node" key={stage} data-reveal><span>{stage}</span>{index < evolStages.length - 1 && <ArrowRight size={17} aria-hidden="true" />}</div>)}
           </div>
         </div>
       </section>
@@ -149,7 +151,7 @@ function TechnicalHeritagePage({ BookLink }: { BookLink: ComponentType<{ childre
               <div className="th-industries" aria-label="Application areas">{industries.map(([item, Icon], index) => <div key={item} data-reveal style={{ '--step': index } as React.CSSProperties}><span className="th-industry-mark"><Icon size={15} strokeWidth={1.6} aria-hidden="true" /></span>{item}</div>)}</div>
             </div>
           </div>
-          <div className="th-properties" data-reveal><span className="th-micro-label">MATERIAL / PERFORMANCE</span>{properties.map((item, index) => <div key={item}><span className={`th-property-dot dot-${index}`} />{item}</div>)}</div>
+          <div className="th-properties" data-reveal><span className="th-micro-label">MATERIAL / PERFORMANCE</span>{properties.map((item) => <span className="th-property-item" key={item}>{item}</span>)}</div>
         </div>
       </section>
 
@@ -166,14 +168,17 @@ function TechnicalHeritagePage({ BookLink }: { BookLink: ComponentType<{ childre
             </div>
             <figure className="th-research-image" data-reveal><img src={asset('technical-heritage-research.jpg')} alt="Research equipment and cable samples in an industrial science setting" /></figure>
           </div>
-          <div className="th-journey" aria-label="Journey: research, radiation science, material development, process development, cable application, industrial adoption">
-            {journey.map((item, index) => <div className="th-journey-node" key={item} data-reveal><span className="th-journey-count">0{index + 1}</span><span>{item}</span>{index < journey.length - 1 && <ArrowDown size={15} aria-hidden="true" />}</div>)}
+          <div className="th-india-notes">
+            <div className="th-journey" aria-label="Journey: research, radiation science, material development, process development, cable application, industrial adoption">
+              {journey.map((item, index) => <div className="th-journey-node" key={item} data-reveal><span className="th-journey-count">0{index + 1}</span><span>{item}</span>{index < journey.length - 1 && <ArrowDown size={15} aria-hidden="true" />}</div>)}
+            </div>
+            <article className="th-study-card" data-reveal>
+              <p className="th-notebook-label">ENGINEERING NOTES / CABLE &amp; POLYMER</p>
+              <h3>Areas explored in cable and polymer applications</h3>
+              <div className="th-polymer-types">{['PE', 'EPDM', 'EVA', 'PVC'].map((type) => <span key={type}>{type}</span>)}</div>
+              <div className="th-study-areas">{studyAreas.map((area) => <span key={area}><Check size={13} aria-hidden="true" />{area}</span>)}</div>
+            </article>
           </div>
-          <article className="th-study-card" data-reveal>
-            <h3>Areas explored in cable and polymer applications</h3>
-            <div className="th-polymer-types">{['PE', 'EPDM', 'EVA', 'PVC'].map((type) => <span key={type}>{type}</span>)}</div>
-            <div className="th-study-areas">{studyAreas.map((area) => <span key={area}><Check size={13} aria-hidden="true" />{area}</span>)}</div>
-          </article>
         </div>
       </section>
 
@@ -233,6 +238,20 @@ function TechnicalHeritagePage({ BookLink }: { BookLink: ComponentType<{ childre
               <p>The objective is not to promote a particular machine, supplier or processing route, but to help answer a more useful question:</p>
               <p className="th-question">What does the evidence tell us, and what should happen next?</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="th-then-now" aria-label="From technical heritage to current advisory practice">
+        <div className="wrap th-then-now-inner">
+          <div className="th-bridge-part">
+            <span>THEN</span>
+            <p>Understanding radiation,<br />materials and processing.</p>
+          </div>
+          <ArrowDown className="th-bridge-arrow" size={18} aria-hidden="true" />
+          <div className="th-bridge-part th-bridge-now">
+            <span>NOW</span>
+            <p>Using that technical understanding<br />to support better decisions.</p>
           </div>
         </div>
       </section>

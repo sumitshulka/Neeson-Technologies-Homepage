@@ -1,0 +1,682 @@
+REFINE THE EXISTING “TECHNICAL HERITAGE” PAGE — DO NOT REBUILD IT FROM SCRATCH.
+
+The current page structure and content direction are good. Now refine the visual design so that it feels completely native to the rest of the Neeson Technologies website.
+
+The goal is:
+
+PREMIUM SCIENTIFIC CONSULTING
++ INDUSTRIAL HERITAGE
++ EDITORIAL STORYTELLING
++ MODERN TECHNOLOGY
+
+It should NOT feel like:
+- an infographic
+- a museum/history website
+- a SaaS landing page
+- a technology equipment vendor website
+- a long sequence of cards
+
+==================================================
+1. MATCH THE EXISTING NEESON DESIGN SYSTEM
+==================================================
+
+Reuse the exact design language already established on the other pages.
+
+Do NOT create new:
+- navigation styles
+- button styles
+- typography system
+- footer
+- card language
+- colour palette
+- border radius system
+
+The Technical Heritage page should look like page 5/6 of the SAME website.
+
+The visitor should be unable to tell that this page was designed separately.
+
+==================================================
+2. MAKE THE PAGE MORE EDITORIAL
+==================================================
+
+The current version has too many visually equal sections.
+
+Create stronger hierarchy.
+
+Every section should NOT look like:
+
+heading + paragraph + cards + icons.
+
+Instead alternate between:
+
+A. Editorial text + large image
+B. Dark technical visualisation
+C. Timeline
+D. Large statement
+E. Technical diagram
+F. Editorial image + supporting data
+G. Quote-style statement
+
+This will create rhythm while scrolling.
+
+Think:
+
+“premium scientific journal / industrial consulting firm”
+
+rather than:
+
+“corporate infographic”.
+
+==================================================
+3. HERO REFINEMENT
+==================================================
+
+Keep the current hero concept.
+
+Headline:
+
+“From electron beams
+to better materials.”
+
+Make this the strongest typography on the page.
+
+Use:
+
+TECHNICAL HERITAGE
+
+as a small orange/yellow eyebrow.
+
+The electron-beam visual should occupy approximately 50% of the hero.
+
+Make the beam look physically plausible and sophisticated.
+
+Avoid an overly futuristic “laser weapon” appearance.
+
+The visual should communicate:
+
+electron accelerator
+→ energetic electrons
+→ material interaction
+→ molecular change
+
+rather than science fiction.
+
+Add a very subtle animated particle field.
+
+Keep the primary CTA:
+
+Explore the journey ↓
+
+Do not add additional hero buttons.
+
+==================================================
+4. REDUCE CARD DENSITY
+==================================================
+
+This is important.
+
+Several sections currently contain too many cards.
+
+Replace unnecessary cards with clean editorial blocks.
+
+For example, Section 02 should not feel like five SaaS feature cards.
+
+Instead create a single horizontal evolution narrative:
+
+ACCELERATOR
+→ DOSE CONTROL
+→ MATERIAL SCIENCE
+→ PROCESS HANDLING
+→ PROCESS OPTIMISATION
+
+Use compact nodes with very little text.
+
+The visual hierarchy should be:
+
+ONE BIG IDEA
+↓
+supporting explanation
+↓
+technical visual
+
+not:
+
+FIVE BIG CARDS
+↓
+more cards
+↓
+more icons.
+
+==================================================
+5. SECTION 01 — THE SCIENCE
+==================================================
+
+Make this section feel like a scientific explainer.
+
+Left:
+
+“When electrons became a tool
+for materials science.”
+
+Right:
+
+a large clean diagram:
+
+ELECTRONS
+↓
+ENERGY TRANSFER
+↓
+POLYMER STRUCTURE
+↓
+MATERIAL PROPERTIES
+↓
+PRODUCT PERFORMANCE
+
+Use thin connecting lines and elegant scientific icons.
+
+Do not use large colourful circular icons.
+
+Keep icons minimal.
+
+Use blue/purple/orange only as accents.
+
+==================================================
+6. SECTION 02 — EVOLUTION
+==================================================
+
+Make this a dark immersive section.
+
+Headline:
+
+“From laboratory phenomenon
+to industrial process.”
+
+Instead of five cards, create a continuous horizontal technical timeline.
+
+PHYSICS
+→
+MATERIALS SCIENCE
+→
+PROCESS ENGINEERING
+→
+INDUSTRIAL MANUFACTURING
+→
+PRODUCT QUALIFICATION
+
+Above/below the timeline show the corresponding technical developments:
+
+Accelerator technology
+Dose control
+Material behaviour
+Product handling
+Process optimisation
+
+Use a subtle electron-beam accelerator image in the background.
+
+Add a very subtle moving beam/light effect.
+
+==================================================
+7. SECTION 03 — CABLE INDUSTRY
+==================================================
+
+Make this one of the strongest sections visually.
+
+Use a large high-quality cable image occupying approximately 45% of the section.
+
+On the other side:
+
+“Why wire and cable became
+a natural application.”
+
+Then show the important properties as a simple typographic list:
+
+THERMAL RESISTANCE
+MECHANICAL STRENGTH
+ELECTRICAL PERFORMANCE
+CHEMICAL RESISTANCE
+ABRASION RESISTANCE
+SERVICE LIFE
+
+Do not put each property inside a separate card.
+
+Below, use a thin application strip:
+
+RAIL
+AUTOMOTIVE
+DEFENCE
+AEROSPACE
+ENERGY
+SOLAR
+INDUSTRIAL
+
+Keep this understated.
+
+==================================================
+8. SECTION 04 — INDIA
+==================================================
+
+This section should feel historical without becoming a conventional history timeline.
+
+Headline:
+
+“From research capability
+to industrial adoption.”
+
+Use a large India/research/industrial visual.
+
+Then create a vertical timeline:
+
+RESEARCH
+↓
+RADIATION SCIENCE
+↓
+MATERIAL DEVELOPMENT
+↓
+PROCESS DEVELOPMENT
+↓
+CABLE APPLICATION
+↓
+INDUSTRIAL ADOPTION
+
+On the side, add a small technical evidence panel:
+
+PE
+EPDM
+EVA
+PVC
+
+and:
+
+Accelerator parameters
+Dose optimisation
+Dose uniformity
+Cable handling
+Material formulation
+Product performance
+
+The evidence panel should look like a laboratory notebook / engineering data panel rather than a feature card.
+
+Where factual historical claims are made, use only verified claims. Do not invent dates or “first in India” statements.
+
+The historical context can reference the documented development of radiation processing in India and the role of Indian research institutions and industry, but keep the page focused on the technical journey rather than personalities.
+
+==================================================
+9. SECTION 05 — TECHNOLOGY EVOLVES
+==================================================
+
+Make this visually lighter.
+
+Heading:
+
+“From crosslinking to a
+broader materials platform.”
+
+Instead of four equal cards, create a horizontal image gallery:
+
+POLYMER MODIFICATION
+HEAT-SHRINKABLE PRODUCTS
+MEDICAL STERILISATION
+SURFACE TREATMENT
+
+Each image should be large and photographic.
+
+Overlay the label subtly at the bottom.
+
+No heavy borders.
+
+==================================================
+10. SECTION 06 — TECHNICAL LINEAGE
+==================================================
+
+This should be a signature Neeson section.
+
+Use a dark navy background.
+
+Large headline:
+
+“What survives when
+technology evolves?”
+
+Then create one large visual sequence:
+
+ENERGY
+→
+MATERIALS
+→
+PROCESSING
+→
+EVIDENCE
+→
+PERFORMANCE
+→
+DECISION
+
+Make this visually sophisticated.
+
+Underneath, display the questions one at a time:
+
+What happens to the material?
+
+What changes after irradiation?
+
+How much change is desirable?
+
+How do we know?
+
+Can the result be repeated?
+
+Does it improve the product enough to matter?
+
+Use large typography rather than cards.
+
+==================================================
+11. SECTION 07 — WHY THIS MATTERS TODAY
+==================================================
+
+Make this section much simpler.
+
+Headline:
+
+“Experience matters most
+when the question is difficult.”
+
+On the right, retain the circular:
+
+BETTER
+DECISIONS
+
+Around it:
+
+Technology
+Materials
+Manufacturing
+Qualification
+Economics
+Customer Requirements
+
+Use very thin connection lines.
+
+Do not overcrowd the diagram.
+
+This should feel like a consulting framework, not an infographic.
+
+==================================================
+12. SECTION 08 — NEESON PERSPECTIVE
+==================================================
+
+Make this section highly editorial.
+
+Use a large statement:
+
+“Understand the material.
+Understand the evidence.
+Then make the decision.”
+
+Make each line progressively more visually prominent.
+
+Supporting text should be relatively short.
+
+Add a small electron-beam image on the opposite side.
+
+The purpose is to transition the visitor from:
+
+HISTORY
+
+to
+
+NEESON TODAY.
+
+==================================================
+13. ADD A SMALL “THEN → NOW” TRANSITION
+==================================================
+
+Before the final CTA, add a very elegant transition:
+
+THEN
+
+Understanding radiation,
+materials and processing.
+
+↓
+
+NOW
+
+Using that technical understanding
+to support better decisions.
+
+Keep this extremely minimal.
+
+This is the bridge between Technical Heritage and Neeson's current advisory practice.
+
+==================================================
+14. FINAL CTA
+==================================================
+
+Keep the existing final CTA.
+
+Headline:
+
+“The technology has evolved.
+The questions still matter.”
+
+Supporting text:
+
+“Have a technical or investment question around radiation processing, polymers or materials?”
+
+Primary:
+
+Book a 30-minute discovery call →
+
+Secondary:
+
+Explore our expertise →
+
+Use the existing site's CTA styling.
+
+==================================================
+15. TYPOGRAPHY
+==================================================
+
+Increase editorial typography.
+
+Major section headings should be approximately:
+
+48–64px desktop
+34–40px mobile
+
+Body:
+
+17–19px desktop
+15–17px mobile
+
+Do not make paragraphs too wide.
+
+Maximum text width approximately 550–650px.
+
+Use generous vertical spacing.
+
+The page should breathe.
+
+==================================================
+16. COLOUR REFINEMENT
+==================================================
+
+Use the existing Neeson palette.
+
+Primary:
+
+Deep navy
+#06182B approximately
+
+Secondary:
+
+Electric blue
+
+Accent:
+
+Blue-violet
+
+Highlight:
+
+Orange/yellow
+
+Background:
+
+White / very light blue
+
+IMPORTANT:
+
+Do not use bright colours everywhere.
+
+The orange/yellow should be reserved for:
+- eyebrow labels
+- important CTA
+- selected timeline nodes
+- very small highlights
+
+Blue/purple should dominate technical visuals.
+
+==================================================
+17. IMAGERY
+==================================================
+
+Use premium scientific and industrial imagery.
+
+Preferred visual subjects:
+
+- electron accelerator
+- electron beam interaction
+- polymer molecular structures
+- cable cross-sections
+- industrial cable manufacturing
+- scientific laboratory equipment
+- materials science
+- radiation processing
+- industrial polymer processing
+
+Avoid:
+
+- generic corporate teams
+- people in suits
+- handshake images
+- generic laboratories with scientists posing
+- generic stock “technology” imagery
+- futuristic robots
+- science-fiction lasers
+
+The page should feel credible to an engineer, CTO, technical director or industrial decision-maker.
+
+==================================================
+18. ANIMATION
+==================================================
+
+Use restrained motion.
+
+Allowed:
+
+- beam movement
+- particle movement
+- timeline node activation
+- subtle fade/slide reveals
+- diagram line drawing
+- very subtle image zoom
+
+Avoid:
+
+- excessive parallax
+- bouncing cards
+- spinning icons
+- aggressive gradients
+- constant motion
+
+The animation should communicate technical precision.
+
+==================================================
+19. MOBILE REFINEMENT
+==================================================
+
+The website is portrait-first.
+
+On mobile:
+
+Hero:
+headline → description → CTA → visual
+
+Technical diagrams:
+convert horizontal flows into vertical flows.
+
+Timeline:
+convert to vertical.
+
+Image/text sections:
+stack cleanly.
+
+Do not shrink desktop layouts into mobile.
+
+Recompose them.
+
+Ensure:
+- no horizontal scrolling
+- no tiny text
+- no cramped diagrams
+- no oversized images
+- CTA remains visible and usable
+
+==================================================
+20. CONTENT DISCIPLINE
+==================================================
+
+Do not add unsupported historical claims.
+
+Do not mention individual personalities.
+
+Do not turn the page into a biography.
+
+Do not claim Neeson invented, introduced or pioneered electron-beam processing unless explicitly supported elsewhere on the website.
+
+The story should be:
+
+SCIENCE
+→
+TECHNOLOGY
+→
+MATERIALS
+→
+CABLE INDUSTRY
+→
+INDIA
+→
+INDUSTRIAL EVOLUTION
+→
+TECHNICAL THINKING
+→
+NEESON TODAY
+
+==================================================
+FINAL DESIGN TEST
+==================================================
+
+After implementing the refinement, review the entire page from top to bottom.
+
+Ask:
+
+1. Does this look like the SAME Neeson Technologies website?
+2. Does it feel premium enough for industrial CTOs and technical decision-makers?
+3. Does it feel scientific without becoming academic?
+4. Does it communicate heritage without becoming a history textbook?
+5. Is there enough visual breathing space?
+6. Are there too many cards?
+7. Are the important statements visually dominant?
+8. Does the page tell one continuous story?
+9. Does the visitor naturally understand why this history matters to Neeson today?
+10. Does the final CTA feel like the natural conclusion of the story?
+
+If any section feels like a generic SaaS component, redesign that section.
+
+The final result should feel like:
+
+“An established technical advisory practice with deep materials and industrial understanding.”
+
+Not:
+
+“A website explaining electron-beam technology.”
