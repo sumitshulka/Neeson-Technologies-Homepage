@@ -1,0 +1,935 @@
+Build PAGE 3 of the Neeson Technologies website.
+
+Page title:
+EXPERTISE
+
+I am attaching a visual reference/mockup image for this page.
+
+IMPORTANT:
+Use the attached mockup as the PRIMARY visual design reference.
+
+Do NOT place the mockup image itself on the webpage.
+
+Recreate the design using actual React / HTML / CSS components.
+
+This must look like the SAME WEBSITE as Page 1 and Page 2.
+
+Reuse the existing:
+- Header component
+- Navigation component
+- Logo
+- Typography
+- Button styles
+- Colour system
+- Card styles
+- Footer
+- Animation system
+- Responsive breakpoints
+
+Do not redesign the overall brand.
+
+Page 3 should feel more scientific and technical than Page 2.
+
+The visual concept is:
+
+MATERIALS
++
+RADIATION
++
+CHARACTERISATION
++
+INDUSTRIAL APPLICATION
+
+==================================================
+1. PURPOSE OF THIS PAGE
+==================================================
+
+This page explains what Neeson Technologies actually brings to a technical problem.
+
+It should NOT read like a list of generic consulting services.
+
+It should communicate depth in:
+
+- Radiation processing
+- Polymer materials
+- Materials behaviour after irradiation
+- Nanoscience
+- Polymer nanocomposites
+- Surface modification and coatings
+- Formulation
+- Characterisation
+- Evidence interpretation
+- Industrial application
+
+The page should make a technical decision-maker feel:
+
+"They understand the material, not just the machine."
+
+The source material specifically frames Neeson's approach around understanding what a compound or material does after irradiation, rather than only what an e-beam machine can deliver. Use this principle prominently.
+
+==================================================
+2. GLOBAL VISUAL LANGUAGE
+==================================================
+
+Maintain the existing Neeson Technologies visual identity.
+
+Colours:
+
+Deep Navy:
+#061B2A
+
+Dark Blue:
+#08253A
+
+Electric Blue:
+#168CFF
+
+Blue Purple:
+#6040D8
+
+Purple:
+#7548E8
+
+Lotus Pink:
+#F15BB5
+
+Orange:
+#FFB52E
+
+Yellow:
+#FFC84A
+
+White:
+#FFFFFF
+
+Light scientific background:
+#F5F8FB
+
+Use:
+- Deep navy
+- Blue-purple
+- Electric blue
+- Pink
+- Orange/yellow accents
+
+The scientific accent can use:
+
+Electric Blue → Purple → Pink
+
+Do NOT overuse gradients.
+
+Typography must match Pages 1 and 2.
+
+Use:
+Inter / Manrope / Plus Jakarta Sans.
+
+==================================================
+3. HEADER
+==================================================
+
+Reuse the exact header from Page 1.
+
+Logo:
+Neeson Technologies
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+
+CTA:
+
+Book a 30-minute call →
+
+"Expertise" must be the active navigation item.
+
+Active state:
+Small orange/yellow indicator.
+
+Header:
+Deep navy.
+
+Sticky.
+
+Mobile:
+Logo + hamburger.
+
+==================================================
+4. HERO SECTION
+==================================================
+
+Create a premium scientific hero.
+
+Use a dark navy background.
+
+Unlike Page 1, the hero should focus on scientific capability rather than the business problem.
+
+Eyebrow:
+
+EXPERTISE
+
+Main heading:
+
+"Materials science
+behind the decision."
+
+Alternative visual emphasis:
+
+"Materials science"
+in white
+
+"behind the decision."
+with a subtle blue-purple-pink gradient.
+
+Supporting copy:
+
+"Neeson brings materials science, radiation-processing knowledge and hands-on characterisation experience to technical questions where product performance, material behaviour and evidence intersect."
+
+Important:
+
+Do not claim more than the supplied source supports.
+
+Primary CTA:
+
+"Discuss a technical question →"
+
+Secondary:
+
+"Book a 30-minute discovery call"
+
+Hero visual:
+
+Create a sophisticated scientific composition containing:
+
+- Polymer molecular structure
+- Nanoparticles
+- Electron-beam energy
+- Material layers
+- Cable geometry
+- Scientific particles
+- Subtle technical grid
+
+The visual should appear integrated into the background.
+
+Do NOT use a generic laboratory stock image.
+
+The image should feel like:
+advanced materials engineering.
+
+==================================================
+5. SECTION — THE CORE IDEA
+==================================================
+
+Create a light section immediately below the hero.
+
+Eyebrow:
+
+"THE NEESON APPROACH"
+
+Heading:
+
+"Don't stop at what the machine can deliver."
+
+Supporting copy:
+
+"Ask what the material does after dose."
+
+Then a visual comparison.
+
+LEFT:
+
+PROCESS
+
+"E-BEAM"
+
+Show:
+Energy
+Dose
+Processing
+
+RIGHT:
+
+MATERIAL
+
+"WHAT CHANGES?"
+
+Show:
+Structure
+Properties
+Performance
+Qualification evidence
+
+Between them:
+
+"UNDERSTAND THE CONNECTION"
+
+This should be a sophisticated diagram rather than ordinary cards.
+
+Use glowing lines / particle trails.
+
+The visual message:
+
+PROCESS
+↓
+MATERIAL RESPONSE
+↓
+PRODUCT PERFORMANCE
+↓
+DECISION
+
+==================================================
+6. SECTION — RADIATION PROCESSING & POLYMER MATERIALS
+==================================================
+
+Create a large two-column section.
+
+LEFT:
+Scientific visual.
+
+RIGHT:
+Text.
+
+Eyebrow:
+
+"01 — RADIATION PROCESSING"
+
+Heading:
+
+"Radiation processing
+& polymer materials"
+
+Copy:
+
+"Neeson considers product and material questions where irradiation can influence performance, qualification or product decisions."
+
+Second paragraph:
+
+"The advisory approach connects processing conditions with material behaviour and the evidence needed to make a sound business decision."
+
+Then create three small capability blocks:
+
+PROCESS
+
+Processing conditions
+
+MATERIAL
+
+Material behaviour
+
+EVIDENCE
+
+Qualification & decision evidence
+
+Use thin connecting lines.
+
+Important:
+Do not claim that Neeson performs irradiation processing itself.
+
+The language should remain advisory.
+
+==================================================
+7. SECTION — ADVANCED MATERIALS & NANOSCIENCE
+==================================================
+
+This should be one of the most visually impressive sections.
+
+Use a deep blue-purple background.
+
+Eyebrow:
+
+"02 — ADVANCED MATERIALS & NANOSCIENCE"
+
+Heading:
+
+"From nanoparticles
+to polymer systems."
+
+Supporting text:
+
+"Alongside the cable and polymer focus, Neeson considers defined advisory questions involving advanced materials and nanoscience."
+
+Create four large scientific capability cards.
+
+CARD 01:
+
+"Nanoparticles & Dispersions"
+
+Description:
+
+"Defined advisory questions involving nanoparticle systems and dispersions."
+
+Visual:
+Floating particle / nano structure.
+
+Accent:
+Electric Blue.
+
+CARD 02:
+
+"Surface Modification & Coatings"
+
+Description:
+
+"Questions involving surface modification, coatings and material interfaces."
+
+Visual:
+Layered material surface.
+
+Accent:
+Pink.
+
+CARD 03:
+
+"Formulation"
+
+Description:
+
+"Defined formulation questions where material composition and performance need to be understood together."
+
+Visual:
+Molecular mixing / formulation diagram.
+
+Accent:
+Orange.
+
+CARD 04:
+
+"Characterisation Data"
+
+Description:
+
+"Interpretation of characterisation data in support of a defined materials question."
+
+Visual:
+Spectrum / analytical graph abstraction.
+
+Accent:
+Purple.
+
+IMPORTANT:
+
+Do not invent specific laboratory techniques unless they are supported by the source.
+
+Do not imply ownership of a testing laboratory.
+
+==================================================
+8. SECTION — MATERIALS EXPERIENCE
+==================================================
+
+Create a white/light section.
+
+Eyebrow:
+
+"MATERIALS EXPERIENCE"
+
+Heading:
+
+"Hands-on materials and characterisation experience."
+
+Use the source-supported areas:
+
+- Nanoparticle synthesis and colloids
+- Surface modification and coatings
+- Polymer nanocomposites and compounding
+- Hands-on characterisation
+- Radiation processing
+- Polymer radiation chemistry
+
+Create six visual capability tiles.
+
+Each tile should have:
+
+Number
+Icon
+Title
+One-line explanation
+
+Example:
+
+01
+NANOPARTICLE SYNTHESIS & COLLOIDS
+
+02
+SURFACE MODIFICATION
+& COATINGS
+
+03
+POLYMER NANOCOMPOSITES
+& COMPOUNDING
+
+04
+CHARACTERISATION
+
+05
+RADIATION PROCESSING
+
+06
+POLYMER RADIATION CHEMISTRY
+
+Keep the copy concise.
+
+==================================================
+9. SECTION — FROM MATERIAL TO PRODUCT
+==================================================
+
+Create a strong visual process section.
+
+Background:
+Light grey / very pale blue.
+
+Heading:
+
+"Where materials science meets the product decision."
+
+Create a horizontal process diagram:
+
+MATERIAL
+
+↓
+
+PROCESS
+
+↓
+
+MATERIAL RESPONSE
+
+↓
+
+CHARACTERISATION
+
+↓
+
+PRODUCT PERFORMANCE
+
+↓
+
+QUALIFICATION
+
+↓
+
+DECISION
+
+Each step should have:
+- Small icon
+- Short label
+- Thin connector line
+
+On mobile:
+Convert this into a vertical timeline.
+
+Use alternating blue / purple / pink / orange accents.
+
+This section should visually communicate Neeson's multidisciplinary thinking.
+
+==================================================
+10. SECTION — EVIDENCE-LED INTERPRETATION
+==================================================
+
+Use a dark navy section.
+
+Eyebrow:
+
+"EVIDENCE-LED"
+
+Heading:
+
+"Separate what is known
+from what still needs proof."
+
+Supporting text:
+
+"The objective is not to generate technical complexity for its own sake. Neeson helps distinguish supported conclusions from open questions, identify the evidence still required, and set out the next work required."
+
+Create three large statements:
+
+SUPPORTED
+
+"What does the available evidence actually support?"
+
+OPEN
+
+"What remains uncertain?"
+
+NEXT
+
+"What work would settle the question?"
+
+Use:
+✓
+?
+→
+
+as large visual symbols.
+
+This section should connect directly to the Decision Diagnostic concept from Page 2.
+
+==================================================
+11. SECTION — WHEN ADDITIONAL EXPERTISE IS NEEDED
+==================================================
+
+Create a light section.
+
+Heading:
+
+"Expertise should be added
+when the question requires it."
+
+Copy:
+
+"Where a project needs additional expertise, Neeson proposes a named specialist with a defined role and responsibility, agreed with the client before work starts."
+
+Then create a visual network:
+
+CLIENT QUESTION
+        |
+        |
+NEESON
+        |
+ ┌──────┼──────┐
+ |      |      |
+Materials  E-Beam  Specialist
+Science    History  Expertise
+
+Important:
+
+Do NOT invent names of specialists.
+
+Add:
+
+"Specialists are named only once each has agreed in writing to a stated role."
+
+This is important for credibility.
+
+==================================================
+12. SECTION — WHAT THIS EXPERTISE DOES NOT MEAN
+==================================================
+
+Create a visually clean boundary section.
+
+Heading:
+
+"Technical expertise does not mean we do everything."
+
+Supporting copy:
+
+"Neeson's role is independent advisory."
+
+Create four boundary cards:
+
+EQUIPMENT SUPPLY
+Outside direct advisory role.
+
+PLANT OPERATION
+Outside direct advisory role.
+
+RADIATION SAFETY & REGULATORY SUBMISSIONS
+Outside direct advisory role.
+
+FORMAL TECHNICAL SIGN-OFF
+Outside direct advisory role.
+
+Then:
+
+"Any specialist work and responsibility are defined in the agreed proposal."
+
+Also include:
+
+"Neeson does not imply that it owns a testing laboratory or supplies a complete development and validation service."
+
+This section is essential and should not be hidden in the footer.
+
+==================================================
+13. TECHNICAL CREDIBILITY CALLOUT
+==================================================
+
+Create a narrow dark-blue section.
+
+Heading:
+
+"Independent by design."
+
+Text:
+
+"Neeson's advisory scope is agreed with the client. Relevant supplier or specialist relationships are disclosed in the proposal. Equipment suppliers, laboratories and qualified specialists retain their own responsibilities."
+
+Visual:
+
+CLIENT
+→
+EVIDENCE
+→
+ADVISORY INTERPRETATION
+→
+OPTIONS
+→
+DECISION
+
+Use a subtle glowing line.
+
+==================================================
+14. FINAL CTA
+==================================================
+
+Use the same final CTA component as Pages 1 and 2.
+
+Deep navy / blue-purple background.
+
+Heading:
+
+"Have a materials question?"
+
+Supporting:
+
+"Bring one live question. We will establish whether Neeson is the right fit and what the next step could involve."
+
+CTA:
+
+"Book a 30-minute discovery call →"
+
+Secondary:
+
+"How we help →"
+
+Do not say:
+"Get a free consultation."
+
+The correct positioning is:
+"30-minute discovery call."
+
+==================================================
+15. FOOTER
+==================================================
+
+Reuse EXACTLY the same footer from Page 1.
+
+Do not redesign it.
+
+Left:
+
+Neeson Technologies
+
+"Independent advisory on radiation processing of materials. Bengaluru, India."
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+Contact and Booking
+
+Footer statement:
+
+"Neeson Technologies provides independent advisory on radiation processing of materials. Equipment supply, plant operation, radiation safety, regulatory submissions and formal technical sign-off are outside its direct advisory role. Any specialist work and responsibility are defined in the agreed proposal."
+
+© 2026 Neeson Technologies.
+
+==================================================
+16. RESPONSIVE DESIGN
+==================================================
+
+This is a portrait-first website.
+
+Mobile width:
+320px minimum.
+
+Optimise particularly for:
+375px
+390px
+430px
+
+Mobile hero:
+Text → visual → CTA
+
+Core idea:
+Vertical process diagram.
+
+Radiation processing:
+Stacked.
+
+Nanoscience:
+Two-column desktop becomes one-column mobile.
+
+Materials experience:
+Two-column grid on tablet/desktop,
+single-column or 2-column compact grid on mobile.
+
+Material-to-product:
+Vertical timeline.
+
+Evidence-led:
+Stacked cards.
+
+Boundary section:
+Stacked cards.
+
+Final CTA:
+Full-width.
+
+No horizontal scrolling.
+
+==================================================
+17. ANIMATION
+==================================================
+
+Use the same animation language as Pages 1 and 2.
+
+Subtle:
+- Fade-up section reveals
+- Scientific particles
+- Slow molecular movement
+- Hover elevation
+- Gradient light movement
+- Timeline reveal
+- CTA arrow movement
+
+Do NOT over-animate.
+
+Scientific visuals should feel precise and controlled.
+
+==================================================
+18. ROUTING
+==================================================
+
+This page:
+
+/expertise
+
+Navigation:
+
+/
+ /how-we-help
+ /expertise
+ /our-experts
+ /technical-heritage
+ /contact
+
+Primary CTA:
+ /contact
+
+"Meet the principal":
+ /our-experts
+
+Do not use "#" links.
+
+==================================================
+19. CONTENT ACCURACY
+==================================================
+
+The supplied Neeson Technologies PDF is the authoritative content source.
+
+Do not invent:
+
+- Additional technical capabilities
+- Laboratory facilities
+- Testing equipment
+- Certifications
+- Awards
+- Patents
+- Client names
+- Performance statistics
+- Scientific claims
+- Additional experts
+
+Specifically:
+
+Do NOT say that Neeson:
+- owns a laboratory
+- operates an irradiation plant
+- supplies e-beam equipment
+- performs radiation safety
+- handles regulatory submissions
+- provides formal technical sign-off
+- provides complete development and validation services
+
+Keep the language advisory.
+
+Use the exact source-supported expertise:
+
+Nanoparticle synthesis and colloids
+Surface modification and coatings
+Polymer nanocomposites and compounding
+Hands-on characterisation
+Radiation processing
+Polymer radiation chemistry
+
+==================================================
+20. IMPORTANT DESIGN DISTINCTION
+==================================================
+
+Page 1:
+WHY NEESON?
+
+Page 2:
+HOW NEESON HELPS.
+
+Page 3:
+WHAT NEESON KNOWS.
+
+Page 4:
+WHO IS BEHIND NEESON.
+
+Page 5:
+TECHNICAL HERITAGE.
+
+Page 6:
+CONTACT / BOOKING.
+
+Therefore Page 3 must NOT repeat the Page 2 service journey.
+
+It should be an authoritative demonstration of technical breadth.
+
+The visitor should finish Page 3 thinking:
+
+"They understand the relationship between irradiation, materials behaviour, characterisation and the eventual product decision."
+
+==================================================
+21. FINAL VISUAL QUALITY CHECK
+==================================================
+
+Before considering the page complete:
+
+Compare the rendered page against the attached mockup.
+
+Check:
+
+- Header height
+- Hero proportions
+- Typography
+- Scientific visual scale
+- Section spacing
+- Card dimensions
+- Colour balance
+- Gradient intensity
+- Line weights
+- Border radius
+- CTA placement
+- Footer height
+- Mobile portrait composition
+
+Make the page feel spacious.
+
+Do not cram technical content simply because there is a lot of information.
+
+Use visual hierarchy to make complex technical material easy to scan.
+
+The final impression must be:
+
+PREMIUM
+SCIENTIFIC
+TECHNICALLY CREDIBLE
+INDEPENDENT
+INDUSTRIAL
+EVIDENCE-LED
+
+NOT:
+
+Generic consulting
+Generic SaaS
+University brochure
+Equipment manufacturer
+AI-generated template

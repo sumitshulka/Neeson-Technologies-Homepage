@@ -1,0 +1,40 @@
+@import '../neeson-how-we-help/_group.css';
+
+.neeson-extract .inner-hero { position: relative; padding: 88px 0 82px; color: white; background: radial-gradient(ellipse at 91% 22%, rgba(88,61,150,.4), transparent 32%), linear-gradient(120deg, #061b2a, #102b49 62%, #211845); }
+.neeson-extract .inner-hero::after { content: ''; position: absolute; top: 0; right: 8%; height: 100%; width: 1px; background: linear-gradient(transparent, rgba(255,195,77,.5), transparent); opacity: .45; }
+.neeson-extract .inner-hero h1 { max-width: 850px; margin: 0; font: 800 clamp(2.75rem, 6vw, 5rem)/.99 var(--app-font-serif); letter-spacing: -.065em; }
+.neeson-extract .inner-hero .hero-text { max-width: 680px; color: #d3e0ec; font-size: 14px; line-height: 1.7; margin: 19px 0 18px; }
+.neeson-extract .inner-hero .eyebrow { color: #f5c35a; }
+.neeson-extract .inner-body { padding: 72px 0 85px; background: #f5f8fa; }
+.neeson-extract .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 58px; align-items: start; }
+.neeson-extract .content-block { padding: 28px; background: white; border: 1px solid #e0e8ee; border-radius: 6px; }
+.neeson-extract .content-block h2 { margin: 0 0 14px; font: 800 24px/1.15 var(--app-font-serif); letter-spacing: -.04em; }
+.neeson-extract .content-block p { color: #5d7180; font-size: 14px; line-height: 1.75; }
+.neeson-extract .content-block p:last-child { margin-bottom: 0; }
+.neeson-extract .item-list { list-style: none; margin: 18px 0 0; padding: 0; }
+.neeson-extract .item-list li { display: flex; gap: 11px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #e8edf1; color: #294457; font-size: 13px; line-height: 1.5; }
+.neeson-extract .item-list li:last-child { border: 0; }
+.neeson-extract .item-list svg { margin-top: 2px; flex: none; color: #2482bd; }
+.neeson-extract .callout { padding: 23px 25px; color: white; background: #0d2a41; border-left: 3px solid var(--gold); border-radius: 3px; font-size: 14px; line-height: 1.7; }
+.neeson-extract .callout strong { color: white; }
+.neeson-extract .page-cta { margin-top: 35px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px; background: #e8f0f5; border-radius: 6px; }
+.neeson-extract .page-cta p { margin: 0; color: #315066; font-size: 14px; line-height: 1.6; }
+.neeson-extract .page-cta .button { flex: none; }
+
+@media (max-width: 800px) {
+  .neeson-extract .content-grid { grid-template-columns: 1fr; gap: 30px; }
+  .neeson-extract .inner-hero { padding: 58px 0 50px; }
+  .neeson-extract .inner-body { padding: 48px 0 58px; }
+}
+@media (max-width: 520px) {
+  .neeson-extract .wrap { width: calc(100% - 40px); }
+  .neeson-extract .nav-inner { width: calc(100% - 32px); }
+  .neeson-extract .brand { min-width: 0; }
+  .neeson-extract .brand img { width: 143px; height: 49px; }
+  .neeson-extract .inner-hero { padding: 54px 0 46px; }
+  .neeson-extract .inner-hero h1 { font-size: 3rem; }
+  .neeson-extract .inner-hero .hero-text { font-size: 13px; }
+  .neeson-extract .content-block { padding: 21px; }
+  .neeson-extract .page-cta { align-items: stretch; flex-direction: column; padding: 19px; }
+  .neeson-extract .page-cta .button { width: 100%; }
+}

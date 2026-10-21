@@ -1,5 +1,6 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import './pages/how-we-help.css';
+import { ExpertisePageContent } from '@/pages/expertise-page';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -63,7 +64,7 @@ const seo: Record<string, { title: string; description: string }> = {
   },
   '/expertise': {
     title: 'Expertise | Neeson Technologies',
-    description: 'Materials behaviour after irradiation, e-beam processing, product qualification and advanced materials advisory.',
+    description: 'Materials science, radiation processing, characterisation and evidence-led product decisions.',
   },
   '/our-experts': {
     title: 'Our Experts | Neeson Technologies',
@@ -587,19 +588,7 @@ function HowWeHelpPage() {
 }
 
 function ExpertisePage() {
-  return <Shell>
-    <PageHero eyebrow="EXPERTISE" title={<>Materials behaviour.<br />Evidence. Decisions.</>} description="Independent technical and strategic advisory for product, material and evidence questions around irradiation and materials performance." />
-    <section className="inner-body"><div className="wrap">
-      <div className="content-grid">
-        <article className="content-block"><h2>Materials behaviour after irradiation</h2><p>Frame questions about how a material or compound behaves after dose, and what evidence is needed to understand or qualify that performance.</p><ul className="item-list"><li><Layers3 size={16} />Materials behaviour after irradiation</li><li><Microscope size={16} />Characterisation and testing context</li><li><ScanSearch size={16} />Interpretation of available evidence</li></ul></article>
-        <article className="content-block"><h2>E-beam and process qualification</h2><p>Consider where e-beam may be relevant to a product or process question, and which qualification evidence or practical assessments could inform the next decision.</p><ul className="item-list"><li><Zap size={16} />E-beam processing questions</li><li><Cable size={16} />Cable and polymer product perspective</li><li><ClipboardCheck size={16} />Product qualification and evidence strategy</li></ul></article>
-        <article className="content-block"><h2>Product and application perspective</h2><p>Support for cable manufacturers and polymer compound suppliers assessing product families, customer requirements or a new line.</p><p>Also relevant to businesses weighing irradiation job work against their own capability.</p></article>
-        <article className="content-block"><h2>Advanced materials and nanoscience</h2><p>Defined advisory questions involving nanoparticles and dispersions, surface modification and coatings, formulation, and interpretation of characterisation data.</p><p>These may support e-beam applications or a separate materials project.</p></article>
-      </div>
-      <div className="callout" style={{ marginTop: 24 }}><strong>Scope matters.</strong> Neeson does not directly provide equipment supply, plant operation, radiation safety, regulatory submissions or formal technical sign-off.</div>
-      <PageCta text="Have a product or evidence question? Start with a conversation about the decision ahead." />
-    </div></section>
-  </Shell>;
+  return <Shell><ExpertisePageContent BookLink={BookLink} /></Shell>;
 }
 
 function ExpertsPage() {
