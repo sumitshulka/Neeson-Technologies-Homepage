@@ -3,6 +3,7 @@ import './pages/how-we-help.css';
 import { ExpertisePageContent } from '@/pages/expertise-page';
 import { ExpertsPageContent } from '@/pages/experts-page';
 import { ContactPageContent, PrivacyPageContent } from '@/pages/contact-page';
+import TechnicalHeritagePage from '@/pages/technical-heritage-page';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -602,23 +603,6 @@ function ExpertsPage() {
   return <Shell><ExpertsPageContent BookLink={BookLink} /></Shell>;
 }
 
-function HeritagePage() {
-  return <Shell>
-    <PageHero eyebrow="TECHNICAL HERITAGE" title={<>Materials first.<br />Evidence before commitment.</>} description="Neeson's technical perspective brings materials behaviour, process context and evidence together to help clients make informed next decisions." />
-    <section className="heritage-band"><div className="wrap heritage-band-grid"><div className="heritage-mark">Ask what the material does after dose.</div><p>Radiation processing is one part of a product question. The material, application, available evidence and qualification context all matter. Neeson's work starts by defining what needs to be understood.</p></div></section>
-    <section className="inner-body"><div className="wrap">
-      <div className="section-heading"><p className="eyebrow">AN EVIDENCE-LED APPROACH</p><h2 className="section-title">A decision framework, not an equipment pitch.</h2><p className="section-lede">Independent advisory on radiation processing of materials—grounded in the client's question and bounded by a clear scope.</p></div>
-      <div className="content-grid">
-        <article className="content-block"><h2>Materials behaviour</h2><p>Understand the material question after irradiation and identify what available evidence can and cannot establish.</p></article>
-        <article className="content-block"><h2>Evidence and qualification</h2><p>Clarify the information needed to assess product requirements, qualification questions and remaining uncertainty.</p></article>
-        <article className="content-block"><h2>Industrial context</h2><p>Consider cable and polymer products, line and product-family questions, and the choice between irradiation job work and own capability.</p></article>
-        <article className="content-block"><h2>Independent scope</h2><p>Neeson does not supply equipment or accept commission linked to equipment sales. Relevant supplier or specialist relationships are disclosed in a proposal.</p></article>
-      </div>
-      <PageCta text="Bring the product question, the decision ahead and what you already know." />
-    </div></section>
-  </Shell>;
-}
-
 function RoutedErrorBoundary({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   return <ErrorBoundary resetKey={location}>{children}</ErrorBoundary>;
@@ -630,7 +614,7 @@ function Router() {
     <Route path="/how-we-help" component={HowWeHelpPage} />
     <Route path="/expertise" component={ExpertisePage} />
     <Route path="/our-experts" component={ExpertsPage} />
-    <Route path="/technical-heritage" component={HeritagePage} />
+    <Route path="/technical-heritage">{() => <Shell><TechnicalHeritagePage BookLink={BookLink} /></Shell>}</Route>
     <Route path="/contact">{() => <Shell><ContactPageContent /></Shell>}</Route>
     <Route path="/privacy">{() => <Shell><PrivacyPageContent /></Shell>}</Route>
     <Route component={NotFound} />

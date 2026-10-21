@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+.neeson-heritage-page {
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Manrope', sans-serif;
+  --app-font-mono: 'Space Mono', monospace;
+  --navy: #061b2a;
+  --navy-2: #0b2940;
+  --navy-3: #153752;
+  --blue: #168cff;
+  --violet: #7548e8;
+  --pink: #ed5eb0;
+  --gold: #ffbd3c;
+  --paper: #f4f7fa;
+  --ink: #0c2639;
+  --muted-ink: #526575;
+  --line: #dce5ec;
+  min-height: 100vh;
+  overflow: clip;
+  color: var(--ink);
+  font-family: var(--app-font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+.neeson-heritage-page *,
+.neeson-heritage-page *::before,
+.neeson-heritage-page *::after { box-sizing: border-box; }
+.neeson-heritage-page a { -webkit-tap-highlight-color: transparent; }
+.neeson-heritage-page ::selection { color: #061b2a; background: #ffc34d; }
+html:has(.neeson-heritage-page) { scroll-behavior: smooth; background: #f4f7fa; }
+body:has(.neeson-heritage-page) {
+  margin: 0;
+  min-width: 320px;
+  background: #f4f7fa;
+  color: #0c2639;
+  font-family: var(--app-font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+.neeson-heritage-page .wrap { width: min(1260px, calc(100% - 64px)); margin-inline: auto; }
+.neeson-heritage-page .eyebrow {
+  margin: 0 0 14px;
+  color: #2e78bc;
+  font: 700 10px/1.4 var(--app-font-mono);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.neeson-heritage-page .section-title {
+  margin: 0;
+  font-family: var(--app-font-serif);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.06;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+}
+.neeson-heritage-page .section-lede { max-width: 650px; color: var(--muted-ink); font-size: 16px; line-height: 1.7; }
+.neeson-heritage-page .section-heading { margin-bottom: 35px; }
+.neeson-heritage-page .section-heading .section-lede { margin: 13px 0 0; }
+
+.neeson-heritage-page .button {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform .22s ease, background .22s ease, color .22s ease;
+}
+.neeson-heritage-page .button:hover { transform: translateY(-2px); }
+.neeson-heritage-page .button:focus-visible,
+.neeson-heritage-page a:focus-visible { outline: 3px solid #ffcf70; outline-offset: 3px; }
+.neeson-heritage-page .button-gold {
+  color: #142838;
+  background: linear-gradient(105deg, #ffb72f, #ffd15e);
+  box-shadow: 0 7px 22px rgba(255, 181, 46, .15);
+}
+.neeson-heritage-page .button-gold:hover { background: #ffd15e; }
+.neeson-heritage-page .button svg { transition: transform .2s ease; }
+.neeson-heritage-page .button:hover svg { transform: translateX(3px); }
+
+.neeson-heritage-page .inner-hero {
+  position: relative;
+  padding: 88px 0 82px;
+  color: white;
+  background: radial-gradient(ellipse at 91% 22%, rgba(88,61,150,.4), transparent 32%), linear-gradient(120deg, #061b2a, #102b49 62%, #211845);
+}
+.neeson-heritage-page .inner-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 8%;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(transparent, rgba(255,195,77,.5), transparent);
+  opacity: .45;
+}
+.neeson-heritage-page .inner-hero h1 {
+  max-width: 850px;
+  margin: 0;
+  font: 800 clamp(2.75rem, 6vw, 5rem)/.99 var(--app-font-serif);
+  letter-spacing: -.065em;
+}
+.neeson-heritage-page .inner-hero .hero-text { max-width: 680px; }
+.neeson-heritage-page .inner-hero .eyebrow { color: #f5c35a; }
+.neeson-heritage-page .inner-body { padding: 72px 0 85px; background: #f5f8fa; }
+.neeson-heritage-page .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 58px; align-items: start; }
+.neeson-heritage-page .content-block { padding: 28px; background: white; border: 1px solid #e0e8ee; border-radius: 6px; }
+.neeson-heritage-page .content-block h2 { margin: 0 0 14px; font: 800 24px/1.15 var(--app-font-serif); letter-spacing: -.04em; }
+.neeson-heritage-page .content-block p { color: #5d7180; font-size: 14px; line-height: 1.75; }
+.neeson-heritage-page .content-block p:last-child { margin-bottom: 0; }
+.neeson-heritage-page .page-cta {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px;
+  background: #e8f0f5;
+  border-radius: 6px;
+}
+.neeson-heritage-page .page-cta p { margin: 0; color: #315066; font-size: 14px; line-height: 1.6; }
+.neeson-heritage-page .page-cta .button { flex: none; }
+.neeson-heritage-page .heritage-band { padding: 46px 0; color: white; background: linear-gradient(110deg,#0c2b42,#1c2750); }
+.neeson-heritage-page .heritage-band-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: center; }
+.neeson-heritage-page .heritage-band p { margin: 0; color: #c9d8e3; font-size: 14px; line-height: 1.75; }
+.neeson-heritage-page .heritage-mark { font: 700 clamp(1.7rem,3.6vw,3.2rem)/1.05 var(--app-font-serif); letter-spacing: -.06em; }
+
+@media (max-width: 1050px) {
+  .neeson-heritage-page .wrap { width: min(100% - 48px, 900px); }
+}
+@media (max-width: 800px) {
+  .neeson-heritage-page .content-grid,
+  .neeson-heritage-page .heritage-band-grid { grid-template-columns: 1fr; gap: 30px; }
+  .neeson-heritage-page .inner-hero { padding: 58px 0 50px; }
+  .neeson-heritage-page .inner-body { padding: 48px 0 58px; }
+}
+@media (max-width: 520px) {
+  .neeson-heritage-page .wrap { width: calc(100% - 40px); }
+  .neeson-heritage-page .section-heading { margin-bottom: 22px; }
+  .neeson-heritage-page .section-title { font-size: 1.95rem; line-height: 1.08; }
+  .neeson-heritage-page .section-lede { font-size: 13px; line-height: 1.65; }
+  .neeson-heritage-page .inner-hero { padding: 54px 0 46px; }
+  .neeson-heritage-page .inner-hero h1 { font-size: 3rem; }
+  .neeson-heritage-page .inner-hero .hero-text { font-size: 13px; }
+  .neeson-heritage-page .content-block { padding: 21px; }
+  .neeson-heritage-page .page-cta { align-items: stretch; flex-direction: column; padding: 19px; }
+  .neeson-heritage-page .page-cta .button { width: 100%; }
+}

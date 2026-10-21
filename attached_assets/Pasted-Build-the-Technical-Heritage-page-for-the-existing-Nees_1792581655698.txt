@@ -1,0 +1,539 @@
+Build the “Technical Heritage” page for the existing Neeson Technologies website.
+
+IMPORTANT:
+This is NOT a standalone redesign. The page must look like a natural continuation of the existing website and must reuse the SAME:
+- Header/navigation
+- Typography
+- Color system
+- Button styles
+- Card styles
+- Border radius
+- Spacing system
+- Footer
+- Responsive behaviour
+- Animation language
+- Overall premium scientific/industrial visual identity
+
+The existing website has a premium, dark navy / electric blue / blue-purple / orange-yellow / white visual language.
+
+The page should feel like a premium scientific documentary about the evolution of electron-beam technology and materials science — NOT like a generic SaaS page.
+
+Do NOT mention Mr Tikku or any individual historical personality anywhere on this page.
+
+==================================================
+PAGE
+==================================================
+
+Page title:
+TECHNICAL HERITAGE
+
+Hero headline:
+“From electron beams
+to better materials.”
+
+Supporting text:
+
+“The story of electron-beam processing is not simply a story about machines. It is a story about understanding how energy changes materials — and how those changes can create better-performing products.”
+
+“Neeson’s perspective is shaped by that technical lineage.”
+
+Primary CTA:
+“Explore the journey”
+
+The hero should use a sophisticated electron-beam / accelerator visual:
+- dark industrial environment
+- electron beam travelling through space/material
+- molecular structures
+- subtle glowing particles
+- blue, violet and orange energy
+- premium scientific photography / 3D scientific visual
+- avoid cheesy sci-fi imagery
+
+The hero should be approximately 55–60vh on desktop and adapt naturally on mobile.
+
+==================================================
+SECTION 01 — THE SCIENCE
+==================================================
+
+Eyebrow:
+01 — THE SCIENCE
+
+Heading:
+“When electrons became a tool for materials science.”
+
+Content:
+
+“Electron-beam technology emerged from the development of our understanding of electrons and accelerated particles.
+
+For polymers, one of the most important effects is the ability to induce crosslinking — changing the relationship between polymer chains and consequently the behaviour of the material.
+
+The process can alter material performance without relying on conventional chemistry, heat or pressure routes traditionally associated with conventional crosslinking processes.”
+
+On the right, create a premium horizontal scientific process diagram:
+
+ELECTRONS
+↓
+ENERGY TRANSFER
+↓
+POLYMER STRUCTURE
+↓
+MATERIAL PROPERTIES
+↓
+PRODUCT PERFORMANCE
+
+Each step should have:
+- minimal scientific icon
+- short label
+- subtle glow
+- connecting arrows
+
+This section should have a predominantly white/light background while retaining the website's navy typography and blue/purple/orange accents.
+
+==================================================
+SECTION 02 — EVOLUTION OF E-BEAM PROCESSING
+==================================================
+
+Eyebrow:
+02 — THE EVOLUTION OF E-BEAM PROCESSING
+
+Heading:
+“From laboratory phenomenon
+to industrial process.”
+
+Intro:
+
+“Electron-beam processing did not become an industrial technology overnight. Its development required progress across several disciplines.”
+
+Create five premium cards:
+
+1. ACCELERATOR TECHNOLOGY
+“Higher and more controllable electron-beam energy”
+
+2. DOSE CONTROL
+“Understanding and controlling absorbed radiation dose”
+
+3. MATERIAL SCIENCE
+“Understanding how polymers respond differently to radiation”
+
+4. PRODUCT HANDLING
+“Reliable movement of products through the processing zone”
+
+5. PROCESS OPTIMISATION
+“Beam energy, dose, line speed, thickness and geometry”
+
+Below these cards create a horizontal evolution line:
+
+PHYSICS
+→
+MATERIALS SCIENCE
+→
+PROCESS ENGINEERING
+→
+INDUSTRIAL MANUFACTURING
+→
+PRODUCT QUALIFICATION
+
+Use a dark navy background with subtle grid/particle texture.
+
+Include an industrial electron-beam processing image on the right side.
+
+==================================================
+SECTION 03 — THE CABLE INDUSTRY CONNECTION
+==================================================
+
+Eyebrow:
+03 — THE CABLE INDUSTRY CONNECTION
+
+Heading:
+“Why wire and cable became
+a natural application.”
+
+Content:
+
+“Cable insulation and jacketing must often deliver a combination of properties. Electron-beam crosslinking offered another route to enabling high-performing cable constructions, particularly for demanding environments.”
+
+Create a large industrial image of:
+- electrical cables
+- cross-section cable
+- polymer insulation
+- subtle electron-beam energy treatment
+
+Below/right create application icons:
+
+RAILWAYS
+AUTOMOTIVE
+DEFENCE
+AEROSPACE
+ENERGY
+SOLAR
+INDUSTRIAL
+
+Also visually highlight the material/performance relationship:
+
+Thermal Resistance
+Mechanical Strength
+Electrical Insulation
+Chemical Resistance
+Abrasion Resistance
+Dimensional Stability
+
+Do not make this section look like a product catalogue. Keep it editorial and scientific.
+
+==================================================
+SECTION 04 — THE INDIAN JOURNEY
+==================================================
+
+Eyebrow:
+04 — THE INDIAN JOURNEY
+
+Heading:
+“From research capability
+to industrial adoption.”
+
+Content:
+
+“India’s radiation-processing journey developed alongside the country’s broader investment in nuclear science and applied radiation technology.
+
+Research and industrial programmes gradually explored radiation processing as a practical route for modifying materials and improving product performance.
+
+The cable industry became one of the important industrial contexts in which electron-beam processing could move from technical possibility toward application.”
+
+Create a visual timeline / journey:
+
+RESEARCH
+↓
+RADIATION SCIENCE
+↓
+MATERIAL DEVELOPMENT
+↓
+PROCESS DEVELOPMENT
+↓
+CABLE APPLICATION
+↓
+INDUSTRIAL ADOPTION
+
+Create a secondary information card titled:
+
+“Areas explored in cable and polymer applications”
+
+Show:
+PE
+EPDM
+EVA
+PVC
+
+And:
+Accelerator Parameters
+Dose Optimisation
+Dose Uniformity
+Cable Handling
+Material Formulation
+Product Performance
+
+Use a subtle Indian industrial/research visual, but DO NOT make the page overly patriotic or government-styled.
+
+==================================================
+SECTION 05 — THE TECHNOLOGY EVOLVES
+==================================================
+
+Eyebrow:
+05 — THE TECHNOLOGY EVOLVES
+
+Heading:
+“From crosslinking to a
+broader materials platform.”
+
+Content:
+
+“Electron-beam processing now extends beyond traditional wire and cable into polymer modification, heat-shrinkable products, medical sterilisation, surface treatment, grafting and advanced materials.”
+
+Create four large visual cards:
+
+POLYMER
+MODIFICATION
+
+HEAT-SHRINKABLE
+PRODUCTS
+
+MEDICAL
+STERILISATION
+
+SURFACE TREATMENT
+& ADVANCED MATERIALS
+
+Each card should use a high-quality scientific/industrial image.
+
+Keep these cards visually elegant and minimal.
+
+==================================================
+SECTION 06 — THE TECHNICAL LINEAGE
+==================================================
+
+Eyebrow:
+06 — THE TECHNICAL LINEAGE
+
+Heading:
+“What survives when
+technology evolves?”
+
+Content:
+
+“Machines change. Accelerators improve. Materials evolve.
+
+But some technical questions remain remarkably consistent.”
+
+Create a six-step visual chain:
+
+ENERGY
+→
+MATERIALS
+→
+PROCESSING
+→
+EVIDENCE
+→
+PERFORMANCE
+→
+DECISION
+
+Underneath, show short questions:
+
+What happens to the material?
+
+What changes after irradiation?
+
+How much change is desirable?
+
+How do we know?
+
+Can the result be repeated?
+
+Does it improve the product enough to matter?
+
+This should be one of the strongest visual sections on the page.
+
+==================================================
+SECTION 07 — WHY THIS MATTERS TODAY
+==================================================
+
+Eyebrow:
+07 — WHY THIS MATTERS TODAY
+
+Heading:
+“Experience matters most
+when the question is difficult.”
+
+Content:
+
+“Today’s technical questions are rarely isolated. The answer requires more than knowing how an electron beam works. It requires understanding the connection between technology, materials, manufacturing, qualification, economics and customer requirements.”
+
+Create a central glowing circular graphic:
+
+BETTER
+DECISIONS
+
+Around it, connect:
+
+Technology
+Materials
+Manufacturing
+Qualification
+Economics
+Customer Requirements
+
+Use thin neon-blue/purple connection lines.
+
+This should visually communicate systems thinking.
+
+==================================================
+SECTION 08 — THE NEESON PERSPECTIVE
+==================================================
+
+Eyebrow:
+08 — THE NEESON PERSPECTIVE
+
+Heading:
+
+“A technical heritage built around one principle:
+
+Understand the material.
+Understand the evidence.
+Then make the decision.”
+
+Make these three statements visually prominent, with progressive blue → purple → orange emphasis.
+
+Supporting copy:
+
+“Neeson’s advisory perspective is rooted in the evolution of radiation processing and its application to materials and industrial products.
+
+The objective is not to promote a particular machine, supplier or processing route, but to help answer a more useful question:
+
+What does the evidence tell us, and what should happen next?”
+
+Include a small electron-beam visual on the left.
+
+==================================================
+FINAL CTA
+==================================================
+
+Create a full-width premium CTA band with dark navy background and subtle glowing blue/purple/orange electron-beam graphics.
+
+Headline:
+
+“The technology has evolved.
+The questions still matter.”
+
+Supporting text:
+
+“Have a technical or investment question around radiation processing, polymers or materials?”
+
+Primary CTA:
+“Book a 30-minute discovery call →”
+
+Secondary CTA:
+“Explore our expertise →”
+
+==================================================
+FOOTER
+==================================================
+
+Reuse the EXACT footer structure already used elsewhere on the website.
+
+Do not redesign the footer specifically for this page.
+
+Include the existing:
+- Neeson Technologies logo
+- Navigation
+- Focus areas
+- Contact/booking link
+- Privacy / Terms
+- Copyright
+
+==================================================
+VISUAL DESIGN
+==================================================
+
+The page should look like:
+
+SCIENCE + INDUSTRY + HERITAGE + CONSULTING
+
+NOT:
+
+generic consulting
+generic SaaS
+generic corporate history page
+
+Use:
+- Deep navy
+- Electric blue
+- Blue-violet
+- Controlled orange/yellow highlights
+- White/light sections for contrast
+- Thin scientific line graphics
+- Particle/electron effects
+- Molecular structures
+- Technical diagrams
+- Industrial photography
+- Subtle gradients
+- Premium glass cards where appropriate
+- Fine borders
+- Soft glow effects
+
+Avoid:
+- excessive gradients
+- excessive rounded cards
+- cartoon icons
+- stock-business imagery
+- people shaking hands
+- generic office photos
+- excessive animations
+- excessive text density
+
+==================================================
+LAYOUT SYSTEM
+==================================================
+
+Desktop:
+- max-width approximately 1280–1400px
+- generous whitespace
+- editorial composition
+- alternating light/dark sections
+- large typography
+- strong visual hierarchy
+
+Mobile:
+- portrait-first design
+- single-column layout
+- preserve visual storytelling
+- diagrams become vertically stacked
+- horizontal timelines become vertical timelines
+- cards become full-width
+- CTA remains prominent
+- no horizontal overflow
+- maintain readable typography
+
+==================================================
+ANIMATION
+==================================================
+
+Use subtle animations only.
+
+On scroll:
+- headings fade/slide in
+- cards reveal sequentially
+- electron particles move subtly
+- connecting lines animate progressively
+- timeline nodes illuminate as they enter viewport
+
+Do NOT use aggressive parallax or distracting effects.
+
+==================================================
+IMPORTANT CONTENT RULES
+==================================================
+
+1. Do NOT mention Mr Tikku or any individual historical personality.
+2. Do not invent names, dates, companies or claims.
+3. Do not claim Neeson invented electron-beam processing.
+4. Do not claim Neeson owns an accelerator, testing laboratory or processing facility.
+5. Do not imply Neeson operates an irradiation plant.
+6. This page is about technical evolution and lineage, not individual biography.
+7. Keep the distinction between:
+   - scientific development
+   - industrial adoption
+   - cable-industry application
+   - Neeson’s current advisory perspective
+8. Do not make the page sound like an equipment supplier.
+9. Do not make unsupported “first in India” or “first ever” claims.
+10. Preserve the existing website's header, footer, navigation and design system.
+
+==================================================
+MOST IMPORTANT DESIGN PRINCIPLE
+==================================================
+
+The page should tell a visual story:
+
+SCIENCE
+↓
+ELECTRONS
+↓
+MATERIALS
+↓
+E-BEAM PROCESSING
+↓
+WIRE & CABLE
+↓
+INDIA
+↓
+INDUSTRIAL APPLICATION
+↓
+TECHNICAL LINEAGE
+↓
+EVIDENCE
+↓
+BETTER DECISIONS
+↓
+NEESON TODAY
+
+The visitor should feel that they are moving through the history and evolution of a technology rather than simply scrolling through a corporate webpage.
+
+Build this as a polished production-quality page, not a wireframe.
