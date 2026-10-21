@@ -156,3 +156,384 @@
   .neeson-extract .ep-hero-copy { animation:none; }
   .neeson-extract .ep-page *, .neeson-extract .ep-page *::before, .neeson-extract .ep-page *::after { transition-duration:.01ms!important; }
 }
+
+/* Page 4 refinement: quieter scientific detail, more portrait-led composition,
+   and clearer visual separation between current practice and heritage. */
+.neeson-extract .ep-page {
+  background: #f5f8fb;
+}
+.neeson-extract .ep-page .section {
+  padding-block: 72px;
+}
+.neeson-extract .ep-hero {
+  background:
+    radial-gradient(ellipse at 83% 47%, rgba(103, 72, 157, .25), transparent 39%),
+    linear-gradient(112deg, #061b2a 0%, #0b2841 58%, #211e42 100%);
+}
+.neeson-extract .ep-hero::before {
+  opacity: .16;
+  background-size: 76px 72px, 121px 105px;
+}
+.neeson-extract .ep-hero-grid {
+  min-height: 320px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr);
+  gap: clamp(18px, 3vw, 42px);
+  padding-block: 22px 25px;
+}
+.neeson-extract .ep-hero-copy {
+  padding-block: 15px;
+}
+.neeson-extract .ep-hero h1 {
+  max-width: 660px;
+  font-size: clamp(2.7rem, 3.55vw, 3.35rem);
+  line-height: 1.03;
+  letter-spacing: -.06em;
+}
+.neeson-extract .ep-hero-lede {
+  max-width: 550px;
+  margin-top: 17px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 1.68;
+}
+.neeson-extract .ep-hero-sub {
+  max-width: 510px;
+  font-size: 11px;
+  line-height: 1.65;
+}
+.neeson-extract .ep-hero-cta {
+  margin-top: 18px;
+}
+.neeson-extract .ep-hero-art {
+  height: 276px;
+  mask-image: radial-gradient(ellipse, #000 47%, transparent 100%);
+}
+.neeson-extract .ep-hero-art-grid {
+  opacity: .23;
+  background-size: 36px 36px;
+}
+.neeson-extract .ep-hero-ring {
+  border-color: rgba(149, 191, 233, .19);
+}
+.neeson-extract .ep-hero-ring.ring-two {
+  border-color: rgba(226, 139, 211, .22);
+}
+.neeson-extract .ep-molecular-map::before {
+  background: linear-gradient(90deg, transparent, rgba(84, 187, 255, .68), rgba(163, 120, 232, .6), rgba(238, 131, 191, .55), transparent);
+}
+.neeson-extract .ep-molecular-map::after {
+  background: linear-gradient(90deg, transparent, rgba(99, 196, 255, .45), rgba(237, 131, 192, .48), transparent);
+}
+.neeson-extract .ep-molecular-map i {
+  box-shadow: 0 0 12px rgba(49, 163, 255, .35);
+}
+.neeson-extract .ep-hero-rule {
+  opacity: .56;
+}
+
+.neeson-extract .ep-profile-grid {
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(34px, 5.3vw, 72px);
+  align-items: center;
+}
+.neeson-extract .ep-portrait {
+  min-height: 540px;
+  box-shadow: 11px 12px 0 rgba(16, 58, 87, .045);
+  background:
+    radial-gradient(ellipse at 52% 43%, rgba(94, 76, 173, .31), transparent 46%),
+    linear-gradient(145deg, #0a2337, #132e4c 58%, #30264b);
+}
+.neeson-extract .ep-portrait-grid {
+  opacity: .25;
+}
+.neeson-extract .ep-portrait-orbit {
+  border-color: rgba(141, 191, 224, .28);
+}
+.neeson-extract .ep-orbit-b {
+  border-color: rgba(237, 139, 203, .3);
+}
+.neeson-extract .ep-portrait-contour {
+  width: 216px;
+  height: 280px;
+  background: linear-gradient(140deg, rgba(124, 198, 231, .055), rgba(186, 122, 205, .09));
+}
+.neeson-extract .ep-portrait-contour span {
+  border-color: rgba(155, 199, 230, .2);
+}
+.neeson-extract .ep-portrait-core {
+  box-shadow: 0 0 0 10px rgba(241, 91, 181, .09), 0 0 24px rgba(241, 91, 181, .48);
+}
+.neeson-extract .ep-portrait-core i {
+  box-shadow: 0 0 8px rgba(22, 140, 255, .45);
+}
+.neeson-extract .ep-profile-copy h2 {
+  font-size: clamp(2.1rem, 3.15vw, 2.8rem);
+}
+.neeson-extract .ep-positioning {
+  max-width: 560px;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.46;
+}
+.neeson-extract .ep-bio {
+  max-width: 570px;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.neeson-extract .ep-education {
+  margin-top: 25px;
+}
+.neeson-extract .ep-education-card {
+  padding: 13px;
+}
+.neeson-extract .ep-education-card h4 {
+  font-size: 10px;
+}
+.neeson-extract .ep-education-card p {
+  font-size: 9px;
+}
+.neeson-extract .ep-capabilities {
+  margin-top: 57px;
+}
+.neeson-extract .ep-capabilities-heading {
+  margin-bottom: 20px;
+}
+.neeson-extract .ep-capability {
+  min-height: 160px;
+  padding: 19px 20px;
+}
+.neeson-extract .ep-capability h4 {
+  max-width: 235px;
+  font-size: 13px;
+}
+
+.neeson-extract .ep-materials {
+  background:
+    radial-gradient(ellipse at 79% 38%, rgba(99, 65, 165, .2), transparent 36%),
+    linear-gradient(112deg, #071d2d, #102a47 65%, #1c2043);
+}
+.neeson-extract .ep-material-step > i {
+  box-shadow: none;
+  opacity: .75;
+}
+.neeson-extract .ep-heritage {
+  background:
+    radial-gradient(ellipse at 14% 76%, rgba(255, 173, 68, .065), transparent 34%),
+    linear-gradient(115deg, #071c2c, #0c2339 62%, #211f3a);
+}
+.neeson-extract .ep-heritage-heading {
+  margin-bottom: 39px;
+}
+.neeson-extract .ep-heritage-graphic {
+  min-height: 320px;
+  border-color: rgba(163, 191, 214, .22);
+  background:
+    radial-gradient(ellipse at 48% 52%, rgba(73, 95, 168, .2), transparent 56%),
+    linear-gradient(145deg, #0b253a, #122741);
+}
+.neeson-extract .ep-heritage-graphic .ep-heritage-grid {
+  opacity: .2;
+}
+.neeson-extract .ep-cable-cross {
+  box-shadow: 0 0 0 10px rgba(72, 120, 163, .07), 0 0 24px rgba(64, 142, 195, .12);
+}
+.neeson-extract .ep-beam-trace {
+  opacity: .68;
+  box-shadow: 0 0 9px rgba(95, 173, 239, .24);
+}
+.neeson-extract .ep-beam-trace span {
+  box-shadow: 0 0 5px rgba(255, 181, 46, .62);
+}
+.neeson-extract .ep-heritage-badge {
+  padding: 10px 13px;
+  border-color: rgba(238, 171, 93, .54);
+  color: #f2c779;
+  background: rgba(255, 181, 46, .09);
+  line-height: 1.8;
+}
+.neeson-extract .ep-heritage-badge b {
+  color: #f3a3cc;
+}
+.neeson-extract .ep-heritage-disclaimer {
+  margin-top: 22px;
+  padding: 17px 18px;
+  border-color: rgba(255, 191, 102, .58);
+  background: rgba(255, 181, 46, .075);
+}
+.neeson-extract .ep-heritage-disclaimer svg {
+  color: #ffd078;
+}
+.neeson-extract .ep-heritage-disclaimer strong {
+  font-size: 13px;
+  line-height: 1.55;
+}
+.neeson-extract .ep-lineage {
+  margin-top: 39px;
+  padding: 20px 23px;
+  border-color: rgba(175, 201, 220, .2);
+  background: rgba(255, 255, 255, .035);
+}
+.neeson-extract .ep-lineage > i {
+  background: linear-gradient(90deg, rgba(255, 181, 46, .72), rgba(117, 72, 232, .62), rgba(22, 140, 255, .66));
+  box-shadow: none;
+}
+.neeson-extract .ep-compare {
+  background: #eef4f8;
+}
+.neeson-extract .ep-compare-card {
+  min-height: 294px;
+  padding: 28px 30px 25px;
+}
+.neeson-extract .ep-compare-current {
+  background: linear-gradient(135deg, #fff, #fbfdff);
+}
+.neeson-extract .ep-compare-heritage {
+  background: linear-gradient(135deg, #fffefa, #fffaf4);
+  border-color: #e8ddce;
+}
+.neeson-extract .ep-compare-heritage::before {
+  width: 4px;
+}
+.neeson-extract .ep-compare-heritage .ep-compare-label {
+  color: #a46624;
+}
+.neeson-extract .ep-compare-notice {
+  border-color: #ebd3ad !important;
+  background: #fff5e5 !important;
+  color: #694921 !important;
+}
+
+@media (max-width: 900px) {
+  .neeson-extract .ep-hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(260px, .95fr);
+  }
+  .neeson-extract .ep-portrait {
+    min-height: 410px;
+  }
+  .neeson-extract .ep-profile-grid {
+    gap: 30px;
+  }
+  .neeson-extract .ep-education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .neeson-extract .ep-page .section {
+    padding-block: 53px;
+  }
+  .neeson-extract .ep-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 24px 12px;
+  }
+  .neeson-extract .ep-hero-copy {
+    padding-top: 7px;
+  }
+  .neeson-extract .ep-hero h1 {
+    font-size: clamp(2.45rem, 8.8vw, 3.35rem);
+  }
+  .neeson-extract .ep-hero-art {
+    height: 174px;
+    margin-inline: -8px;
+  }
+  .neeson-extract .ep-profile-grid,
+  .neeson-extract .ep-materials-grid,
+  .neeson-extract .ep-role-grid,
+  .neeson-extract .ep-heritage-grid,
+  .neeson-extract .ep-independence-grid,
+  .neeson-extract .ep-specialists-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+  .neeson-extract .ep-portrait {
+    min-height: 390px;
+    aspect-ratio: 4 / 4.5;
+    order: -1;
+  }
+  .neeson-extract .ep-profile-copy h2 {
+    font-size: clamp(2rem, 8vw, 2.65rem);
+  }
+  .neeson-extract .ep-education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .neeson-extract .ep-capabilities {
+    margin-top: 42px;
+  }
+  .neeson-extract .ep-heritage-heading {
+    margin-bottom: 25px;
+  }
+  .neeson-extract .ep-heritage-graphic {
+    min-height: 260px;
+  }
+  .neeson-extract .ep-lineage {
+    margin-top: 27px;
+  }
+}
+@media (max-width: 420px) {
+  .neeson-extract .ep-page .section {
+    padding-block: 46px;
+  }
+  .neeson-extract .ep-hero-grid {
+    padding-block: 21px 9px;
+  }
+  .neeson-extract .ep-hero h1 {
+    font-size: clamp(2.15rem, 9.1vw, 2.55rem);
+  }
+  .neeson-extract .ep-hero-art {
+    height: 151px;
+    margin-inline: -6px;
+  }
+  .neeson-extract .ep-hero-cta {
+    max-width: 100%;
+    font-size: 11px;
+    padding-inline: 13px;
+  }
+  .neeson-extract .ep-portrait {
+    min-height: 350px;
+  }
+  .neeson-extract .ep-portrait-tag {
+    left: 12px;
+    max-width: calc(100% - 24px);
+    font-size: 6px;
+    letter-spacing: .08em;
+  }
+  .neeson-extract .ep-education-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .neeson-extract .ep-capability {
+    min-height: 142px;
+    padding: 13px;
+  }
+  .neeson-extract .ep-capability h4 {
+    font-size: 11px;
+  }
+  .neeson-extract .ep-capability p {
+    font-size: 9px;
+  }
+  .neeson-extract .ep-heritage-badge {
+    font-size: 7px;
+    letter-spacing: .07em;
+  }
+  .neeson-extract .ep-heritage-disclaimer {
+    gap: 10px;
+    padding: 14px 13px;
+  }
+  .neeson-extract .ep-heritage-disclaimer strong {
+    font-size: 12px;
+  }
+  .neeson-extract .ep-collaboration {
+    grid-template-columns: minmax(0, 1fr) 12px minmax(0, 1fr) 12px minmax(0, 1fr);
+    padding-inline: 6px;
+    gap: 2px;
+  }
+  .neeson-extract .ep-collab-node {
+    min-width: 0;
+    padding-inline: 3px;
+  }
+  .neeson-extract .ep-collab-node strong {
+    font-size: 6px;
+    overflow-wrap: anywhere;
+  }
+  .neeson-extract .ep-compare-card {
+    padding: 22px 19px;
+  }
+}
