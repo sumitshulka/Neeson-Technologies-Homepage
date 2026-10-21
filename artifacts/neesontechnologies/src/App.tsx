@@ -1,6 +1,7 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import './pages/how-we-help.css';
 import { ExpertisePageContent } from '@/pages/expertise-page';
+import { ExpertsPageContent } from '@/pages/experts-page';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -592,16 +593,7 @@ function ExpertisePage() {
 }
 
 function ExpertsPage() {
-  return <Shell>
-    <PageHero eyebrow="OUR EXPERTS" title={<>One principal.<br />Direct technical dialogue.</>} description="Dr Sonia Tikku Suresh is the Principal and leads client conversations and advisory reviews." />
-    <section className="inner-body"><div className="wrap">
-      <div className="expert-profile">
-        <div className="profile-monogram" role="img" aria-label="Abstract materials-science motif"><span>NEESON / MATERIALS PERSPECTIVE</span></div>
-        <div className="profile-copy"><p className="eyebrow">PRINCIPAL</p><h2>Dr Sonia Tikku Suresh</h2><p>Dr Sonia Tikku Suresh leads client conversations and advisory reviews at Neeson Technologies. Her hands-on materials and characterisation experience informs a practical focus on what a compound does after dose—not only what a machine can deliver.</p><p>Engagements begin with a defined client question. The scope is agreed with the client, and advice is offered independently of equipment sales.</p><PageCta text="Speak with Dr Sonia about one live question and the right next step." /></div>
-      </div>
-      <div className="callout" style={{ marginTop: 34 }}>Neeson Technologies is an independent advisory practice. No additional experts are represented on this page; specialist support, where relevant, is discussed transparently as part of an agreed scope.</div>
-    </div></section>
-  </Shell>;
+  return <Shell><ExpertsPageContent BookLink={BookLink} /></Shell>;
 }
 
 function HeritagePage() {

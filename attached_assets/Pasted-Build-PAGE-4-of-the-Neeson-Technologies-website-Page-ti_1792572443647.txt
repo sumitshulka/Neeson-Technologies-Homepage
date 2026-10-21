@@ -1,0 +1,972 @@
+Build PAGE 4 of the Neeson Technologies website.
+
+Page title:
+OUR EXPERTS
+
+I am attaching a visual reference/mockup image for this page.
+
+IMPORTANT:
+Use the attached mockup as the PRIMARY visual design reference.
+
+Do NOT place the mockup image itself on the website.
+
+Recreate it using real React / HTML / CSS components.
+
+This page must look like it belongs to exactly the same website as:
+
+Page 1 — Home
+Page 2 — How We Help
+Page 3 — Expertise
+
+Reuse the existing:
+- Header
+- Navigation
+- Logo
+- Typography
+- Colour palette
+- CTA buttons
+- Card styles
+- Footer
+- Animation system
+- Responsive breakpoints
+
+Do NOT create a new visual identity.
+
+The purpose of Page 4 is to answer:
+
+"Who is behind Neeson Technologies?"
+
+The page should feel:
+PERSONAL
+CREDIBLE
+SCIENTIFIC
+EXPERIENCED
+INDEPENDENT
+PREMIUM
+
+==================================================
+1. CORE POSITIONING
+==================================================
+
+This is NOT a conventional corporate "Our Team" page.
+
+Neeson Technologies is an expert-led advisory practice.
+
+The page should therefore focus on:
+- expertise
+- experience
+- technical depth
+- independence
+- credibility
+- personal accountability
+
+The principal is:
+
+Dr Sonia Tikku Suresh
+
+She is the person who leads current client conversations and advisory reviews.
+
+The page should make this extremely clear.
+
+The second profile is:
+
+Dr V. K. Tikku
+
+However, DO NOT present Dr V. K. Tikku as a current Neeson consultant or current team member.
+
+He represents the technical heritage of Neeson Technologies.
+
+Use a clearly differentiated section labelled:
+
+"TECHNICAL HERITAGE"
+
+and explicitly state:
+
+"Dr V. K. Tikku does not participate in current client engagements."
+
+Do not blur the distinction between current expertise and technical heritage.
+
+==================================================
+2. GLOBAL VISUAL LANGUAGE
+==================================================
+
+Use the same visual language as Pages 1–3.
+
+Primary:
+
+Deep Navy:
+#061B2A
+
+Dark Blue:
+#08253A
+
+Electric Blue:
+#168CFF
+
+Blue Purple:
+#6040D8
+
+Purple:
+#7548E8
+
+Lotus Pink:
+#F15BB5
+
+Orange:
+#FFB52E
+
+Yellow:
+#FFC84A
+
+White:
+#FFFFFF
+
+Light background:
+#F5F8FB
+
+Scientific gradient:
+
+Electric Blue → Purple → Pink
+
+CTA gradient:
+
+Orange → Yellow
+
+Use gradients as accents, not as overwhelming backgrounds.
+
+Typography:
+Use exactly the same font and typography system already established.
+
+Preferred:
+Inter / Manrope / Plus Jakarta Sans.
+
+==================================================
+3. HEADER
+==================================================
+
+Reuse EXACTLY the existing header.
+
+Logo:
+Neeson Technologies
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+
+CTA:
+
+Book a 30-minute call →
+
+"OUR EXPERTS" must be the active navigation item.
+
+Use the same active-state treatment as Pages 2 and 3.
+
+Desktop:
+Sticky navigation.
+
+Mobile:
+Logo + hamburger.
+
+==================================================
+4. HERO
+==================================================
+
+Create a sophisticated personal/scientific hero.
+
+Background:
+Deep navy.
+
+Unlike Page 3, this hero should feel slightly warmer and more human.
+
+Use a subtle scientific background:
+- molecular structures
+- electron trails
+- material textures
+- fine particles
+- abstract technical lines
+
+Do not make it look like a laboratory stock image.
+
+Eyebrow:
+
+OUR EXPERTS
+
+Main heading:
+
+"Deep technical expertise.
+Directly accountable."
+
+Alternative visual hierarchy:
+
+"Deep technical expertise."
+white
+
+"Directly accountable."
+blue-purple / pink gradient
+
+Supporting text:
+
+"Neeson Technologies is built around specialist knowledge in materials science, radiation processing and industrial applications, led by Dr Sonia Tikku Suresh."
+
+Then:
+
+"Every current client conversation and advisory review is led by the principal."
+
+Primary CTA:
+
+"Book a 30-minute discovery call →"
+
+==================================================
+5. PRINCIPAL PROFILE — DR SONIA TIKKU SURESH
+==================================================
+
+This is the HERO PROFILE of the page.
+
+Create a large two-column profile section.
+
+Desktop:
+LEFT:
+Professional portrait of Dr Sonia Tikku Suresh.
+
+RIGHT:
+Profile information.
+
+Mobile:
+Portrait first,
+then profile.
+
+If a real photograph has been provided, use it.
+
+If no portrait asset is available:
+Create a clearly replaceable portrait placeholder component.
+
+Do NOT generate an artificial biography photograph.
+
+Do NOT use a generic female scientist stock image.
+
+Profile heading:
+
+"Dr Sonia Tikku Suresh"
+
+Subheading:
+
+"Principal, Neeson Technologies"
+
+Add a small badge:
+
+"CURRENT PRINCIPAL"
+
+Then the key positioning:
+
+"Dr Sonia Tikku Suresh leads every current client conversation and advisory review."
+
+==================================================
+6. SONIA — EDUCATION
+==================================================
+
+Create a clean "Education" block.
+
+Heading:
+
+"Education"
+
+Use only the source-supported qualifications:
+
+PhD in Chemical Engineering
+Indian Institute of Technology Bombay
+
+Master's Degree
+Drexel University
+
+Do not invent:
+- dates
+- thesis title
+- university rankings
+- additional qualifications
+
+Use elegant qualification cards.
+
+Possible visual:
+
+PhD
+Chemical Engineering
+IIT Bombay
+
+Master's
+Drexel University
+
+==================================================
+7. SONIA — TECHNICAL EXPERTISE
+==================================================
+
+Create a section within her profile:
+
+"Technical Expertise"
+
+Use the source-supported expertise:
+
+Nanoparticle synthesis and colloids
+
+Surface modification and coatings
+
+Polymer nanocomposites and compounding
+
+Hands-on characterisation
+
+Radiation processing
+
+Polymer radiation chemistry
+
+Display as six premium capability tiles.
+
+Each tile:
+
+Number
+Icon
+Capability
+Short supporting phrase
+
+Example:
+
+01
+NANOPARTICLE SYNTHESIS
+& COLLOIDS
+
+02
+SURFACE MODIFICATION
+& COATINGS
+
+03
+POLYMER NANOCOMPOSITES
+& COMPOUNDING
+
+04
+HANDS-ON
+CHARACTERISATION
+
+05
+RADIATION
+PROCESSING
+
+06
+POLYMER RADIATION
+CHEMISTRY
+
+Do not add unsupported technical claims.
+
+==================================================
+8. SONIA — EXPERIENCE POSITIONING
+==================================================
+
+Create a visually distinctive dark section.
+
+Heading:
+
+"Materials science behind the advice."
+
+Copy:
+
+"Dr Sonia Tikku Suresh brings hands-on materials and characterisation experience to every engagement."
+
+Then:
+
+"That is why Neeson asks what your compound does after dose, not only what the machine can deliver."
+
+This should be one of the strongest statements on the page.
+
+Create a visual:
+
+MATERIAL
+↓
+PROCESS
+↓
+RESPONSE
+↓
+CHARACTERISATION
+↓
+DECISION
+
+Use subtle glowing connectors.
+
+==================================================
+9. SONIA — CURRENT ROLE
+==================================================
+
+Create a compact section called:
+
+"Current role"
+
+Display:
+
+PRINCIPAL
+Neeson Technologies
+
+Then:
+
+"Leads current client conversations and advisory reviews."
+
+Then:
+
+"Advisory focus"
+
+- Cable and polymer businesses
+- Radiation processing questions
+- Materials behaviour
+- Product and qualification evidence
+- Advanced materials questions
+- Evidence-led technical decisions
+
+Do not imply she personally performs every specialist service.
+
+==================================================
+10. PERSONAL ACCOUNTABILITY
+==================================================
+
+Create a premium callout.
+
+Heading:
+
+"One accountable technical lead."
+
+Copy:
+
+"Every engagement starts with a defined question. The principal establishes the scope, interprets the available evidence and sets out what the evidence supports, what remains uncertain and what should happen next."
+
+Create three visual statements:
+
+DEFINE
+The decision
+
+INTERPRET
+The evidence
+
+GUIDE
+The next step
+
+Use:
+Blue
+Purple
+Pink
+
+This section should reinforce the expert-led nature of Neeson.
+
+==================================================
+11. TECHNICAL HERITAGE
+==================================================
+
+Now create a visually distinct section.
+
+This should NOT look like another current team member profile.
+
+Use a darker, heritage-inspired visual treatment.
+
+Eyebrow:
+
+"TECHNICAL HERITAGE"
+
+Heading:
+
+"Built on a deeper technical foundation."
+
+Supporting text:
+
+"Neeson Technologies draws on a technical heritage connected to the early development of electron-beam processing in the Indian cable industry."
+
+Then profile:
+
+"Dr V. K. Tikku"
+
+Subheading:
+
+"Technical Heritage"
+
+Add a clearly visible status badge:
+
+TECHNICAL HERITAGE
+NOT A CURRENT CLIENT ADVISOR
+
+Then source-supported description:
+
+"Dr V. K. Tikku contributed to the early development of electron-beam processing in the Indian cable industry."
+
+Then:
+
+"His work forms part of the technical heritage from which Neeson's perspective has developed."
+
+==================================================
+12. IMPORTANT HERITAGE DISCLAIMER
+==================================================
+
+This must be visually prominent.
+
+Use a subtle bordered callout:
+
+"Dr V. K. Tikku does not participate in current client engagements."
+
+Do NOT bury this in small text.
+
+Do NOT describe him as:
+- current advisor
+- consultant
+- team member
+- principal
+- active specialist
+
+Do not imply that current client work is delivered by him.
+
+==================================================
+13. TECHNICAL HERITAGE VISUAL
+==================================================
+
+Create a sophisticated historical-to-modern visual.
+
+LEFT:
+
+EARLY E-BEAM PROCESSING
+
+Use:
+- archival-style technical abstraction
+- electron beam
+- cable cross-section
+- industrial processing
+
+MIDDLE:
+
+TECHNICAL HERITAGE
+
+A glowing timeline.
+
+RIGHT:
+
+CURRENT ADVISORY
+
+Materials
+Evidence
+Decision
+
+The visual should communicate:
+
+EARLY TECHNICAL DEVELOPMENT
+→
+TECHNICAL HERITAGE
+→
+MODERN EVIDENCE-LED ADVISORY
+
+Do not use fabricated historical dates.
+
+Do not create fake historical photographs.
+
+==================================================
+14. CURRENT VS HERITAGE
+==================================================
+
+Create a simple comparison section.
+
+Heading:
+
+"Current expertise and technical heritage."
+
+Two cards.
+
+CARD A:
+
+CURRENT
+
+Dr Sonia Tikku Suresh
+
+Principal
+Neeson Technologies
+
+Current client conversations
+Current advisory reviews
+Materials science
+Radiation processing
+Evidence-led decisions
+
+Accent:
+Electric Blue / Purple.
+
+CARD B:
+
+TECHNICAL HERITAGE
+
+Dr V. K. Tikku
+
+Technical Heritage
+
+Historical contribution to electron-beam processing in the Indian cable industry
+
+Does not participate in current engagements.
+
+Accent:
+Orange / Pink.
+
+Make the distinction extremely clear.
+
+==================================================
+15. INDEPENDENCE
+==================================================
+
+Create a dark navy section.
+
+Eyebrow:
+
+"INDEPENDENT BY DESIGN"
+
+Heading:
+
+"Expertise without an equipment-sales agenda."
+
+Copy:
+
+"Neeson's advisory scope is agreed with the client. Relevant supplier or specialist relationships are disclosed in the proposal."
+
+Then:
+
+"Equipment suppliers, laboratories and qualified specialists retain their own responsibilities."
+
+Create a visual:
+
+CLIENT QUESTION
+↓
+INDEPENDENT REVIEW
+↓
+EVIDENCE
+↓
+OPTIONS
+↓
+DECISION
+
+This should connect the expert profile back to the company's positioning.
+
+==================================================
+16. WHEN ADDITIONAL EXPERTISE IS REQUIRED
+==================================================
+
+Create a light section.
+
+Heading:
+
+"One expert does not need to answer every question."
+
+Supporting copy:
+
+"Where a project needs additional expertise, Neeson proposes a named specialist with a defined role and responsibility, agreed with the client before work starts."
+
+Then visualise:
+
+NEESON
++
+NAMED SPECIALIST
++
+DEFINED RESPONSIBILITY
+
+→
+
+CLEARER DECISION
+
+Important:
+
+Do NOT name additional specialists.
+
+Do NOT invent a network of experts.
+
+Do NOT show fake headshots.
+
+Use abstract expert/network icons.
+
+==================================================
+17. FINAL CTA
+==================================================
+
+Use the same final CTA component as Pages 1–3.
+
+Deep navy / blue-purple background.
+
+Heading:
+
+"Bring your question
+to the right expert."
+
+Supporting text:
+
+"In thirty minutes we find out whether Neeson is the right fit and what the next step would be."
+
+Primary CTA:
+
+"Book a 30-minute discovery call →"
+
+Secondary:
+
+"Explore our expertise →"
+
+Do not use:
+"Free consultation"
+
+Use:
+"Discovery call"
+
+==================================================
+18. FOOTER
+==================================================
+
+Reuse EXACTLY the same footer from all previous pages.
+
+Left:
+
+Neeson Technologies
+
+"Independent advisory on radiation processing of materials. Bengaluru, India."
+
+Quick Links:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+Contact and Booking
+
+Focus Areas:
+
+Materials Behaviour
+Process Qualification
+Evidence Strategy
+Advanced Materials
+Industrial Consulting
+
+Bottom:
+
+© 2026 Neeson Technologies. All rights reserved.
+
+Privacy Policy | Terms of Use
+
+==================================================
+19. RESPONSIVE DESIGN
+==================================================
+
+This page must be portrait-first.
+
+Mobile:
+
+Hero:
+Heading
+Supporting text
+CTA
+Scientific visual
+
+Sonia profile:
+Portrait
+Name
+Role
+Current status
+Biography
+Education
+Expertise
+
+Technical expertise:
+2-column compact grid where possible.
+
+Personal accountability:
+Stacked.
+
+Technical Heritage:
+Profile
+Status
+Description
+Heritage visual
+
+Current vs Heritage:
+Stacked cards.
+
+Final CTA:
+Full width.
+
+Footer:
+Stacked.
+
+Desktop:
+
+Sonia profile:
+50/50 layout.
+
+Technical expertise:
+3 × 2 grid.
+
+Heritage:
+Two-column.
+
+Current vs Heritage:
+2-column.
+
+==================================================
+20. ANIMATION
+==================================================
+
+Use the same animation system as previous pages.
+
+Subtle:
+- Fade-up on scroll
+- Portrait image reveal
+- Card hover
+- Timeline animation
+- Scientific particles
+- Gradient light movement
+- CTA arrow movement
+
+Do not over-animate.
+
+The page should feel:
+confident
+professional
+human
+scientific
+
+not theatrical.
+
+==================================================
+21. ROUTING
+==================================================
+
+Page URL:
+
+/our-experts
+
+Navigation:
+
+/
+ /how-we-help
+ /expertise
+ /our-experts
+ /technical-heritage
+ /contact
+
+CTA:
+ /contact
+
+"Explore our expertise":
+ /expertise
+
+Do not use "#" placeholder links.
+
+==================================================
+22. CONTENT ACCURACY
+==================================================
+
+The supplied Neeson Technologies source material is authoritative.
+
+Do not invent:
+
+- Additional qualifications
+- Dates
+- Awards
+- Certifications
+- Publications
+- Patents
+- Employers
+- Client names
+- Project names
+- Historical dates
+- Additional experts
+- Technical claims
+
+For Dr Sonia Tikku Suresh use only source-supported information.
+
+For Dr V. K. Tikku use only the technical heritage information supported by the source.
+
+Most importantly:
+
+Dr Sonia Tikku Suresh:
+CURRENT PRINCIPAL
+
+Dr V. K. Tikku:
+TECHNICAL HERITAGE
+
+Dr V. K. Tikku:
+NOT CURRENTLY INVOLVED IN CLIENT ENGAGEMENTS.
+
+==================================================
+23. IMPORTANT DESIGN DISTINCTION
+==================================================
+
+Page 1:
+WHY NEESON?
+
+Page 2:
+HOW NEESON HELPS.
+
+Page 3:
+WHAT NEESON KNOWS.
+
+Page 4:
+WHO IS BEHIND NEESON.
+
+Page 5:
+TECHNICAL HERITAGE.
+
+Page 6:
+CONTACT / BOOKING.
+
+Therefore Page 4 should NOT become a duplicate of Page 3.
+
+Page 3 demonstrates technical expertise.
+
+Page 4 demonstrates:
+PEOPLE
+CREDIBILITY
+ACCOUNTABILITY
+TECHNICAL HERITAGE
+
+The visitor should finish Page 4 thinking:
+
+"There is a real technical expert accountable for the advice."
+
+and:
+
+"The company has a genuine technical lineage, but it is not pretending that historical contributors are current consultants."
+
+==================================================
+24. FINAL QUALITY CHECK
+==================================================
+
+Before considering the page complete:
+
+Compare the rendered page against the attached Page 4 mockup.
+
+Check:
+
+- Header
+- Navigation
+- Hero proportions
+- Portrait placement
+- Profile hierarchy
+- Typography
+- Card proportions
+- Scientific background
+- Current vs heritage distinction
+- CTA
+- Footer
+
+Make sure the page does NOT look like a generic "Our Team" template.
+
+It should feel like an expert-led scientific advisory practice.
+
+The final visual impression:
+
+EXPERTISE
++
+ACCOUNTABILITY
++
+TECHNICAL HERITAGE
++
+INDEPENDENCE
+
+Use generous whitespace.
+
+Avoid excessive text density.
+
+Make the page premium and highly credible.
