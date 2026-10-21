@@ -1,0 +1,1184 @@
+Build PAGE 5 of the Neeson Technologies website.
+
+Page title:
+CONTACT & BOOKING
+
+This is the PRIMARY conversion page of the website.
+
+I am attaching a visual reference/mockup image for this page.
+
+IMPORTANT:
+Use the attached mockup as the PRIMARY visual design reference.
+
+Do NOT place the mockup image itself on the webpage.
+
+Recreate the design using real React / HTML / CSS components.
+
+This page must look like the SAME website as:
+
+Page 1 — Home
+Page 2 — How We Help
+Page 3 — Expertise
+Page 4 — Our Experts
+
+Reuse the existing:
+- Header
+- Navigation
+- Logo
+- Typography
+- Colour palette
+- Button system
+- Card system
+- Footer
+- Animation language
+- Responsive breakpoints
+
+Do NOT introduce a different design language on the Contact page.
+
+==================================================
+1. PURPOSE OF THE PAGE
+==================================================
+
+The page has one primary objective:
+
+Convert a visitor with a genuine technical/business question into a
+30-minute discovery call or enquiry.
+
+The visitor should be able to:
+
+1. Book a 30-minute discovery call
+2. Choose a convenient time
+3. Submit a short enquiry
+4. Email Neeson
+5. Connect via WhatsApp
+6. Visit LinkedIn
+7. Request a callback if required
+
+The page should NOT feel like a generic "Contact Us" page.
+
+It should feel like:
+
+"Let's establish whether Neeson is the right fit."
+
+The central message:
+
+"Bring one question.
+Leave with a next step."
+
+==================================================
+2. IMPORTANT POSITIONING
+==================================================
+
+The discovery call is NOT a technical consultation.
+
+The call establishes:
+- Whether Neeson is the right fit
+- What decision the client is facing
+- When the decision needs to be made
+- What a scoped next step could involve
+
+Do NOT imply that the 30-minute call includes:
+- Document review
+- Detailed technical analysis
+- Substantive technical advice
+- Formal qualification
+- Engineering sign-off
+
+Use this important statement prominently:
+
+"Document review and substantive technical advice are undertaken through an agreed paid engagement."
+
+And:
+
+"Please do not send confidential technical details at this stage."
+
+==================================================
+3. GLOBAL VISUAL LANGUAGE
+==================================================
+
+Use exactly the same visual language as Pages 1–4.
+
+Primary:
+
+Deep Navy:
+#061B2A
+
+Dark Blue:
+#08253A
+
+Electric Blue:
+#168CFF
+
+Blue Purple:
+#6040D8
+
+Purple:
+#7548E8
+
+Lotus Pink:
+#F15BB5
+
+Orange:
+#FFB52E
+
+Yellow:
+#FFC84A
+
+White:
+#FFFFFF
+
+Light background:
+#F5F8FB
+
+Use gradients sparingly.
+
+Primary CTA gradient:
+
+Orange → Yellow
+
+Scientific accent:
+
+Electric Blue → Purple → Pink
+
+Typography:
+Use the same font as the previous pages.
+
+Preferred:
+Inter / Manrope / Plus Jakarta Sans.
+
+==================================================
+4. HEADER
+==================================================
+
+Reuse EXACTLY the same header as all previous pages.
+
+Logo:
+Neeson Technologies
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+
+Right CTA:
+
+Book a 30-minute call →
+
+The active navigation item should be:
+
+Contact / Booking
+
+If the existing navigation does not have "Contact", add it discreetly or keep the CTA visually active.
+
+Desktop:
+Sticky header.
+
+Mobile:
+Logo + hamburger.
+
+==================================================
+5. HERO
+==================================================
+
+Create a premium dark hero.
+
+Eyebrow:
+
+CONTACT & BOOKING
+
+Main heading:
+
+"Book a 30-minute
+discovery call"
+
+Use large, confident typography.
+
+Highlight:
+"30-minute"
+with blue-purple / pink gradient or electric blue.
+
+Supporting copy:
+
+"Tell us the decision your team is facing and when it needs to be made."
+
+Second paragraph:
+
+"The call establishes whether Neeson is the right fit and what a scoped next step could involve."
+
+Then an important small statement:
+
+"Document review and substantive technical advice are undertaken through an agreed paid engagement."
+
+Primary visual CTA:
+
+"Choose a time →"
+
+Secondary:
+
+"Prefer email? Send an enquiry →"
+
+==================================================
+6. HERO VISUAL
+==================================================
+
+The right side of the hero should contain a premium scientific visual.
+
+Use a visual metaphor of:
+
+QUESTION
+→
+EVIDENCE
+→
+DECISION
+
+Possible visual:
+
+A glowing electron-beam line travelling through a material/cable structure and resolving into a clean decision node.
+
+Use:
+- Electric blue
+- Purple
+- Pink
+- Orange
+
+Do not use:
+- Generic business handshake
+- Generic customer-service imagery
+- Generic phone/contact stock photo
+
+This is a scientific industrial advisory practice.
+
+==================================================
+7. MAIN CONTACT / BOOKING AREA
+==================================================
+
+This is the most important section.
+
+Create a two-column desktop layout.
+
+LEFT:
+Booking / calendar.
+
+RIGHT:
+Enquiry / qualification form.
+
+On mobile:
+Booking first,
+then enquiry form.
+
+==================================================
+8. LEFT — BOOKING SCHEDULER
+==================================================
+
+Heading:
+
+"Choose a time"
+
+Supporting text:
+
+"Times shown in India Standard Time. Your calendar will convert this to your own time zone once the scheduler is connected."
+
+Create a premium scheduler card.
+
+IMPORTANT:
+
+Build this as an integration-ready component.
+
+Do NOT hard-code fake meeting slots permanently.
+
+Create a configuration object such as:
+
+BOOKING_PROVIDER = "calendly"
+
+Possible values:
+
+"calendly"
+"cal.id"
+"custom"
+
+Create a placeholder configuration:
+
+CALENDLY_URL = "YOUR_CALENDLY_URL"
+CAL_ID_URL = "YOUR_CAL_ID_URL"
+
+The actual URL must be easy to replace in one location.
+
+If no URL is configured:
+show a polished placeholder:
+
+"Booking calendar coming soon"
+
+with:
+
+"Prefer to enquire by email or WhatsApp?"
+
+and buttons for those channels.
+
+When a real Calendly or Cal.id URL is configured:
+the component should be capable of displaying/opening the scheduler.
+
+Prefer:
+embedded scheduler if technically appropriate.
+
+Otherwise:
+open scheduler in a modal or new tab.
+
+Do not require API credentials for the basic implementation.
+
+==================================================
+9. BOOKING DETAILS
+==================================================
+
+Under the scheduler show:
+
+30 minutes
+
+Discovery call
+
+India Standard Time
+
+No document review
+
+No substantive technical advice
+
+One live question
+
+Use small icons.
+
+==================================================
+10. RIGHT — ENQUIRY FORM
+==================================================
+
+Heading:
+
+"Tell us about your question"
+
+Supporting text:
+
+"Keep it brief. One or two sentences are enough for the first conversation."
+
+Fields:
+
+Your name *
+Work email *
+Company *
+Role
+Your question, in one or two sentences *
+Decision timing (optional)
+
+Do NOT include excessive fields.
+
+Do NOT ask for:
+- Address
+- Revenue
+- Budget
+- Number of employees
+- Confidential technical documents
+
+The form should be simple.
+
+==================================================
+11. CONFIDENTIALITY WARNING
+==================================================
+
+Immediately above the submit button create a clearly visible warning box.
+
+Icon:
+Shield / lock.
+
+Text:
+
+"Please do not include confidential technical details or upload documents at this stage."
+
+Then:
+
+"Document review and substantive technical advice are undertaken through an agreed paid engagement."
+
+This should be visually prominent but not alarming.
+
+==================================================
+12. FORM SUBMIT
+==================================================
+
+Primary button:
+
+"Send enquiry →"
+
+On successful submission:
+
+"Thank you. Your enquiry has been received."
+
+Then:
+
+"We will respond within two business days."
+
+IMPORTANT:
+
+Do not claim that this response time is guaranteed unless configured.
+
+Make the response-time text configurable.
+
+For now:
+
+"Typical response: within two business days."
+
+Make this easy to modify.
+
+==================================================
+13. FORM VALIDATION
+==================================================
+
+Implement real client-side validation.
+
+Required:
+- Name
+- Work email
+- Company
+- Question
+
+Optional:
+- Role
+- Decision timing
+
+Email validation.
+
+Question:
+minimum 10 characters.
+
+Show clear inline validation.
+
+Do not use browser-default alert boxes.
+
+Use elegant inline validation.
+
+==================================================
+14. ANTI-SPAM
+==================================================
+
+Prepare the form for future integration with:
+
+- Replit backend
+- Formspree
+- Resend
+- SendGrid
+- Supabase
+- Custom API
+
+Do not hard-code API keys.
+
+Create a clean submit handler.
+
+Use environment variables where backend integration is eventually added.
+
+Example:
+
+CONTACT_FORM_ENDPOINT
+
+If no endpoint is configured:
+show a development-mode success state rather than silently failing.
+
+==================================================
+15. WHATSAPP CONTACT
+==================================================
+
+Create a dedicated contact card below the main booking/form area.
+
+Heading:
+
+"Prefer WhatsApp?"
+
+Copy:
+
+"Send a short message about the decision your team is facing."
+
+Button:
+
+"Connect on WhatsApp →"
+
+Use the official WhatsApp icon.
+
+IMPORTANT:
+
+Do NOT invent the WhatsApp number.
+
+Create a configuration:
+
+WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER"
+
+The button should generate:
+
+https://wa.me/WHATSAPP_NUMBER
+
+with a pre-filled message such as:
+
+"Hello Neeson Technologies, I would like to discuss a technical/business question and understand whether Neeson may be the right fit."
+
+Make the number configurable from one location.
+
+==================================================
+16. EMAIL CONTACT
+==================================================
+
+Create a separate card:
+
+"Prefer email?"
+
+Copy:
+
+"Send a brief outline of the decision you are facing."
+
+Button:
+
+"Email Neeson →"
+
+Create configuration:
+
+ENQUIRY_EMAIL = "YOUR_ENQUIRY_EMAIL"
+
+Use:
+
+mailto:
+
+when configured.
+
+IMPORTANT:
+
+Do not invent an email address.
+
+The source document currently uses a placeholder for the monitored enquiry email.
+
+==================================================
+17. LINKEDIN
+==================================================
+
+Create a professional social/contact card:
+
+"Connect on LinkedIn"
+
+Copy:
+
+"Follow Neeson Technologies and connect with the practice."
+
+Button:
+
+"LinkedIn →"
+
+Create configuration:
+
+LINKEDIN_URL = "YOUR_LINKEDIN_URL"
+
+Do not invent the actual LinkedIn URL.
+
+If the URL is not configured:
+do not show a broken link.
+
+Instead:
+hide the card or show:
+
+"LinkedIn profile coming soon."
+
+==================================================
+18. CALLBACK OPTION
+==================================================
+
+Create a compact card:
+
+"Prefer a callback?"
+
+Fields:
+
+Name
+Phone number
+Preferred time
+Short reason
+
+Button:
+
+"Request a callback →"
+
+This does NOT need to be a full separate form.
+
+Use a compact modal or inline expandable form.
+
+Make the phone number field:
+- International format friendly
+- Country code supported
+
+Do not assume India-only phone numbers.
+
+==================================================
+19. CONTACT OPTIONS GRID
+==================================================
+
+Create a visually beautiful four-card section.
+
+Cards:
+
+BOOK A CALL
+
+30-minute discovery call
+
+Choose a time
+
+---
+
+EMAIL
+
+Send a brief enquiry
+
+Email Neeson
+
+---
+
+WHATSAPP
+
+Quick conversation
+
+Connect on WhatsApp
+
+---
+
+LINKEDIN
+
+Professional connection
+
+Visit LinkedIn
+
+Use:
+Blue
+Purple
+Pink
+Orange
+
+Each card has:
+- icon
+- title
+- one-line description
+- CTA
+
+Cards should have subtle hover animations.
+
+==================================================
+20. WHAT HAPPENS AFTER YOU CONTACT US
+==================================================
+
+Create a light section.
+
+Eyebrow:
+
+"WHAT HAPPENS NEXT"
+
+Heading:
+
+"A simple first step."
+
+Create four steps:
+
+01
+YOU SHARE THE QUESTION
+
+One or two sentences are enough.
+
+02
+WE ESTABLISH THE FIT
+
+We discuss whether Neeson is the right fit for the question.
+
+03
+WE DEFINE THE NEXT STEP
+
+If appropriate, we outline a scoped engagement.
+
+04
+WORK STARTS WITH AGREED SCOPE
+
+Paid technical work begins only after scope, timing and fees are agreed.
+
+Visual:
+A horizontal timeline on desktop.
+
+Vertical timeline on mobile.
+
+==================================================
+21. WHAT THE DISCOVERY CALL IS NOT
+==================================================
+
+Create a dark navy section.
+
+Heading:
+
+"What the call is not"
+
+Create three cards:
+
+NO DOCUMENT REVIEW
+
+"We do not review documents during the discovery call."
+
+NO SUBSTANTIVE TECHNICAL ADVICE
+
+"Detailed technical advice is undertaken through an agreed paid engagement."
+
+NO CONFIDENTIAL MATERIAL
+
+"Please do not send confidential technical details at this stage."
+
+This section is important for setting expectations.
+
+==================================================
+22. PRIVACY / DATA HANDLING
+==================================================
+
+Create a subtle privacy notice near the form.
+
+Text:
+
+"By submitting an enquiry, you agree to our privacy notice."
+
+Link:
+
+"Privacy notice →"
+
+IMPORTANT:
+
+Do not create detailed legal privacy claims unless supplied.
+
+Create:
+
+/privacy
+
+as a placeholder route.
+
+If the privacy notice is not yet ready:
+show a simple "Privacy notice coming soon" page.
+
+Do not invent GDPR / ISO / data-retention claims.
+
+==================================================
+23. LOCATION
+==================================================
+
+Create a small footer/contact location section.
+
+Heading:
+
+"Neeson Technologies"
+
+Text:
+
+"Independent advisory on radiation processing of materials."
+
+"Bengaluru, India."
+
+Do not invent:
+- street address
+- office number
+- Google Maps location
+- physical office details
+
+If a confirmed address is added later, make it configurable.
+
+==================================================
+24. FINAL CONVERSION CTA
+==================================================
+
+Create a strong final CTA before the footer.
+
+Deep navy / blue-purple gradient.
+
+Heading:
+
+"Bring one question.
+Leave with a next step."
+
+Supporting:
+
+"In thirty minutes we find out whether Neeson is the right fit and what the next step would be."
+
+CTA:
+
+"Book a 30-minute discovery call →"
+
+Secondary:
+
+"Send an enquiry →"
+
+Add subtle scientific/e-beam visual background.
+
+==================================================
+25. FOOTER
+==================================================
+
+Reuse the EXACT footer component from Pages 1–4.
+
+Left:
+
+Neeson Technologies
+
+"Independent advisory on radiation processing of materials. Bengaluru, India."
+
+Contact:
+Email — configurable
+WhatsApp — configurable
+LinkedIn — configurable
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+Contact and Booking
+
+Legal:
+
+Privacy notice
+Terms of Use
+
+Bottom statement:
+
+"Neeson Technologies provides independent advisory on radiation processing of materials. Equipment supply, plant operation, radiation safety, regulatory submissions and formal technical sign-off are outside its direct advisory role. Any specialist work and responsibility are defined in the agreed proposal."
+
+© 2026 Neeson Technologies. All rights reserved.
+
+==================================================
+26. MOBILE DESIGN
+==================================================
+
+This page must be designed specifically for portrait mobile.
+
+Target widths:
+
+320px
+375px
+390px
+430px
+
+Mobile order:
+
+HEADER
+
+HERO
+
+BOOK A CALL
+
+ENQUIRY FORM
+
+WHATSAPP / EMAIL / LINKEDIN
+
+WHAT HAPPENS NEXT
+
+WHAT THE CALL IS NOT
+
+FINAL CTA
+
+FOOTER
+
+Do not make the booking/form area cramped.
+
+Inputs must be at least approximately 44px tall.
+
+Buttons must be easy to tap.
+
+Do not use side-by-side tiny input fields on mobile.
+
+==================================================
+27. DESKTOP DESIGN
+==================================================
+
+At desktop:
+
+Maximum content width:
+1200–1280px.
+
+Hero:
+Two-column.
+
+Main contact area:
+50/50.
+
+Booking card:
+Large and prominent.
+
+Form:
+Clean white card.
+
+Contact options:
+4-column grid.
+
+What happens next:
+Horizontal timeline.
+
+What call is not:
+3-column cards.
+
+Final CTA:
+Full-width.
+
+==================================================
+28. ANIMATION
+==================================================
+
+Use the same animation language as previous pages.
+
+Subtle:
+
+- Hero fade-in
+- Scheduler card reveal
+- Form field focus transitions
+- Contact card hover
+- Timeline reveal
+- CTA arrow movement
+- Scientific background particle movement
+
+Do NOT over-animate the form.
+
+The user must feel:
+confidence
+clarity
+trust
+
+==================================================
+29. ACCESSIBILITY
+==================================================
+
+Implement:
+
+- Proper labels for all fields
+- Keyboard navigation
+- Visible focus states
+- ARIA labels for icon buttons
+- Accessible error messages
+- Proper button states
+- Sufficient colour contrast
+- Screen-reader-friendly form validation
+
+Do not rely on colour alone to indicate errors.
+
+==================================================
+30. INTEGRATION ARCHITECTURE
+==================================================
+
+Create a simple configuration file for all external integrations.
+
+Example concept:
+
+siteConfig = {
+
+ booking:
+ {
+   provider: "calendly",
+   calendlyUrl: "",
+   calIdUrl: ""
+ },
+
+ contact:
+ {
+   email: "",
+   whatsappNumber: "",
+   linkedinUrl: "",
+   phone: ""
+ },
+
+ forms:
+ {
+   endpoint: ""
+ }
+
+}
+
+IMPORTANT:
+
+Do not expose secret API keys in frontend code.
+
+Only public URLs and phone/email contact details should be stored client-side.
+
+==================================================
+31. BOOKING PROVIDER ARCHITECTURE
+==================================================
+
+Build the booking component so that it supports:
+
+OPTION 1:
+Calendly
+
+OPTION 2:
+Cal.id
+
+OPTION 3:
+Custom scheduler
+
+The developer should only need to change:
+
+booking.provider
+
+and the relevant URL.
+
+For example:
+
+provider = "calendly"
+
+or:
+
+provider = "calid"
+
+The rest of the page should not change.
+
+If no provider is configured:
+
+show a graceful fallback:
+
+"Online booking is being configured."
+
+Then:
+
+"Prefer to contact us directly?"
+
+with Email and WhatsApp buttons.
+
+==================================================
+32. CONTACT FORM ARCHITECTURE
+==================================================
+
+Build the form as a reusable React component:
+
+<EnquiryForm />
+
+It should support:
+
+onSubmit
+loading
+success
+error
+validation
+
+Do not hard-code a particular backend.
+
+Keep the component ready for:
+- Resend
+- Formspree
+- Supabase
+- custom API
+
+==================================================
+33. IMPORTANT CONTENT ACCURACY
+==================================================
+
+Use the supplied Neeson Technologies source material as authoritative.
+
+The source currently establishes:
+
+"Book a 30-minute discovery call"
+
+"Tell us the decision your team is facing and when it needs to be made."
+
+"The call establishes whether Neeson is the right fit and what a scoped next step could involve."
+
+"Document review and substantive technical advice are undertaken through an agreed paid engagement."
+
+"We do not review documents or give substantive technical advice on the call."
+
+"Please do not send confidential technical details at this stage."
+
+"By submitting, you agree to our privacy notice."
+
+Do not invent:
+- phone numbers
+- email addresses
+- WhatsApp numbers
+- LinkedIn URLs
+- physical address
+- office timings
+- guaranteed response times
+- booking availability
+
+Use configuration placeholders for these.
+
+==================================================
+34. IMPORTANT BRAND POSITIONING
+==================================================
+
+Do not make this page look like:
+
+- A customer-support page
+- A call-centre page
+- A generic contact form
+- A lead-generation landing page
+- A software SaaS contact page
+
+It must feel like:
+
+A direct doorway to a technical expert.
+
+The emotional message should be:
+
+"Have a serious technical or investment question?
+Let's establish whether Neeson is the right person to help."
+
+==================================================
+35. FINAL QUALITY CHECK
+==================================================
+
+Before considering Page 5 complete:
+
+Compare it against the attached Page 5 mockup.
+
+Check:
+
+1. Header consistency
+2. Hero proportions
+3. Booking prominence
+4. Form usability
+5. Contact options
+6. Scientific visual quality
+7. Typography
+8. Spacing
+9. CTA hierarchy
+10. Mobile usability
+11. Footer consistency
+
+Most importantly:
+
+The user should immediately understand:
+
+WHAT CAN I DO HERE?
+
+→ Book a 30-minute discovery call
+
+→ Send an enquiry
+
+→ WhatsApp
+
+→ Email
+
+→ LinkedIn
+
+→ Request a callback
+
+And they should also understand:
+
+WHAT HAPPENS ON THE CALL?
+
+→ Establish fit
+→ Understand the decision
+→ Identify the appropriate next step
+
+NOT:
+
+Detailed technical consulting
+Document review
+Confidential analysis
+Formal technical advice
+
+The page should feel:
+
+PREMIUM
+SCIENTIFIC
+DIRECT
+TRUSTWORTHY
+CONVERSION-FOCUSED
+INDEPENDENT

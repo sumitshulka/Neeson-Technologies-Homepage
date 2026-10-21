@@ -2,6 +2,7 @@ import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import './pages/how-we-help.css';
 import { ExpertisePageContent } from '@/pages/expertise-page';
 import { ExpertsPageContent } from '@/pages/experts-page';
+import { ContactPageContent, PrivacyPageContent } from '@/pages/contact-page';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -52,6 +53,7 @@ const navItems = [
   { label: 'Expertise', href: '/expertise' },
   { label: 'Our Experts', href: '/our-experts' },
   { label: 'Technical Heritage', href: '/technical-heritage' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const seo: Record<string, { title: string; description: string }> = {
@@ -76,8 +78,12 @@ const seo: Record<string, { title: string; description: string }> = {
     description: 'An evidence-led approach to radiation processing, materials science and industrial decision-making.',
   },
   '/contact': {
-    title: 'Contact & Booking Preparation | Neeson Technologies',
-    description: 'Prepare for a 30-minute discovery conversation with Neeson Technologies. No booking provider is linked here.',
+    title: 'Contact & Booking | Neeson Technologies',
+    description: 'Book a 30-minute discovery call or send an enquiry to establish whether Neeson Technologies is the right fit for your question.',
+  },
+  '/privacy': {
+    title: 'Privacy Notice | Neeson Technologies',
+    description: 'Neeson Technologies privacy notice.',
   },
 };
 
@@ -180,7 +186,7 @@ function Footer() {
         <div className="footer-col">
           <h3>QUICK LINKS</h3>
           <div className="footer-links">
-            {[...navItems, { label: 'Contact and Booking', href: '/contact' }].map((item) => (
+            {navItems.map((item) => (
               <Link key={item.href} href={item.href} data-testid={`link-footer-${item.href.slice(1) || 'home'}`}>{item.label}</Link>
             ))}
           </div>
@@ -198,7 +204,7 @@ function Footer() {
       </div>
       <div className="wrap footer-bottom">
         <span>© 2026 Neeson Technologies. All rights reserved.</span>
-        <div className="footer-policy"><span>Privacy Policy</span><span>Terms of Use</span></div>
+        <div className="footer-policy"><Link href="/privacy">Privacy notice</Link><span>Terms of Use</span></div>
       </div>
     </footer>
   );
@@ -613,43 +619,6 @@ function HeritagePage() {
   </Shell>;
 }
 
-function ContactPage() {
-  const [copied, setCopied] = useState(false);
-  const prepText = 'Neeson Technologies discovery call preparation\n\nProduct / material question:\nDecision ahead:\nWhat we know so far:\nWhat remains uncertain:';
-  async function copyPrep() {
-    try {
-      await navigator.clipboard.writeText(prepText);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2800);
-    } catch {
-      setCopied(false);
-    }
-  }
-  return <Shell>
-    <PageHero eyebrow="CONTACT & BOOKING" title={<>Bring one question.<br />Start with a conversation.</>} description="The 30-minute discovery call is a chance to discuss one live question, see whether Neeson is the right fit and identify what the next step could be." />
-    <section className="inner-body"><div className="wrap contact-layout">
-      <article className="contact-panel">
-        <p className="eyebrow">PREPARE FOR THE CONVERSATION</p><h2>Keep it focused on the decision ahead.</h2>
-        <p>You do not need to prepare a presentation or send documents for the call. A little context can help make the conversation useful.</p>
-        <ul className="prep-list">
-          <li><Check size={17} />The product, material or application in question</li>
-          <li><Check size={17} />The decision you are approaching—investment, trial or qualification</li>
-          <li><Check size={17} />What is known so far and what remains uncertain</li>
-          <li><Check size={17} />The next step you are considering</li>
-        </ul>
-        <div className="callout"><strong>Call format:</strong> 30 minutes with Dr Sonia Tikku Suresh. We do not review documents on the call.</div>
-        <div className="copy-box"><p>Copy a simple note to prepare your thoughts before a conversation.</p><button type="button" className="button button-light" onClick={copyPrep} data-testid="button-copy-preparation">{copied ? <><Check size={15} />Copied to clipboard</> : <><ClipboardCopy size={15} />Copy preparation prompts</>}</button><p className="status-text" role="status">{copied ? 'Preparation prompts copied.' : ''}</p></div>
-      </article>
-      <aside className="contact-panel">
-        <p className="eyebrow">BOOKING INFORMATION</p><h2>Arranging a call</h2>
-        <p>No external booking provider or direct contact details have been configured on this page. We will not send you to an unverified booking link or imply that a request has been submitted.</p>
-        <p>When a direct booking or contact route is published, it can be added here. Until then, use the prompts to prepare the question and decision context for a 30-minute discovery conversation.</p>
-        <div className="copy-box"><p><strong>What happens after the call?</strong></p><p>If a defined review could help, Neeson may propose a paid Decision Diagnostic. Scope, timing and fees are agreed before work starts.</p></div>
-      </aside>
-    </div></section>
-  </Shell>;
-}
-
 function RoutedErrorBoundary({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   return <ErrorBoundary resetKey={location}>{children}</ErrorBoundary>;
@@ -662,7 +631,8 @@ function Router() {
     <Route path="/expertise" component={ExpertisePage} />
     <Route path="/our-experts" component={ExpertsPage} />
     <Route path="/technical-heritage" component={HeritagePage} />
-    <Route path="/contact" component={ContactPage} />
+    <Route path="/contact">{() => <Shell><ContactPageContent /></Shell>}</Route>
+    <Route path="/privacy">{() => <Shell><PrivacyPageContent /></Shell>}</Route>
     <Route component={NotFound} />
   </Switch></RoutedErrorBoundary>;
 }

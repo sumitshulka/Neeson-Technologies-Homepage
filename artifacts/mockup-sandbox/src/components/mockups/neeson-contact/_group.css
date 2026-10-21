@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Manrope', sans-serif;
+  --app-font-mono: 'Space Mono', monospace;
+  --navy: #061b2a;
+  --gold: #ffbd3c;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #f4f7fa; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f4f7fa;
+  color: #0c2639;
+  font-family: var(--app-font-sans);
+  text-rendering: optimizeLegibility;
+}
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+::selection { color: #061b2a; background: #ffc34d; }
+
+.neeson-contact-extract { overflow: clip; color: #0c2639; }
+.neeson-contact-extract .wrap { width: min(1260px, calc(100% - 64px)); margin-inline: auto; }
+.neeson-contact-extract .eyebrow {
+  margin: 0 0 14px;
+  color: #2e78bc;
+  font: 700 10px/1.4 var(--app-font-mono);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.neeson-contact-extract .button {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform .22s ease, background .22s ease, color .22s ease;
+}
+.neeson-contact-extract .button:hover { transform: translateY(-2px); }
+.neeson-contact-extract .button:focus-visible,
+.neeson-contact-extract a:focus-visible,
+.neeson-contact-extract button:focus-visible { outline: 3px solid #ffcf70; outline-offset: 3px; }
+.neeson-contact-extract .button-light { color: var(--navy); background: #fff; }
+.neeson-contact-extract .button svg { transition: transform .2s ease; }
+.neeson-contact-extract .button:hover svg { transform: translateX(3px); }
+
+.neeson-contact-extract .inner-hero {
+  position: relative;
+  padding: 88px 0 82px;
+  color: white;
+  background: radial-gradient(ellipse at 91% 22%, rgba(88,61,150,.4), transparent 32%), linear-gradient(120deg, #061b2a, #102b49 62%, #211845);
+}
+.neeson-contact-extract .inner-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 8%;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(transparent, rgba(255,195,77,.5), transparent);
+  opacity: .45;
+}
+.neeson-contact-extract .inner-hero h1 {
+  max-width: 850px;
+  margin: 0;
+  font: 800 clamp(2.75rem, 6vw, 5rem)/.99 var(--app-font-serif);
+  letter-spacing: -.065em;
+}
+.neeson-contact-extract .inner-hero .hero-text {
+  max-width: 680px;
+  color: #d3e0ec;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 19px 0 18px;
+}
+.neeson-contact-extract .inner-hero .eyebrow { color: #f5c35a; }
+.neeson-contact-extract .inner-body { padding: 72px 0 85px; background: #f5f8fa; }
+.neeson-contact-extract .contact-layout { display: grid; grid-template-columns: 1fr .9fr; gap: 24px; align-items: stretch; }
+.neeson-contact-extract .contact-panel { padding: 30px; background: white; border: 1px solid #dce6ed; border-radius: 6px; }
+.neeson-contact-extract .contact-panel h2 { margin: 0 0 12px; font: 800 27px/1.1 var(--app-font-serif); letter-spacing: -.04em; }
+.neeson-contact-extract .contact-panel p { color: #5c7080; font-size: 13px; line-height: 1.7; }
+.neeson-contact-extract .prep-list { list-style: none; padding: 0; margin: 22px 0; }
+.neeson-contact-extract .prep-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e7edf1; color: #274256; font-size: 13px; line-height: 1.5; }
+.neeson-contact-extract .prep-list li svg { color: #3687b7; flex: none; }
+.neeson-contact-extract .callout { padding: 23px 25px; color: white; background: #0d2a41; border-left: 3px solid var(--gold); border-radius: 3px; font-size: 14px; line-height: 1.7; }
+.neeson-contact-extract .callout strong { color: white; }
+.neeson-contact-extract .copy-box { padding: 17px; margin-top: 20px; background: #f1f6f9; border: 1px solid #dce7ee; border-radius: 4px; }
+.neeson-contact-extract .copy-box p { color: #304c60; font-size: 12px; }
+.neeson-contact-extract .status-text { min-height: 19px; margin: 9px 0 0 !important; color: #216d4d !important; font-size: 11px !important; }
+
+@media (max-width: 1050px) {
+  .neeson-contact-extract .wrap { width: min(100% - 48px, 900px); }
+}
+@media (max-width: 800px) {
+  .neeson-contact-extract .contact-layout { grid-template-columns: 1fr; gap: 30px; }
+  .neeson-contact-extract .inner-hero { padding: 58px 0 50px; }
+  .neeson-contact-extract .inner-body { padding: 48px 0 58px; }
+}
+@media (max-width: 520px) {
+  .neeson-contact-extract .wrap { width: calc(100% - 40px); }
+  .neeson-contact-extract .inner-hero { padding: 54px 0 46px; }
+  .neeson-contact-extract .inner-hero h1 { font-size: 3rem; }
+  .neeson-contact-extract .inner-hero .hero-text { font-size: 13px; }
+}
