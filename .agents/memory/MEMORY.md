@@ -1,0 +1,1 @@
+- [Neeson advisory scope](neesontechnologies-scope.md) — Independent, evidence-led advice only; preserve boundaries around equipment, operations, labs, safety, regulatory work, and sign-off.

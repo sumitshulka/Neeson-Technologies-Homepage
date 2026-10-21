@@ -1,0 +1,871 @@
+Build PAGE 2 of the Neeson Technologies website.
+
+Page title:
+HOW WE HELP
+
+I am attaching a visual reference/mockup image for this page.
+
+IMPORTANT:
+Use the attached image as the PRIMARY visual reference.
+
+Recreate the page using actual React/HTML/CSS components.
+
+DO NOT place the mockup image directly on the website.
+
+The resulting page must visually belong to the same website as the Neeson Technologies homepage.
+
+It must use exactly the same:
+- Header
+- Navigation
+- Logo
+- Typography
+- Colour palette
+- Button styles
+- Card styles
+- Border radius
+- Animation language
+- Footer
+- Scientific visual language
+
+The page should feel like the second chapter of the same premium scientific advisory website.
+
+==================================================
+1. PAGE PURPOSE
+==================================================
+
+The purpose of this page is NOT to present a generic list of consulting services.
+
+The purpose is to explain:
+
+"What happens when I bring a technical or investment question to Neeson?"
+
+The core message is:
+
+"A clear question and an agreed written output."
+
+Neeson works with:
+- Cable manufacturers
+- Polymer compound suppliers
+- Businesses assessing irradiation job work against their own capability
+
+The starting point is a:
+- Product question
+- Material question
+- Specification question
+- Investment decision
+that needs better evidence.
+
+The page should therefore communicate:
+
+QUESTION
+→
+EVIDENCE
+→
+INTERPRETATION
+→
+DECISION
+→
+NEXT STEP
+
+==================================================
+2. GLOBAL DESIGN
+==================================================
+
+Use the same design system as the homepage.
+
+Primary background:
+Deep Navy #061B2A
+
+Secondary:
+#08253A
+
+Light background:
+#F5F8FB
+
+White:
+#FFFFFF
+
+Electric Blue:
+#168CFF
+
+Blue Purple:
+#6040D8
+
+Lotus Pink:
+#F15BB5
+
+Orange:
+#FFB52E
+
+Yellow:
+#FFC84A
+
+Use gradients carefully.
+
+Scientific accent gradient:
+
+Electric Blue → Purple → Pink
+
+CTA gradient:
+
+Orange → Yellow
+
+Typography:
+Use the same font as the homepage.
+
+Preferred:
+Inter / Manrope / Plus Jakarta Sans.
+
+The page should be highly readable.
+
+Do not create a generic SaaS dashboard aesthetic.
+
+==================================================
+3. HEADER
+==================================================
+
+Use EXACTLY the same header as the homepage.
+
+Left:
+Neeson Technologies logo.
+
+Navigation:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+
+Right:
+Book a 30-minute call →
+
+The "How We Help" navigation item must be the active item.
+
+Active state:
+Small orange/yellow underline.
+
+Header:
+Deep navy.
+
+Sticky navigation.
+
+Mobile:
+Logo + hamburger menu.
+
+==================================================
+4. HERO SECTION
+==================================================
+
+Create a premium, relatively compact hero.
+
+Do NOT make the hero as tall as the homepage hero.
+
+Use a dark navy / blue-purple background.
+
+Add subtle scientific background decoration:
+- molecular structures
+- electron trails
+- fine particles
+- technical grid
+- subtle cable/e-beam visual
+
+Keep the visual restrained.
+
+Hero eyebrow:
+
+HOW WE HELP
+
+Main heading:
+
+"A clear question.
+An agreed written output."
+
+Use:
+
+"A clear question." in white
+
+"An agreed written output." with blue/purple/pink gradient emphasis.
+
+Supporting copy:
+
+"We work with cable manufacturers, polymer compound suppliers and businesses assessing irradiation job work against their own capability."
+
+Second paragraph:
+
+"The starting point is a product, material, specification or investment decision that needs better evidence."
+
+Primary CTA:
+
+"Book a 30-minute discovery call →"
+
+Secondary text:
+
+"Start with one live question."
+
+==================================================
+5. SECTION — WHO WE WORK WITH
+==================================================
+
+Create a clean light-background section.
+
+Eyebrow:
+
+"WHO WE WORK WITH"
+
+Heading:
+
+"Built around the decisions that matter."
+
+Supporting text:
+
+"Neeson's work is designed for businesses that need to make a technical, product or investment decision with greater confidence."
+
+Create three large horizontal cards on desktop.
+
+On mobile:
+Stack them vertically.
+
+CARD 01:
+
+Icon:
+Industrial cable / factory
+
+Title:
+"Cable makers"
+
+Description:
+
+"Producers planning a line, preparing the next product family, or in the early stages of running an electron-beam line."
+
+Accent:
+Electric Blue.
+
+CARD 02:
+
+Icon:
+Molecule / material
+
+Title:
+"Compound suppliers"
+
+Description:
+
+"Suppliers whose grades must perform after dose, and repeat the result batch after batch."
+
+Accent:
+Pink / Purple.
+
+CARD 03:
+
+Icon:
+Industrial machine / decision
+
+Title:
+"Job-work users"
+
+Description:
+
+"Owners deciding whether to keep buying irradiation or install their own machine."
+
+Accent:
+Orange.
+
+Design details:
+- Large number 01 / 02 / 03
+- Minimal scientific icon
+- Large heading
+- Short text
+- Subtle gradient line
+- Rounded card
+- Soft shadow
+- Hover elevation
+
+Do not overdecorate.
+
+==================================================
+6. SECTION — HOW THE WORK RUNS
+==================================================
+
+This is the MAIN section of the page.
+
+Use a dark navy background or a very light technical background.
+
+Eyebrow:
+
+"HOW THE WORK RUNS"
+
+Heading:
+
+"From one question to a decision you can act on."
+
+Supporting text:
+
+"The discovery call establishes your question, timing and fit. A paid Decision Diagnostic reviews the agreed information and produces a Decision Note and review discussion. Where a larger feasibility or materials review is justified, its scope, site work and specialist responsibilities are agreed separately."
+
+Then create a beautiful three-step vertical process.
+
+DESKTOP:
+Horizontal timeline / journey.
+
+MOBILE:
+Vertical timeline.
+
+STEP 01
+
+Large number:
+01
+
+Title:
+"Discovery Call"
+
+Badge:
+"FREE"
+
+Description:
+
+"We define the decision and who owns it, and confirm whether Neeson is the right fit."
+
+Outcome:
+
+"Recommended next step"
+
+Visual:
+Circle containing an icon of conversation / question.
+
+Connector line:
+01 → 02
+
+---
+
+STEP 02
+
+Large number:
+02
+
+Title:
+"Decision Diagnostic"
+
+Badge:
+"PAID · ONE DEFINED QUESTION"
+
+Description:
+
+"For a first machine, a failed grade or a moved specification."
+
+Then a highlighted box:
+
+"You receive a written Decision Note covering:
+
+• What the available evidence supports
+• Open questions
+• Options
+• Next steps"
+
+Add:
+
+"One review call is included."
+
+Small note:
+
+"Scope, timing and fee are agreed in writing before work starts."
+
+Visual:
+Document/report icon.
+
+---
+
+STEP 03
+
+Large number:
+03
+
+Title:
+"Feasibility or Materials Review"
+
+Badge:
+"PAID · SCOPE AGREED SEPARATELY"
+
+Description:
+
+"For a defined product-family or plant question where a broader view is justified."
+
+Then:
+
+"Stakeholder input, evidence review and a written case for your board or internal decision team."
+
+Small note:
+
+"Scope, any site work and specialist responsibilities are agreed in writing before work starts."
+
+Visual:
+Strategic / engineering icon.
+
+==================================================
+7. VISUAL PROCESS FLOW
+==================================================
+
+Under the three steps, create a visually powerful process diagram.
+
+Show:
+
+YOUR QUESTION
+↓
+AVAILABLE EVIDENCE
+↓
+SUPPORTED CONCLUSIONS
+↓
+OPEN QUESTIONS
+↓
+OPTIONS
+↓
+NEXT WORK
+↓
+DECISION
+
+Use thin glowing lines.
+
+Each node should have a small icon.
+
+Use blue/purple/pink/orange accents.
+
+This is important because this diagram visually explains what makes Neeson's advisory model different.
+
+==================================================
+8. SECTION — WHAT WE ACTUALLY DO
+==================================================
+
+Create a white/light section.
+
+Heading:
+
+"We make the decision clearer."
+
+Supporting text:
+
+"We define the decision and who owns it, review the available evidence, distinguish supported conclusions from open questions, and set out the next work required."
+
+Then create four large visual blocks:
+
+01
+DEFINE
+
+"Define the decision and who owns it."
+
+02
+REVIEW
+
+"Review the available evidence."
+
+03
+DISTINGUISH
+
+"Separate supported conclusions from open questions."
+
+04
+ACT
+
+"Set out the next work required."
+
+Below:
+
+"Tests, trials or formal qualification are separately scoped where needed."
+
+This should be visually elegant and not text-heavy.
+
+==================================================
+9. SECTION — QUESTIONS WE CAN HELP FRAME
+==================================================
+
+Use a dark blue-purple section.
+
+Eyebrow:
+
+"QUESTIONS WE CAN HELP FRAME"
+
+Heading:
+
+"Sometimes the right answer starts with a better question."
+
+Create five question cards.
+
+QUESTION 01:
+
+"Which next product families justify further trials or qualification on your line?"
+
+QUESTION 02:
+
+"Can a compound's performance after dose be confirmed, and repeated?"
+
+QUESTION 03:
+
+"What customer or qualification evidence is needed before the next commitment?"
+
+QUESTION 04:
+
+"Own a machine, or keep buying job work?"
+
+QUESTION 05:
+
+"When a grade's performance changes after dose, what evidence settles the question?"
+
+Design these as:
+- Large typography
+- Number
+- Minimal icon
+- Hover effect
+- Thin gradient border
+
+On mobile:
+Use accordion interaction.
+
+When expanded:
+Show the full question.
+
+==================================================
+10. SECTION — ADVANCED MATERIALS & NANOSCIENCE
+==================================================
+
+Create a two-column section.
+
+LEFT:
+Large scientific visual.
+
+Use:
+- Molecular structure
+- Nanoparticle visual
+- Polymer structure
+- Scientific particles
+
+RIGHT:
+
+Eyebrow:
+
+"ADVANCED MATERIALS & NANOSCIENCE"
+
+Heading:
+
+"Beyond the cable and polymer question."
+
+Copy:
+
+"Alongside the cable and polymer focus, Neeson considers defined advisory questions involving nanoparticles and dispersions, surface modification and coatings, formulation, and interpretation of characterisation data."
+
+Then four small capability tags/cards:
+
+Nanoparticles
+& Dispersions
+
+Surface Modification
+& Coatings
+
+Formulation
+
+Characterisation
+Data Interpretation
+
+Add:
+
+"The scope is agreed around Sonia's demonstrated experience and any required specialist or laboratory input."
+
+Then an important disclaimer:
+
+"These materials questions may support e-beam applications or a separate materials project."
+
+Do not claim that Neeson owns a testing laboratory.
+
+Add:
+
+"Neeson does not imply that it owns a testing laboratory or supplies a complete development and validation service."
+
+==================================================
+11. SECTION — WHAT SITS OUTSIDE OUR ADVISORY ROLE
+==================================================
+
+This needs to be visually clear.
+
+Do NOT hide this in tiny footer text.
+
+Create a clean dark/light split section.
+
+LEFT:
+
+Heading:
+
+"What sits outside our advisory role"
+
+RIGHT:
+Four items.
+
+1
+Equipment supply
+and plant operation
+
+2
+Radiation safety
+and regulatory submissions
+
+3
+Formal technical
+sign-off
+
+4
+Specialist work and responsibility
+defined in the agreed proposal
+
+Use muted icons.
+
+Add supporting text:
+
+"Any specialist work and responsibility are defined in the agreed proposal."
+
+The purpose is to establish trust and independence.
+
+==================================================
+12. FINAL CTA
+==================================================
+
+Use the same CTA treatment as the homepage.
+
+Large full-width dark navy / blue-purple section.
+
+Background:
+Deep navy with subtle electron-beam/cable light trails.
+
+Heading:
+
+"Bring one question.
+Leave with a next step."
+
+Supporting copy:
+
+"In thirty minutes we find out whether Neeson is the right fit and what the next step would be."
+
+Secondary line:
+
+"We do not review documents on the call."
+
+Primary button:
+
+"Book a 30-minute discovery call →"
+
+Button:
+Orange/yellow.
+
+==================================================
+13. FOOTER
+==================================================
+
+Use exactly the same footer as the homepage.
+
+Left:
+
+Neeson Technologies logo
+
+"Independent advisory on radiation processing of materials. Bengaluru, India."
+
+Quick Links:
+
+Home
+How We Help
+Expertise
+Our Experts
+Technical Heritage
+Contact and Booking
+
+Focus Areas:
+
+Materials Behaviour
+Process Qualification
+Evidence Strategy
+Advanced Materials
+Industrial Consulting
+
+Right:
+
+"Independent advice
+for better decisions."
+
+Bottom:
+
+© 2026 Neeson Technologies. All rights reserved.
+
+Privacy Policy | Terms of Use
+
+==================================================
+14. RESPONSIVE BEHAVIOUR
+==================================================
+
+This page must be portrait-first.
+
+At mobile width:
+
+Header:
+Logo + hamburger.
+
+Hero:
+Text first.
+CTA.
+Scientific visual below.
+
+Who We Work With:
+Three stacked cards.
+
+How Work Runs:
+Vertical timeline.
+
+Process flow:
+Vertical.
+
+Questions:
+Accordion.
+
+Advanced Materials:
+Image above text.
+
+Outside Advisory Role:
+Stacked.
+
+Final CTA:
+Full width.
+
+Footer:
+Stacked.
+
+At desktop:
+Use generous whitespace and a maximum content width of approximately 1200–1280px.
+
+==================================================
+15. ANIMATION
+==================================================
+
+Use subtle animation only.
+
+On page load:
+Hero content fades/slides upward.
+
+On scroll:
+Sections reveal gently.
+
+Cards:
+Small elevation on hover.
+
+Timeline:
+Connector line can animate subtly as it enters viewport.
+
+Question cards:
+Small hover movement.
+
+CTA arrow:
+Moves 3–4px on hover.
+
+Scientific particles:
+Very subtle movement.
+
+Do not make the site flashy.
+
+The animation language should communicate:
+precision
+science
+confidence
+technical sophistication.
+
+==================================================
+16. ROUTING
+==================================================
+
+This is:
+
+/how-we-help
+
+Navigation should work.
+
+CTA:
+Book a 30-minute discovery call → /contact
+
+Homepage:
+/
+
+Expertise:
+/expertise
+
+Our Experts:
+/our-experts
+
+Technical Heritage:
+/technical-heritage
+
+Contact:
+/contact
+
+Do not use "#" placeholder links.
+
+==================================================
+17. CONTENT ACCURACY
+==================================================
+
+Use the supplied source material as authoritative.
+
+Do not invent:
+- Clients
+- Case studies
+- Revenue
+- Certifications
+- Awards
+- Machines
+- Laboratories
+- Performance statistics
+- Additional experts
+
+Do not imply that Neeson:
+- Supplies equipment
+- Operates irradiation plants
+- Provides radiation safety
+- Handles regulatory submissions
+- Provides formal technical sign-off
+- Owns a testing laboratory
+- Provides complete development/validation services
+
+Keep the distinction between:
+ADVISORY
+and
+TESTING / QUALIFICATION / SPECIALIST SERVICES
+
+very clear.
+
+==================================================
+18. DESIGN OBJECTIVE
+==================================================
+
+The final page should communicate:
+
+"Bring us a difficult technical or investment question.
+We help you structure the evidence, understand what is known and unknown, and decide what should happen next."
+
+The page should feel:
+
+PREMIUM
+SCIENTIFIC
+INDEPENDENT
+INDUSTRIAL
+EVIDENCE-LED
+TRUSTWORTHY
+
+It should NOT feel like:
+
+A generic consulting company
+A SaaS startup
+An equipment manufacturer
+A university research website
+
+The visual relationship should be:
+
+SCIENCE
++
+INDUSTRY
++
+EVIDENCE
++
+DECISION
+
+Use the attached mockup as the final visual authority and make the implementation as close to it as reasonably possible while ensuring the page is responsive and functional.
