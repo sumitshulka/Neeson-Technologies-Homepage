@@ -168,7 +168,7 @@
 .th-final::before { position: absolute; z-index: -1; inset: 0; content: ''; background: radial-gradient(ellipse at 82% 50%, rgba(112,86,215,.28), transparent 42%), linear-gradient(90deg, rgba(5,25,42,.28), transparent); }
 .th-final-content { position: relative; z-index: 2; }
 .technical-heritage .th-final .th-eyebrow { color: #a8d9ff; }
-.th-final h2 { margin: 0; font: 800 clamp(2.4rem, 4.7vw, 4.1rem)/1.04 var(--app-font-serif); letter-spacing: -.06em; }
+.th-final h2 { max-width: 700px; margin: 0; font: 800 clamp(2.15rem, 4.1vw, 3.4rem)/1.04 var(--app-font-serif); letter-spacing: -.05em; }
 .th-final-content > p:not(.th-eyebrow) { max-width: 560px; margin: 15px 0 22px; color: #d0dfeb; font-size: 13px; line-height: 1.7; }
 .th-final-actions { display: flex; flex-wrap: wrap; gap: 11px; }
 .th-final-beam { position: absolute; z-index: 0; top: 51%; right: -4%; width: 56%; height: 1px; transform: rotate(-13deg); background: linear-gradient(90deg, transparent, rgba(93,174,255,.57), rgba(177,129,255,.6), rgba(255,183,85,.72), transparent); box-shadow: 0 0 19px rgba(93,159,255,.35); }
@@ -244,7 +244,7 @@
   .th-perspective-visual { height: 250px; }
   .th-perspective-copy .th-intro h2 { font-size: 2rem; }
   .th-final { padding: 48px 0; }
-  .th-final h2 { font-size: clamp(2.3rem, 9vw, 3.3rem); }
+  .th-final h2 { font-size: 2.1rem; }
   .th-final-actions { display: grid; }
   .th-final-actions .button { width: 100%; }
   .th-final-beam { width: 100%; right: -35%; top: 27%; }
@@ -263,7 +263,7 @@
 /* Editorial refinement: technical journal rhythm with the established Neeson palette. */
 .technical-heritage .th-copy,
 .technical-heritage .th-dark-copy { font-size: 16px; line-height: 1.72; }
-.technical-heritage .th-hero h1 { font-size: clamp(3.55rem, 6vw, 5.15rem); }
+.technical-heritage .th-hero h1 { max-width: 690px; font-size: clamp(3.1rem, 4.35vw, 4.15rem); line-height: 1.01; letter-spacing: -.06em; }
 .technical-heritage .th-hero-image { left: 42%; }
 .technical-heritage .th-hero-image img { filter: saturate(.92) contrast(1.02) brightness(.94); }
 .technical-heritage .th-hero-beam { opacity: .43; box-shadow: none; }
@@ -343,7 +343,7 @@
   .technical-heritage .th-copy, .technical-heritage .th-dark-copy { font-size: 15px; line-height: 1.72; }
   .technical-heritage .th-hero-image { inset: 0; height: 57%; }
   .technical-heritage .th-hero-content { padding-block: 255px 39px; }
-  .technical-heritage .th-hero h1 { font-size: clamp(2.35rem, 8.7vw, 3.35rem); }
+  .technical-heritage .th-hero h1 { font-size: clamp(2.2rem, 9.4vw, 2.65rem); line-height: 1.04; }
   .th-evolution-timeline { grid-template-columns: 1fr; margin-top: 30px; border-block: 0; border-left: 1px solid rgba(174,201,218,.3); }
   .th-evolution-timeline::before { top: 0; bottom: 0; left: -1px; right: auto; width: 1px; height: auto; background: linear-gradient(#4d9bc8, #8771bb 55%, #d49b45); }
   .th-evolution-entry, .th-evolution-entry + .th-evolution-entry { min-height: 83px; padding: 13px 0 13px 20px; border: 0; }
