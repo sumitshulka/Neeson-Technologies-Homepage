@@ -134,8 +134,8 @@
   color: #eef6fc; backdrop-filter: blur(16px);
 }
 .nav-inner { width: min(1280px, calc(100% - 56px)); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; min-width: 160px; }
-.brand img { width: 158px; height: 53px; object-fit: contain; object-position: left center; }
+.brand { display: inline-flex; align-items: center; min-width: 184px; }
+.brand img { width: 184px; height: 53px; object-fit: contain; object-position: left center; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(13px, 2vw, 28px); }
 .nav-link { position: relative; text-decoration: none; color: #c6d4df; font-size: 12px; font-weight: 600; white-space: nowrap; transition: color .2s ease; }
 .nav-link:hover, .nav-link.active { color: #fff; }
@@ -429,7 +429,7 @@
   .wrap { width: calc(100% - 40px); }
   .nav-inner { width: calc(100% - 32px); }
   .brand { min-width: 0; }
-  .brand img { width: 143px; height: 49px; }
+  .brand img { width: 150px; height: 49px; }
   .hero-copy { padding: 34px 0 7px; }
   .hero-kicker { font-size: 8px; margin-bottom: 13px; }
   .hero h1 { font-size: clamp(2.2rem, 9.4vw, 2.65rem); line-height: 1.04; }
