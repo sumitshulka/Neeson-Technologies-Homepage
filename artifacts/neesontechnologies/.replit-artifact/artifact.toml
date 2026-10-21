@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Neeson Technologies"
+description = "A premium, mobile-first website for Neeson Technologies, an independent scientific and industrial advisory practice focused on e-beam processing, materials science, cable and polymer businesses."
+version = "1.0.0"
+id = "artifacts/neesontechnologies"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20046
+
+[services.development]
+run = "pnpm --filter @workspace/neesontechnologies run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/neesontechnologies", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/neesontechnologies/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20046"
+BASE_PATH = "/"
