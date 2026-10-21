@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
 
-:root {
+.neeson-contact-page {
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Manrope', sans-serif;
   --app-font-mono: 'Space Mono', monospace;
@@ -8,9 +8,11 @@
   --gold: #ffbd3c;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: #f4f7fa; }
-body {
+.neeson-contact-page *, .neeson-contact-page *::before, .neeson-contact-page *::after { box-sizing: border-box; }
+body:has(.neeson-contact-page) {
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Manrope', sans-serif;
+  --app-font-mono: 'Space Mono', monospace;
   margin: 0;
   min-width: 320px;
   background: #f4f7fa;
@@ -18,9 +20,25 @@ body {
   font-family: var(--app-font-sans);
   text-rendering: optimizeLegibility;
 }
-button, a { -webkit-tap-highlight-color: transparent; }
-button { font: inherit; }
-::selection { color: #061b2a; background: #ffc34d; }
+body:has(.neeson-contact-page) { scroll-behavior: smooth; }
+.neeson-contact-page button, .neeson-contact-page a { -webkit-tap-highlight-color: transparent; }
+.neeson-contact-page button { font: inherit; }
+.neeson-contact-page ::selection { color: #061b2a; background: #ffc34d; }
+
+.neeson-contact-page .wrap { width: min(1260px, calc(100% - 64px)); margin-inline: auto; }
+.neeson-contact-page .button {
+  min-height: 46px; padding: 0 20px; border: 0; border-radius: 6px; display: inline-flex;
+  align-items: center; justify-content: center; gap: 10px; text-decoration: none; cursor: pointer;
+  font-weight: 700; font-size: 13px; transition: transform .22s ease, background .22s ease, color .22s ease;
+}
+.neeson-contact-page .button:hover { transform: translateY(-2px); }
+.neeson-contact-page .button:focus-visible,
+.neeson-contact-page a:focus-visible,
+.neeson-contact-page button:focus-visible { outline: 3px solid #ffcf70; outline-offset: 3px; }
+.neeson-contact-page .button-gold { color: #142838; background: linear-gradient(105deg, #ffb72f, #ffd15e); box-shadow: 0 7px 22px rgba(255, 181, 46, .15); }
+.neeson-contact-page .button-gold:hover { background: #ffd15e; }
+.neeson-contact-page .button svg { transition: transform .2s ease; }
+.neeson-contact-page .button:hover svg { transform: translateX(3px); }
 
 .neeson-contact-extract { overflow: clip; color: #0c2639; }
 .neeson-contact-extract .wrap { width: min(1260px, calc(100% - 64px)); margin-inline: auto; }

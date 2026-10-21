@@ -129,3 +129,276 @@
  .neeson-contact-page .wrap{width:calc(100% - 36px)}.cp-hero-copy{padding-top:33px}.cp-hero h1{font-size:clamp(2.25rem,9.3vw,2.8rem)}.cp-hero-lede{font-size:13px}.cp-hero-detail{font-size:12px}.cp-hero-boundary{font-size:10px}.cp-hero-actions{align-items:stretch;flex-direction:column}.cp-hero-actions .button,.cp-hero-actions .cp-text-link{width:100%;justify-content:center}.cp-hero-visual{height:190px;min-height:190px}.cp-panel{padding:18px 16px}.cp-panel-heading h2{font-size:22px}.cp-scheduler-empty{padding:72px 14px 16px;min-height:205px}.cp-calendar-mark{left:15px;top:16px}.cp-call-facts{grid-template-columns:1fr}.cp-call-facts li{min-height:42px}.cp-field-grid{grid-template-columns:1fr;gap:10px}.cp-full{grid-column:auto}.cp-form input,.cp-form textarea,.cp-callback-form input{min-height:46px}.cp-form textarea{min-height:84px}.cp-options-grid{grid-template-columns:1fr}.cp-option{min-height:0;padding:16px;border-right:0;border-bottom:1px solid #dce5eb!important}.cp-option:last-child{border-bottom:0!important}.cp-option h3{min-height:0;margin-top:11px}.cp-callback-toggle{align-items:flex-start;flex-direction:column;justify-content:center;min-height:70px}.cp-callback-form{padding-inline:14px}.cp-location-mark{gap:8px;font-size:7px}.cp-location-mark i{width:10px}
 }
 @media(prefers-reduced-motion:reduce){.cp-hero-copy{animation:none}.cp-spin{animation-duration:1.8s}}
+
+/* Contact page refinement: a quiet, editorial technical-advisory surface. */
+.neeson-contact-page {
+  --cp-blue: #168cff;
+  --cp-purple: #7548e8;
+  --cp-pink: #ed5eb0;
+  --cp-gold: #ffbd3c;
+  background: #f3f7fa;
+}
+.neeson-contact-page .wrap { max-width: 1260px; }
+.neeson-contact-page a,
+.neeson-contact-page button { -webkit-tap-highlight-color: transparent; }
+.neeson-contact-page .button,
+.neeson-contact-page .cp-action,
+.neeson-contact-page .cp-text-link,
+.neeson-contact-page .cp-scheduler-channels a,
+.neeson-contact-page .cp-scheduler-channels span,
+.neeson-contact-page .cp-disabled {
+  min-height: 44px;
+}
+.neeson-contact-page .button { min-height: 46px; border-radius: 6px; }
+.cp-conversion {
+  padding-block: clamp(48px, 6vw, 74px);
+  background:
+    radial-gradient(ellipse at 6% 8%, rgba(22,140,255,.075), transparent 34%),
+    linear-gradient(125deg, #edf4f8, #e8f0f6);
+}
+.cp-conversion-heading { margin-bottom: 34px; }
+.cp-conversion-heading .eyebrow { color: #317cab; }
+.cp-conversion-heading > p:last-child { font-size: 14px; }
+.cp-main-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: start;
+  gap: 20px;
+}
+.cp-panel {
+  padding: clamp(22px, 2.5vw, 32px);
+  border-color: #d5e1e9;
+  border-radius: 5px;
+  box-shadow: 0 14px 38px rgba(13,47,69,.065);
+}
+.cp-booking {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid var(--cp-blue);
+  box-shadow: 0 18px 42px rgba(19,77,116,.11);
+}
+.cp-booking::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 112px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cp-purple), var(--cp-pink), var(--cp-gold));
+}
+.cp-enquiry { border-top: 3px solid #8c6be3; }
+.cp-panel-heading { padding-bottom: 19px; }
+.cp-panel-index { color: #287db2; font-size: 9px; }
+.cp-panel-heading h2 { margin-top: 11px; font-size: clamp(23px, 2vw, 28px); }
+.cp-panel-heading p { font-size: 12px; }
+.cp-scheduler {
+  min-height: 198px;
+  margin: 19px 0;
+  padding: 23px;
+  border-color: #cbdce8;
+  border-radius: 4px;
+  background:
+    radial-gradient(ellipse at 88% 12%, rgba(117,72,232,.08), transparent 40%),
+    linear-gradient(128deg, #f5faff, #edf4f8);
+}
+.cp-scheduler-empty {
+  min-height: 220px;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 88px;
+}
+.cp-calendar-mark {
+  top: 28px;
+  left: 25px;
+  width: 46px;
+  height: 46px;
+  color: #237eb3;
+  border-color: #cfdfeb;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(19,69,102,.06);
+}
+.cp-status-pill {
+  padding: 6px 9px;
+  color: #775818;
+  background: #fff8eb;
+  border-color: #ead9b2;
+  font-size: 8px;
+}
+.cp-scheduler h3 { font-size: 20px; }
+.cp-scheduler p { font-size: 12px; }
+.cp-scheduler-channels { margin-top: 2px; gap: 9px; }
+.cp-scheduler-channels a,
+.cp-scheduler-channels span {
+  padding-inline: 13px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+.cp-call-facts { gap: 0 22px; }
+.cp-call-facts li {
+  min-height: 49px;
+  gap: 11px;
+  color: #3c586b;
+  font-size: 11px;
+}
+.cp-call-facts li svg { color: #347eaa; }
+.cp-confidential-inline {
+  margin-top: 16px;
+  padding: 10px 12px;
+  color: #675a3f;
+  background: #fbf7ed;
+  border-left: 2px solid #d7ab4d;
+  font-size: 11px;
+  font-weight: 600;
+}
+.cp-form { padding-top: 20px; }
+.cp-field-grid { gap: 16px 15px; }
+.cp-form [data-slot="form-item"],
+.cp-callback-form [data-slot="form-item"] { gap: 7px; }
+.cp-form label,
+.cp-callback-form label { font-size: 11px; }
+.cp-form input,
+.cp-form textarea,
+.cp-callback-form input {
+  min-height: 46px;
+  padding: 11px 13px;
+  border-color: #cfdae3;
+  border-radius: 4px;
+  background: #f9fbfc;
+  font-size: 13px;
+}
+.cp-form textarea { min-height: 94px; }
+.cp-form input:hover,
+.cp-form textarea:hover,
+.cp-callback-form input:hover { border-color: #aabfce; }
+.cp-form input:focus,
+.cp-form textarea:focus,
+.cp-callback-form input:focus {
+  border-color: #388bc0;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(56,139,192,.13);
+}
+.cp-confidential {
+  gap: 12px;
+  margin: 18px 0 15px;
+  padding: 14px 15px;
+  color: #514a39;
+  background: #fbf8f0;
+  border: 1px solid #eadfca;
+  border-left: 3px solid #cfa64d;
+  border-radius: 2px;
+}
+.cp-confidential svg { color: #9a762e; }
+.cp-confidential p { font-size: 11px; }
+.cp-confidential strong { color: #4d432f; }
+.cp-confidential span { color: #75694f; }
+.cp-submit { min-width: 174px; }
+.cp-privacy,.cp-response { font-size: 10px; }
+.cp-privacy a { min-height: 32px; }
+.cp-callback { border-radius: 4px; }
+.cp-callback-toggle { min-height: 62px; padding-inline: 20px; }
+.cp-callback-toggle > span:last-child { min-height: 40px; display: inline-flex; align-items: center; }
+.cp-options { background: #fbfcfd; }
+.cp-options-grid { border-color: #d7e2e9; background: #f8fafc; }
+.cp-option {
+  min-height: 184px;
+  padding: 21px 20px 18px;
+}
+.cp-option:hover { background: #f0f6fa; }
+.cp-option-top { font-size: 9px; }
+.cp-option h3 { font-size: 15px; }
+.cp-action { font-size: 11px; }
+.cp-disabled { color: #748590; font-size: 11px; }
+.cp-next { background: linear-gradient(125deg, #edf4f8, #eaf1f6); }
+.cp-timeline { gap: 17px; padding-top: 31px; }
+.cp-timeline::before { top: 14px; left: 4%; right: 4%; }
+.cp-timeline-item {
+  min-height: 133px;
+  padding: 20px 18px 17px;
+  border-radius: 3px;
+  box-shadow: 0 5px 15px rgba(13,47,69,.035);
+}
+.cp-step-number {
+  top: -30px;
+  left: 15px;
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  color: #fff;
+  background: #287fad;
+  border: 3px solid #edf4f8;
+  border-radius: 50%;
+  font-size: 8px;
+}
+.cp-timeline-item:nth-child(2) .cp-step-number { background: #674db2; }
+.cp-timeline-item:nth-child(3) .cp-step-number { background: #b14b91; }
+.cp-timeline-item:nth-child(4) .cp-step-number { color: #25374a; background: #e8b344; }
+.cp-timeline-item h3 { font-size: 9px; }
+.cp-timeline-item p { font-size: 12px; }
+.cp-boundaries {
+  color: #203d52;
+  background:
+    radial-gradient(ellipse at 92% 0%, rgba(117,72,232,.07), transparent 35%),
+    linear-gradient(115deg, #eaf1f6, #e4edf3);
+}
+.cp-boundaries .eyebrow { color: #397da4; }
+.cp-boundaries .cp-section-head h2 { color: #17384e; }
+.cp-boundary-grid { gap: 14px; }
+.cp-boundary-grid article {
+  min-height: 170px;
+  padding: 21px;
+  color: #26475e;
+  background: rgba(255,255,255,.76);
+  border: 1px solid #d1e0e8;
+  border-top: 2px solid #4c91bc;
+  border-radius: 3px;
+  box-shadow: 0 7px 20px rgba(13,47,69,.04);
+}
+.cp-boundary-grid article:nth-child(2) { border-top-color: #795ec0; }
+.cp-boundary-grid article:nth-child(3) { border-top-color: #d18e45; }
+.cp-boundary-grid article > svg { color: #397fa8; }
+.cp-boundary-grid article > span { color: #758d9c; }
+.cp-boundary-grid h3 { color: #274a61; font-size: 10px; }
+.cp-boundary-grid p { color: #5d7483; font-size: 12px; }
+.cp-role-boundary {
+  max-width: 950px;
+  margin-top: 19px;
+  padding: 12px 15px;
+  color: #496375;
+  background: rgba(255,255,255,.48);
+  border-left: 2px solid #9682c7;
+  font-size: 11px;
+}
+@media(max-width:760px) {
+  .cp-main-grid { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .cp-panel { padding: 23px; }
+  .cp-booking { order: 0; }
+  .cp-enquiry { order: 1; }
+  .cp-timeline { gap: 11px; padding-left: 25px; }
+  .cp-timeline::before { top: 10px; bottom: 10px; left: 10px; right: auto; width: 1px; height: auto; }
+  .cp-timeline-item { min-height: 0; padding: 16px 17px; }
+  .cp-step-number { position: absolute; top: 15px; left: -28px; margin: 0; }
+  .cp-boundary-grid article { min-height: 0; }
+}
+@media(max-width:480px) {
+  .neeson-contact-page .wrap { width: calc(100% - 36px); }
+  .cp-conversion { padding: 43px 0 48px; }
+  .cp-conversion-heading { margin-bottom: 20px; }
+  .cp-panel { padding: 20px 17px; }
+  .cp-scheduler-empty { min-height: 222px; padding: 78px 15px 17px; }
+  .cp-calendar-mark { top: 17px; left: 16px; }
+  .cp-call-facts { grid-template-columns: 1fr; }
+  .cp-form { padding-top: 18px; }
+  .cp-field-grid { gap: 13px; }
+  .cp-form input,.cp-form textarea,.cp-callback-form input { min-height: 48px; }
+  .cp-form textarea { min-height: 92px; }
+  .cp-submit { width: 100%; }
+  .cp-options-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-option { min-height: 154px; padding: 13px 11px; border-right: 1px solid #dce5eb !important; border-bottom: 1px solid #dce5eb !important; }
+  .cp-option:nth-child(2n) { border-right: 0 !important; }
+  .cp-option:nth-last-child(-n+2) { border-bottom: 0 !important; }
+  .cp-option h3 { min-height: 38px; margin: 10px 0 6px; font-size: 13px; }
+  .cp-timeline { gap: 10px; }
+  .cp-timeline-item { padding: 15px; }
+  .cp-boundary-grid article { padding: 17px; }
+  .cp-final-actions .button { min-height: 46px; }
+}
