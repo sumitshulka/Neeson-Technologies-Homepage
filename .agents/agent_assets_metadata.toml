@@ -70,3 +70,31 @@ mtime_ms = 1792996556987
 storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/35cebe50-5c6a-4e8e-be42-c79549466c7c/b289cbf7-448f-4607-8a3c-f839c4cd483a"
 storage_version_token = "1792996627061533"
 content_type = "image/png"
+
+[[outputs]]
+id = "FQmgsuWCkDWdjiYI2fhlm"
+uri = "file://artifacts/neesontechnologies/public/neeson-technologies-logo-blue-4096.png"
+type = "image"
+title = "Neeson Technologies blue logo — 4096 × 4096 PNG"
+description = "Transparent blue-text logo variant for use on light backgrounds."
+logical_id = "40d311cc-17db-44a8-936b-06f5a3a910dc"
+content_hash = "sha256:43e4a07a73c29f9d945d86e6ca409acb85297d0591cbeb0568b4433b23f04790"
+size = 1842387
+mtime_ms = 1792997258623
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/40d311cc-17db-44a8-936b-06f5a3a910dc/48ae1ab1-a2ad-4d44-af5c-43e13d9a86fe"
+storage_version_token = "1792997314616924"
+content_type = "image/png"
+
+[[outputs]]
+id = "tEDHpJ5sClA2WowZF6QF0"
+uri = "file://artifacts/neesontechnologies/public/neeson-logo-horizontal-blue.png"
+type = "image"
+title = "Neeson Technologies blue logo — horizontal PNG"
+description = "Transparent 4096 px-wide horizontal blue lockup for light backgrounds."
+logical_id = "c1b6b4d2-b331-4859-9fde-23f31876f934"
+content_hash = "sha256:c022d3d6d74c9eaaa2d8ac7a5325a3b4a08fd5a47268aaf6648646550f10e5b1"
+size = 1988858
+mtime_ms = 1792997254735
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/c1b6b4d2-b331-4859-9fde-23f31876f934/3bbf7271-efa2-4904-939a-c82b7a241efa"
+storage_version_token = "1792997315912257"
+content_type = "image/png"
