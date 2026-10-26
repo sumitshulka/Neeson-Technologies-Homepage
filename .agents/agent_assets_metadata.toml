@@ -42,3 +42,31 @@ mtime_ms = 1792585076715
 storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/0f4dac25-ac98-4fa6-b231-fd54f576cbb9/78abfd85-08fc-458e-864a-a51bef3a9639"
 storage_version_token = "1792585189594340"
 content_type = "image/png"
+
+[[outputs]]
+id = "6Xtqc9muRHTWiT0WBbvfP"
+uri = "file://artifacts/neesontechnologies/public/neeson-technologies-logo-4096.png"
+type = "image"
+title = "Neeson Technologies logo — 4096 × 4096 PNG"
+description = "Transparent square high-resolution export of the complete supplied lockup."
+logical_id = "69494a17-1c54-4b21-8643-e8c8d4a30f35"
+content_hash = "sha256:d4f4e751306c198520c66d42f89131db40ebd7c37809cf1d9323c1d4f7997803"
+size = 2626671
+mtime_ms = 1792996561563
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/69494a17-1c54-4b21-8643-e8c8d4a30f35/c91446ee-2b96-4a07-ab1a-7391b38faad6"
+storage_version_token = "1792996625696810"
+content_type = "image/png"
+
+[[outputs]]
+id = "pgugBorK7w6Jw05Hm0mXG"
+uri = "file://artifacts/neesontechnologies/public/neeson-logo-horizontal.png"
+type = "image"
+title = "Neeson Technologies logo — horizontal PNG"
+description = "Transparent 4096 px-wide horizontal lockup used in the website header and footer."
+logical_id = "35cebe50-5c6a-4e8e-be42-c79549466c7c"
+content_hash = "sha256:7d5b9199e0bfaeceeab6fdcd92e26461d20306f7efa20c419fea90c6c526ff0d"
+size = 3014840
+mtime_ms = 1792996556987
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:012706db-5573-4917-893b-7e6f1fc7250e/35cebe50-5c6a-4e8e-be42-c79549466c7c/b289cbf7-448f-4607-8a3c-f839c4cd483a"
+storage_version_token = "1792996627061533"
+content_type = "image/png"

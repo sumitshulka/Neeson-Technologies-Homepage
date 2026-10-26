@@ -3,8 +3,8 @@ name: Neeson logo asset
 description: Preserve the supplied raster wordmark unless a clean transparent source is provided.
 ---
 
-Use the current high-resolution blue geometric mark with the horizontal NEESON TECHNOLOGIES lockup in the shared header and footer. Preserve the complete wordmark; do not substitute the older orbital reference or an automatic background-removed derivative.
+Use the logo from the user's latest supplied reference image as the current approved lockup: its blue scientific mark, NEESON TECHNOLOGIES wordmark, and descriptor line. Preserve the complete supplied artwork and lettering; it supersedes the earlier geometric mark choice.
 
-**Why:** The user confirmed the geometric lockup is the approved current logo. The older low-resolution reference and background-removed derivatives do not represent the selected artwork.
+**Why:** The user explicitly requested that this supplied logo be used exactly and that its text remain clearly visible.
 
-**How to apply:** Keep the approved horizontal lockup consistent across shared site shells. If it needs to change later, use a supplied clean brand source rather than reconstructing it with background removal.
+**How to apply:** Keep the complete lockup consistent across the shared header and footer. For future changes, use the user's approved source artwork rather than recreating or substituting the mark or wordmark.
