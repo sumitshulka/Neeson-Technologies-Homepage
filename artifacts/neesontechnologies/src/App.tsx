@@ -228,24 +228,56 @@ function BookLink({ children = 'Book a 30-minute discovery call', className = ''
   return <Link href="/contact" className={`button button-gold ${className}`} data-testid="link-book-call">{children}<ArrowRight size={16} /></Link>;
 }
 
-const situations = [
+const serviceSummaries = [
+  {
+    slug: 'e-beam-consultancy',
+    title: 'E-beam Consultancy',
+    text: 'Advice on investment, applications, materials and qualification for electron-beam processing.',
+    icon: Atom,
+    color: '#168cff',
+  },
+  {
+    slug: 'coatings-surface-finishing',
+    title: 'Coatings and Surface Finishing',
+    text: 'Assessment of electron-beam curing opportunities for coatings, formulations and substrates.',
+    icon: Layers3,
+    color: '#a356cf',
+  },
+  {
+    slug: 'waste-effluent-management',
+    title: 'Waste and Effluent Management',
+    text: 'Assessment of electron-beam and nonmaterial-based treatment opportunities for defined industrial waste streams.',
+    icon: Beaker,
+    color: '#e69b25',
+  },
+  {
+    slug: 'health-diagnostics',
+    title: 'Health and Diagnostics',
+    text: 'Materials and nanoscience assessment for medical research and development questions.',
+    icon: Microscope,
+    color: '#d653a5',
+  },
+  {
+    slug: 'semiconductors',
+    title: 'Semiconductors',
+    text: 'Assessment of selected materials, characterisation and process questions with specialist input.',
+    icon: Network,
+    color: '#3289c7',
+  },
+];
+
+const ebeamExamples = [
   {
     title: 'Planning a line or the next product family',
     text: 'You are considering e-beam investment, preparing a new line, or deciding what an operating line should process next. A scoped review can help clarify the product case, material questions and evidence needed before committing further.',
-    icon: Cable,
-    color: '#168cff',
   },
   {
     title: 'Understanding material behaviour after irradiation',
     text: 'A grade is being developed or qualified, or trial results are inconsistent or difficult to interpret. A scoped review can help organise the evidence and identify which material questions, tests or specialist assessments should come next.',
-    icon: Microscope,
-    color: '#a356cf',
   },
   {
     title: 'Responding to a new customer requirement',
     text: 'A customer, tender or application requires different product evidence. A scoped review can help map the evidence gaps and assess the next qualification steps, including whether e-beam is relevant.',
-    icon: FileText,
-    color: '#e69b25',
   },
 ];
 
@@ -292,13 +324,14 @@ function HomePage() {
 
       <section className="section situations">
         <div className="wrap">
-          <div className="section-heading"><p className="eyebrow">WHY CLIENTS COME TO US</p><h2 className="section-title">Three situations that start a conversation</h2><p className="section-lede">Most first conversations begin with one of these.</p></div>
+          <div className="section-heading"><p className="eyebrow">OUR SERVICES</p><h2 className="section-title">Five focus areas</h2><p className="section-lede">Electron-beam applications and advanced materials advisory.</p></div>
           <div className="situation-grid">
-            {situations.map((item, index) => {
+            {serviceSummaries.map((item, index) => {
               const Icon = item.icon;
-              return <article key={item.title} className="situation-card" style={{ '--card-accent': item.color } as CSSProperties} data-testid={`card-situation-${index + 1}`}>
-                <span className="number">0{index + 1}</span><Icon className="card-icon" size={24} strokeWidth={1.6} /><h3>{item.title}</h3><p>{item.text}</p>
-              </article>;
+              return <Link key={item.slug} href={`/how-we-help#service-${item.slug}`} className="situation-card service-summary" style={{ '--card-accent': item.color } as CSSProperties} data-testid={`link-home-service-${item.slug}`}>
+                <span className="number">0{index + 1}</span><Icon className="card-icon" size={24} strokeWidth={1.6} aria-hidden="true" /><h3>{item.title}</h3><p>{item.text}</p>
+                <span className="service-summary-more">View service <ArrowRight size={14} aria-hidden="true" /></span>
+              </Link>;
             })}
           </div>
         </div>
@@ -417,27 +450,42 @@ function PageCta({ text = 'Bring one live question and find out whether Neeson i
 }
 
 function HowWeHelpPage() {
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1);
+    if (!targetId.startsWith('service-')) return;
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
   const services = [
     {
       number: '01',
+      slug: 'e-beam-consultancy',
       title: 'E-beam Consultancy',
       text: 'For cable makers, compound suppliers, accelerator owners and manufacturers considering electron-beam processing. We help assess investment options, new product applications, material performance after irradiation and qualification evidence. A first assignment may produce a written Decision Note identifying evidence gaps, options and the next trial or investment step.',
+      supplement: 'For accelerator owners and investors, we assess new applications and customer segments that could make better use of existing or planned capacity.',
+      examples: ebeamExamples,
       icon: Atom,
     },
     {
       number: '02',
+      slug: 'coatings-surface-finishing',
       title: 'Coatings and Surface Finishing',
       text: 'For coating manufacturers and businesses assessing electron-beam curing. We review formulation, substrate and process requirements to establish whether further development is justified. A first assessment identifies feasibility questions, evidence gaps and a proposed trial plan.',
       icon: Layers3,
     },
     {
       number: '03',
+      slug: 'waste-effluent-management',
       title: 'Waste and Effluent Management',
       text: 'For industrial operators exploring electron-beam or nonmaterial-based treatment. We assess a defined waste stream, treatment objective and available operating data. A first assessment identifies technical fit, validation needs and questions for specialist trials.',
       icon: Beaker,
     },
     {
       number: '04',
+      slug: 'health-diagnostics',
       title: 'Health and Diagnostics',
       text: 'For medical technology developers and research teams with materials or nanoscience questions. We help assess a defined concept, material or sterilisation application. A first review identifies evidence gaps, characterisation needs and the specialist input required for further development.',
       note: 'Clinical performance, sterilisation validation, biocompatibility and regulatory approval remain outside Neeson’s advisory role and are scoped separately with qualified specialists.',
@@ -445,6 +493,7 @@ function HowWeHelpPage() {
     },
     {
       number: '05',
+      slug: 'semiconductors',
       title: 'Semiconductors',
       text: 'For semiconductor and related technology teams with selected materials or process questions. We help frame characterisation, defect investigation and application assessment needs with relevant specialists. A first review defines the question, available evidence and a practical investigation plan.',
       icon: Settings2,
@@ -542,10 +591,19 @@ function HowWeHelpPage() {
           <div className="hw-services-grid">
             {services.map((service) => {
               const Icon = service.icon;
-              return <article className="hw-service-card" key={service.number} data-testid={`service-${service.number}`}>
+              return <article className="hw-service-card" id={`service-${service.slug}`} key={service.number} data-testid={`service-${service.number}`}>
                 <div className="hw-service-top"><span className="hw-number">{service.number}</span><Icon size={24} strokeWidth={1.55} aria-hidden="true" /></div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
+                {service.supplement && <p className="hw-service-supplement">{service.supplement}</p>}
+                {service.examples && <div className="hw-service-examples">
+                  <p className="hw-service-examples-label">Cable and polymer examples</p>
+                  <div className="hw-service-examples-grid">
+                    {service.examples.map((example) => <article className="hw-service-example" key={example.title}>
+                      <h4>{example.title}</h4><p>{example.text}</p>
+                    </article>)}
+                  </div>
+                </div>}
                 {service.note && <p className="hw-service-note">{service.note}</p>}
               </article>;
             })}
