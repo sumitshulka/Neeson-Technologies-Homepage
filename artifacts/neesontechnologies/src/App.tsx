@@ -730,6 +730,11 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function Router() {
+  const [location] = useLocation();
+  useEffect(() => {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  }, [location]);
+
   return <RoutedErrorBoundary><Switch>
     <Route path="/" component={HomePage} />
     <Route path="/how-we-help" component={HowWeHelpPage} />
