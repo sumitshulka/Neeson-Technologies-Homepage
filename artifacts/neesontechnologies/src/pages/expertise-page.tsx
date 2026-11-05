@@ -296,7 +296,7 @@ export function ExpertisePageContent({ BookLink }: { BookLink: ComponentType<{ c
 
           <section className="ex-independent">
             <div className="wrap ex-independent-grid">
-              <div><p className="eyebrow">INDEPENDENT BY DESIGN</p><h2>Independent<br />by design.</h2><p>Neeson's advisory scope is agreed with the client. Relevant supplier or specialist relationships are disclosed in the proposal. Equipment suppliers, laboratories and qualified specialists retain their own responsibilities.</p></div>
+              <div><p className="eyebrow">COMMERCIAL RELATIONSHIPS</p><h2>Transparent advice and commercial relationships</h2><p>Our advisory scope and fees are agreed with the client. The client decides on equipment purchases and specialist appointments.</p></div>
               <div className="ex-advisory-flow" aria-label="Client, evidence, advisory interpretation, options, decision">
                 {[
                   ['CLIENT', '01'], ['EVIDENCE', '02'], ['ADVISORY INTERPRETATION', '03'], ['OPTIONS', '04'], ['DECISION', '05'],

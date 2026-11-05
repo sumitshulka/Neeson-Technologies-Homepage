@@ -179,7 +179,6 @@
 .hero-text { max-width: 515px; color: #d3e0ec; font-size: 14px; line-height: 1.7; margin: 19px 0 18px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-small { color: #bbcad7; font-size: 11px; line-height: 1.6; margin: 17px 0 0; }
-.hero-independent { margin-top: 20px; padding-top: 13px; border-top: 1px solid rgba(208,228,244,.18); color: #adbdc9; font-size: 11px; max-width: 485px; line-height: 1.6; }
 .hero-art { min-height: 470px; position: relative; display: flex; align-items: center; justify-content: center; margin-right: -62px; }
 .hero-art::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 58% 50%, transparent 38%, rgba(8,29,49,.36) 72%, #0b2340 100%); pointer-events: none; }
 .hero-art img { width: 112%; height: 470px; object-fit: cover; object-position: 57% center; opacity: .88; mix-blend-mode: screen; -webkit-mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); mask-image: radial-gradient(ellipse at 58% 52%, #000 43%, rgba(0,0,0,.86) 69%, transparent 100%); }
@@ -449,7 +448,6 @@
   .hero-actions .button { width: 100%; }
   .hero-actions .button { min-height: 43px; }
   .hero-small { margin-top: 11px; font-size: 10px; }
-  .hero-independent { margin-top: 14px; padding-top: 11px; font-size: 10px; }
   .hero-art { height: 225px; min-height: 225px; margin: -1px -20px 0; }
   .hero-art img { height: 242px; object-position: 61% center; }
   .hero-orbit { width: 220px; height: 220px; right: 2%; }

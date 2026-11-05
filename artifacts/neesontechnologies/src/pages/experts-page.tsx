@@ -34,7 +34,7 @@ const focusAreas = [
 ];
 
 const processSteps = ['MATERIAL', 'PROCESS', 'RESPONSE', 'CHARACTERISATION', 'DECISION'];
-const independenceSteps = ['CLIENT QUESTION', 'INDEPENDENT REVIEW', 'EVIDENCE', 'OPTIONS', 'DECISION'];
+const independenceSteps = ['CLIENT QUESTION', 'ADVISORY REVIEW', 'EVIDENCE', 'OPTIONS', 'DECISION'];
 
 function PortraitPlaceholder() {
   return (
@@ -237,10 +237,9 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
         <section className="ep-independence section">
           <div className="wrap ep-independence-grid">
             <div>
-              <p className="eyebrow">INDEPENDENT BY DESIGN</p>
-              <h2>Expertise without an equipment-sales agenda.</h2>
-              <p>Neeson's advisory scope is agreed with the client. Relevant supplier or specialist relationships are disclosed in the proposal.</p>
-              <p>Equipment suppliers, laboratories and qualified specialists retain their own responsibilities.</p>
+              <p className="eyebrow">COMMERCIAL RELATIONSHIPS</p>
+              <h2>Transparent advice and commercial relationships</h2>
+              <p>Our advisory scope and fees are agreed with the client. The client decides on equipment purchases and specialist appointments.</p>
             </div>
             <div className="ep-independence-flow">
               {independenceSteps.map((step, index) => (

@@ -303,7 +303,6 @@ function HomePage() {
               <Link href="/how-we-help" className="button button-outline" data-testid="link-how-we-help-hero">See Services <ArrowRight size={15} /></Link>
             </div>
             <p className="hero-small">Speak with Dr Sonia Tikku Suresh about one live question and the right next step.</p>
-            <p className="hero-independent">Neeson does not supply equipment or accept commission linked to equipment sales.</p>
           </div>
           <div className="hero-art" aria-label="Scientific visualization of an irradiated polymer cable cross-section">
             <div className="hero-orbit" />
@@ -316,8 +315,8 @@ function HomePage() {
 
       <section className="trust-strip" aria-label="Advisory principles">
         <div className="wrap trust-grid">
-          <div className="trust-item"><ShieldCheck className="trust-icon" size={25} /><div><strong>Independent advice.</strong><span>Evidence-led decisions, without an equipment sales agenda.</span></div></div>
-          <div className="trust-item"><SlidersHorizontal className="trust-icon" size={24} /><div><strong>No equipment sales.</strong><span>No equipment supply or commission linked to sales.</span></div></div>
+          <div className="trust-item"><ShieldCheck className="trust-icon" size={25} /><div><strong>Neeson advisory.</strong><span>We help define the technical question, assess available evidence and develop a practical plan for the next decision.</span></div></div>
+          <div className="trust-item"><SlidersHorizontal className="trust-icon" size={24} /><div><strong>Clear responsibilities.</strong><span>The proposal defines each party’s scope, deliverables, fees and responsibilities before work begins.</span></div></div>
           <div className="trust-item"><UsersRound className="trust-icon" size={25} /><div><strong>Focused on your questions.</strong><span>A clear, practical and evidence-based next step.</span></div></div>
         </div>
       </section>
@@ -393,7 +392,7 @@ function HomePage() {
 
       <section className="independent">
         <div className="wrap independent-grid">
-          <div><p className="eyebrow">INDEPENDENT BY DESIGN</p><h2 className="section-title">Independent of the equipment sale</h2><p className="independent-copy">Neeson's advisory scope is agreed with the client. Relevant supplier or specialist relationships are disclosed in the proposal. Equipment suppliers, laboratories and qualified specialists retain their own responsibilities.</p></div>
+          <div><p className="eyebrow">COMMERCIAL RELATIONSHIPS</p><h2 className="section-title">Transparent advice and commercial relationships</h2><p className="independent-copy">Our advisory scope and fees are agreed with the client. The client decides on equipment purchases and specialist appointments.</p></div>
           <div className="flow" aria-label="Advisory process: client question, evidence, technical interpretation, options, next decision">
             {[
               ['CLIENT QUESTION', UsersRound],
@@ -611,6 +610,37 @@ function HowWeHelpPage() {
         </div>
       </section>
 
+      <section className="hw-delivery section">
+        <div className="wrap">
+          <div className="hw-delivery-intro">
+            <h2 className="section-title">How we deliver your project</h2>
+            <p>Neeson combines its core advisory capability with external expertise where a project requires it. Depending on the agreed scope, we can help identify suitable consultants, laboratories, equipment specialists and other technical partners.</p>
+          </div>
+          <div className="hw-delivery-grid">
+            <article className="hw-delivery-card">
+              <h3>Neeson advisory</h3>
+              <p>We help define the technical question, assess available evidence and develop a practical plan for the next decision.</p>
+            </article>
+            <article className="hw-delivery-card">
+              <h3>Specialist support</h3>
+              <p>Where required, we help identify external expertise for trials, testing, engineering, radiation safety and regulatory application support. The engagement scope specifies whether Neeson coordinates this work or the client appoints the specialist separately.</p>
+            </article>
+            <article className="hw-delivery-card">
+              <h3>Clear responsibilities</h3>
+              <p>The proposal defines each party’s scope, deliverables, fees and responsibilities before work begins.</p>
+            </article>
+            <article className="hw-delivery-card">
+              <h3>Approvals and technical sign-off</h3>
+              <p>Regulatory approvals remain with the relevant authorities. Specialist assessments and technical sign-offs remain the responsibility of appropriately qualified parties.</p>
+            </article>
+            <article className="hw-delivery-card hw-delivery-relationships">
+              <h3>Transparent advice and commercial relationships</h3>
+              <p>Our advisory scope and fees are agreed with the client. The client decides on equipment purchases and specialist appointments.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="hw-actual section">
         <div className="wrap">
           <div className="hw-section-intro">
@@ -664,7 +694,7 @@ function HowWeHelpPage() {
 
       <section className="hw-boundaries">
         <div className="wrap hw-boundary-grid">
-          <div className="hw-boundary-intro"><p className="eyebrow">INDEPENDENT BY DESIGN</p><h2 className="section-title">What sits outside our advisory role</h2><p>Advice supports a decision; it does not replace the responsibilities of operators, suppliers, laboratories, qualified specialists or the client.</p></div>
+          <div className="hw-boundary-intro"><p className="eyebrow">CLEAR SCOPE</p><h2 className="section-title">What sits outside our advisory role</h2><p>Advice supports a decision; it does not replace the responsibilities of operators, suppliers, laboratories, qualified specialists or the client.</p></div>
           <div className="hw-boundary-content">
             <div className="hw-boundary-items">{boundaries.map(([number, title, sub, Icon]) => {
               const BoundaryIcon = Icon as typeof Settings2;
