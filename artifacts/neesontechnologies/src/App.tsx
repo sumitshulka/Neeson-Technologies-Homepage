@@ -264,8 +264,8 @@ function HomePage() {
         <div className="wrap hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">E-BEAM&nbsp; | &nbsp;NANOSCIENCE&nbsp; | &nbsp;INDUSTRIAL CONSULTING</div>
-            <h1>Independent <span className="accent">e-beam</span> advice for cable and <span className="accent-pink">polymer</span> businesses</h1>
-            <p className="hero-text">Neeson Technologies helps you assess product, material and evidence questions before your next investment, trial or qualification decision.</p>
+            <h1>Independent advisory in <span className="accent">electron-beam</span> applications and <span className="accent-pink">advanced materials</span></h1>
+            <p className="hero-text">Neeson Technologies helps manufacturers and technology teams assess product, material and application questions before their next investment, trial or qualification decision.</p>
             <div className="hero-actions">
               <BookLink />
               <Link href="/how-we-help" className="button button-outline" data-testid="link-how-we-help-hero">See Services <ArrowRight size={15} /></Link>
