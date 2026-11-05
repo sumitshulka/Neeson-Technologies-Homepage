@@ -308,7 +308,7 @@ export function ExpertisePageContent({ BookLink }: { BookLink: ComponentType<{ c
           <section className="ex-final-cta">
             <div className="wrap ex-final-grid">
               <div><p className="eyebrow">A TECHNICAL QUESTION, STARTING POINT</p><h2>Have a materials question?</h2><p>Bring one live question. We will establish whether Neeson is the right fit and what the next step could involve.</p></div>
-              <div className="ex-final-actions"><BookLink /><Link href="/how-we-help" className="ex-final-secondary">How we help <ArrowRight size={15} /></Link></div>
+              <div className="ex-final-actions"><BookLink /><Link href="/how-we-help" className="ex-final-secondary">Services <ArrowRight size={15} /></Link></div>
             </div>
             <div className="ex-final-orbit" aria-hidden="true"><span /><span /><span /></div>
           </section>

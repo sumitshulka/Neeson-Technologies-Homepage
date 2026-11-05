@@ -50,11 +50,18 @@ const heroVisual = `${import.meta.env.BASE_URL}materials-hero.png`;
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'How We Help', href: '/how-we-help' },
+  { label: 'Services', href: '/how-we-help' },
+  { label: 'Team', href: '/our-experts' },
+  { label: 'Contact Us', href: '/contact' },
+];
+
+const footerNavItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/how-we-help' },
   { label: 'Expertise', href: '/expertise' },
-  { label: 'Our Experts', href: '/our-experts' },
+  { label: 'Team', href: '/our-experts' },
   { label: 'Technical Heritage', href: '/technical-heritage' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 const seo: Record<string, { title: string; description: string }> = {
@@ -63,7 +70,7 @@ const seo: Record<string, { title: string; description: string }> = {
     description: 'Independent advisory on e-beam processing, materials behaviour and evidence-led decisions for cable and polymer businesses.',
   },
   '/how-we-help': {
-    title: 'How We Help | Neeson Technologies',
+    title: 'Services | Neeson Technologies',
     description: 'Explore Discovery Calls, Decision Diagnostics and Feasibility / Materials Reviews with Neeson Technologies.',
   },
   '/expertise': {
@@ -71,7 +78,7 @@ const seo: Record<string, { title: string; description: string }> = {
     description: 'Materials science, radiation processing, characterisation and evidence-led product decisions.',
   },
   '/our-experts': {
-    title: 'Our Experts | Neeson Technologies',
+    title: 'Team | Neeson Technologies',
     description: 'Meet Dr Sonia Tikku Suresh, Principal of Neeson Technologies and lead for client conversations and advisory reviews.',
   },
   '/technical-heritage': {
@@ -137,7 +144,7 @@ function Header() {
           ))}
         </nav>
         <Link href="/contact" className="button button-gold nav-cta" data-testid="link-book-call-nav">
-          Book a 30-minute call <ArrowRight size={15} />
+          Book a 30-minute discovery call <ArrowRight size={15} />
         </Link>
         <button
           type="button"
@@ -165,7 +172,7 @@ function Header() {
             </Link>
           ))}
           <Link href="/contact" className="button button-gold" data-testid="link-book-call-mobile">
-            Book a 30-minute call <ArrowRight size={15} />
+            Book a 30-minute discovery call <ArrowRight size={15} />
           </Link>
         </nav>
       )}
@@ -187,7 +194,7 @@ function Footer() {
         <div className="footer-col">
           <h3>QUICK LINKS</h3>
           <div className="footer-links">
-            {navItems.map((item) => (
+            {footerNavItems.map((item) => (
               <Link key={item.href} href={item.href} data-testid={`link-footer-${item.href.slice(1) || 'home'}`}>{item.label}</Link>
             ))}
           </div>
@@ -261,7 +268,7 @@ function HomePage() {
             <p className="hero-text">Neeson Technologies helps you assess product, material and evidence questions before your next investment, trial or qualification decision.</p>
             <div className="hero-actions">
               <BookLink />
-              <Link href="/how-we-help" className="button button-outline" data-testid="link-how-we-help-hero">See how we help <ArrowRight size={15} /></Link>
+              <Link href="/how-we-help" className="button button-outline" data-testid="link-how-we-help-hero">See Services <ArrowRight size={15} /></Link>
             </div>
             <p className="hero-small">Speak with Dr Sonia Tikku Suresh about one live question and the right next step.</p>
             <p className="hero-independent">Neeson does not supply equipment or accept commission linked to equipment sales.</p>
@@ -406,7 +413,7 @@ function PageHero({ eyebrow, title, description }: { eyebrow: string; title: Rea
 }
 
 function PageCta({ text = 'Bring one live question and find out whether Neeson is the right fit.' }: { text?: string }) {
-  return <div className="page-cta"><p>{text}</p><BookLink>Book a 30-minute call</BookLink></div>;
+  return <div className="page-cta"><p>{text}</p><BookLink>Book a 30-minute discovery call</BookLink></div>;
 }
 
 function HowWeHelpPage() {
@@ -452,7 +459,7 @@ function HowWeHelpPage() {
       <section className="hw-hero">
         <div className="hw-hero-grid wrap">
           <div className="hw-hero-copy">
-            <p className="eyebrow">HOW WE HELP</p>
+            <p className="eyebrow">SERVICES</p>
             <h1>A clear question.<br /><span>An agreed written output.</span></h1>
             <p className="hw-hero-lede">We work with cable manufacturers, polymer compound suppliers and businesses assessing irradiation job work against their own capability.</p>
             <p className="hw-hero-sub">The starting point is a product, material, specification or investment decision that needs better evidence.</p>

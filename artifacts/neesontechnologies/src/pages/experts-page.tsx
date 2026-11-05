@@ -69,7 +69,7 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
         <section className="ep-hero">
           <div className="wrap ep-hero-grid">
             <div className="ep-hero-copy">
-              <p className="eyebrow">OUR EXPERTS</p>
+              <p className="eyebrow">TEAM</p>
               <h1>Deep technical expertise.<br /><span>Directly accountable.</span></h1>
               <p className="ep-hero-lede">Neeson Technologies is built around specialist knowledge in materials science, radiation processing and industrial applications, led by Dr Sonia Tikku Suresh.</p>
               <p className="ep-hero-sub">Every current client conversation and advisory review is led by the principal.</p>
@@ -277,6 +277,7 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
             </div>
             <div className="ep-final-actions">
               <BookLink className="ep-final-book">Book a 30-minute discovery call</BookLink>
+              <Link href="/technical-heritage" className="ep-expertise-link" data-testid="link-technical-heritage-from-team">Technical Heritage <ArrowRight size={15} /></Link>
               <Link href="/expertise" className="ep-expertise-link" data-testid="link-explore-expertise">Explore our expertise <ArrowRight size={15} /></Link>
             </div>
             <div className="ep-final-art" aria-hidden="true"><span /><span /><span /></div>
