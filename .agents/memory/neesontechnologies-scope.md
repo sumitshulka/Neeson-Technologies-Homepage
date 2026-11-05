@@ -3,9 +3,9 @@ name: Neeson advisory scope
 description: Business positioning and service boundaries to preserve across Neeson Technologies content.
 ---
 
-Neeson Technologies is an independent, evidence-led advisory practice for cable manufacturers, polymer compound suppliers, and businesses evaluating irradiation job work against their own capability. Its role is to structure evidence, clarify uncertainty, and set out next steps.
+Neeson Technologies is an independent, evidence-led advisory practice across five stated focus areas: e-beam consultancy; coatings and surface finishing; waste and effluent management; health and diagnostics; and semiconductors. Its role is to structure evidence, clarify uncertainty, and set out next steps. E-beam consultancy covers assessment of investment options, new product applications, material performance after irradiation, and qualification evidence; an initial assignment may produce a written Decision Note.
 
-Neeson does not supply equipment, operate irradiation plants, provide radiation safety, handle regulatory submissions, provide formal technical sign-off, claim ownership of a testing laboratory, or offer a complete development and validation service. Testing, qualification, specialist work, and responsibilities are separately scoped and agreed in writing.
+For health and diagnostics, clinical performance, sterilisation validation, biocompatibility, and regulatory approval remain outside Neeson's advisory role and are scoped separately with qualified specialists. Neeson does not supply equipment, operate irradiation plants, provide radiation safety, handle regulatory submissions, provide formal technical sign-off, claim ownership of a testing laboratory, or offer a complete development and validation service. Testing, qualification, specialist work, and responsibilities are separately scoped and agreed in writing.
 
 **Why:** These boundaries are part of the user-supplied business positioning; overstating service delivery would misrepresent the practice.
 

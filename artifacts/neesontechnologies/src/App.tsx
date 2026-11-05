@@ -417,10 +417,38 @@ function PageCta({ text = 'Bring one live question and find out whether Neeson i
 }
 
 function HowWeHelpPage() {
-  const audiences = [
-    { number: '01', title: 'Cable makers', text: 'Producers planning a line, preparing the next product family, or in the early stages of running an electron-beam line.', icon: Factory, tone: 'blue' },
-    { number: '02', title: 'Compound suppliers', text: 'Suppliers whose grades must perform after dose, and repeat the result batch after batch.', icon: Boxes, tone: 'violet' },
-    { number: '03', title: 'Job-work users', text: 'Owners deciding whether to keep buying irradiation or install their own machine.', icon: Settings2, tone: 'orange' },
+  const services = [
+    {
+      number: '01',
+      title: 'E-beam Consultancy',
+      text: 'For cable makers, compound suppliers, accelerator owners and manufacturers considering electron-beam processing. We help assess investment options, new product applications, material performance after irradiation and qualification evidence. A first assignment may produce a written Decision Note identifying evidence gaps, options and the next trial or investment step.',
+      icon: Atom,
+    },
+    {
+      number: '02',
+      title: 'Coatings and Surface Finishing',
+      text: 'For coating manufacturers and businesses assessing electron-beam curing. We review formulation, substrate and process requirements to establish whether further development is justified. A first assessment identifies feasibility questions, evidence gaps and a proposed trial plan.',
+      icon: Layers3,
+    },
+    {
+      number: '03',
+      title: 'Waste and Effluent Management',
+      text: 'For industrial operators exploring electron-beam or nonmaterial-based treatment. We assess a defined waste stream, treatment objective and available operating data. A first assessment identifies technical fit, validation needs and questions for specialist trials.',
+      icon: Beaker,
+    },
+    {
+      number: '04',
+      title: 'Health and Diagnostics',
+      text: 'For medical technology developers and research teams with materials or nanoscience questions. We help assess a defined concept, material or sterilisation application. A first review identifies evidence gaps, characterisation needs and the specialist input required for further development.',
+      note: 'Clinical performance, sterilisation validation, biocompatibility and regulatory approval remain outside Neeson’s advisory role and are scoped separately with qualified specialists.',
+      icon: Microscope,
+    },
+    {
+      number: '05',
+      title: 'Semiconductors',
+      text: 'For semiconductor and related technology teams with selected materials or process questions. We help frame characterisation, defect investigation and application assessment needs with relevant specialists. A first review defines the question, available evidence and a practical investigation plan.',
+      icon: Settings2,
+    },
   ];
   const stages = [
     { number: '01', title: 'Discovery Call', badge: 'FREE', icon: MessagesSquare, description: 'We define the decision and who owns it, and confirm whether Neeson is the right fit.', outcome: 'Recommended next step' },
@@ -459,10 +487,8 @@ function HowWeHelpPage() {
       <section className="hw-hero">
         <div className="hw-hero-grid wrap">
           <div className="hw-hero-copy">
-            <p className="eyebrow">SERVICES</p>
-            <h1>A clear question.<br /><span>An agreed written output.</span></h1>
-            <p className="hw-hero-lede">We work with cable manufacturers, polymer compound suppliers and businesses assessing irradiation job work against their own capability.</p>
-            <p className="hw-hero-sub">The starting point is a product, material, specification or investment decision that needs better evidence.</p>
+            <h1>Services</h1>
+            <p className="hw-hero-lede">Electron-beam applications and advanced materials advisory across five focus areas.</p>
             <div className="hw-hero-actions"><BookLink>Book a 30-minute discovery call</BookLink><span>Start with one live question.</span></div>
           </div>
           <div className="hw-hero-visual" role="img" aria-label="Materials scientist examining a polymer-insulated cable sample through a microscope">
@@ -474,30 +500,11 @@ function HowWeHelpPage() {
         <div className="hw-hero-rule"><span /></div>
       </section>
 
-      <section className="hw-audience section">
-        <div className="wrap">
-          <div className="hw-section-intro">
-            <p className="eyebrow">WHO WE WORK WITH</p>
-            <h2 className="section-title">Built around the decisions that matter.</h2>
-            <p className="section-lede">Neeson's work is designed for businesses that need to make a technical, product or investment decision with greater confidence.</p>
-          </div>
-          <div className="hw-audience-grid">
-            {audiences.map((item) => {
-              const Icon = item.icon;
-              return <article className={`hw-audience-card hw-${item.tone}`} key={item.number} data-testid={`card-audience-${item.number}`}>
-                <div className="hw-card-top"><span className="hw-number">{item.number}</span><Icon size={31} strokeWidth={1.5} aria-hidden="true" /></div>
-                <h3>{item.title}</h3><p>{item.text}</p><span className="hw-card-line" />
-              </article>;
-            })}
-          </div>
-        </div>
-      </section>
-
       <section className="hw-process">
         <div className="wrap">
           <div className="hw-process-heading">
-            <div><p className="eyebrow">HOW THE WORK RUNS</p><h2 className="section-title">From one question to a decision you can act on.</h2></div>
-            <p>The discovery call establishes your question, timing and fit. A paid Decision Diagnostic reviews the agreed information and produces a Decision Note and review discussion. Where a larger feasibility or materials review is justified, its scope, site work and specialist responsibilities are agreed separately.</p>
+            <div><h2 className="section-title">How we work</h2></div>
+            <p>Start with a free 30-minute discovery call to define your question and confirm fit. Where appropriate, we propose a paid Decision Diagnostic for one defined question, or a broader Feasibility or Materials Review. Scope, outputs, timing and fees are agreed before work begins.</p>
           </div>
           <div className="hw-timeline">
             {stages.map((stage) => {
@@ -523,6 +530,25 @@ function HowWeHelpPage() {
                 return <div className="hw-flow-node" key={label as string} style={{ '--node-index': index } as CSSProperties}><span className="hw-flow-icon"><FlowIcon size={17} aria-hidden="true" /></span><span>{label as string}</span>{index < flow.length - 1 && <ArrowRight className="hw-flow-arrow" size={15} aria-hidden="true" />}</div>;
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="hw-services section">
+        <div className="wrap">
+          <div className="hw-section-intro">
+            <p className="eyebrow">FIVE FOCUS AREAS</p>
+          </div>
+          <div className="hw-services-grid">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return <article className="hw-service-card" key={service.number} data-testid={`service-${service.number}`}>
+                <div className="hw-service-top"><span className="hw-number">{service.number}</span><Icon size={24} strokeWidth={1.55} aria-hidden="true" /></div>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                {service.note && <p className="hw-service-note">{service.note}</p>}
+              </article>;
+            })}
           </div>
         </div>
       </section>
@@ -594,7 +620,7 @@ function HowWeHelpPage() {
       <section className="hw-final">
         <div className="hw-final-art" aria-hidden="true"><span /><span /><span /></div>
         <div className="wrap hw-final-grid">
-          <div><p className="eyebrow">A CLEARER NEXT STEP</p><h2>Bring one question.<br />Leave with a next step.</h2><p>In thirty minutes we find out whether Neeson is the right fit and what the next step would be.</p><p className="hw-final-small">We do not review documents on the call.</p></div>
+          <div><p className="eyebrow">A CLEARER NEXT STEP</p><h2>Bring one question.<br />Leave with a next step.</h2><p>Discuss your question with Dr Sonia Tikku Suresh and establish whether Neeson is the right fit.</p><p className="hw-final-small">We do not review documents on the call.</p></div>
           <BookLink>Book a 30-minute discovery call</BookLink>
         </div>
       </section>
