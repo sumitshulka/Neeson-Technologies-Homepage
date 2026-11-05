@@ -7,6 +7,12 @@ Neeson Technologies is an independent, evidence-led advisory practice across fiv
 
 For health and diagnostics, clinical performance, sterilisation validation, biocompatibility, and regulatory approval remain outside Neeson's advisory role and are scoped separately with qualified specialists. Neeson may help identify external expertise for trials, testing, engineering, radiation safety, and regulatory application support; the agreed engagement scope says whether Neeson coordinates that work or the client appoints the specialist separately. Regulatory approvals remain with relevant authorities, and specialist assessments and sign-offs remain with appropriately qualified parties. Neeson does not supply equipment, operate irradiation plants, provide radiation safety, handle regulatory submissions, provide formal technical sign-off, claim ownership of a testing laboratory, or offer a complete development and validation service. Testing, qualification, specialist work, and responsibilities are separately scoped and agreed in writing. The client decides on equipment purchases and specialist appointments; do not claim that Neeson accepts no sales-linked commission or is independent of equipment sales.
 
+For the Team page, place Dr V. K. Tikku and the parents' photograph in “Our Inspiration and Eternal Guides,” then show current profiles under “Our Team.”
+
+**Why:** The user explicitly set this editorial distinction between inspiration and the current team.
+
+**How to apply:** Keep historical/inspirational people separate from current team and engagement responsibilities, while retaining the clear boundary that Dr V. K. Tikku is not a current client advisor.
+
 **Why:** These boundaries and the commercial-relationship wording are part of the user-supplied business positioning; overstating service delivery or asserting unprovided commission terms would misrepresent the practice.
 
 **How to apply:** Keep advisory distinct from testing, qualification, and service execution across site copy and CTAs. Describe scope, fees, qualified specialists, and client decisions without making unsupported commission or equipment-sales independence claims. Do not invent clients, case studies, certifications, metrics, experts, or facilities.

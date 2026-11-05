@@ -13,6 +13,11 @@ import {
   Sparkles,
   Zap,
 } from 'lucide-react';
+import vkTikkuPortrait from '@/assets/team/vk-tikku.png';
+import parentsTikkuPortrait from '@/assets/team/parents-tikku.png';
+import soniaPortrait from '@/assets/team/sonia-tikku.jpg';
+import sureshPortrait from '@/assets/team/suresh-kumar.png';
+import mittalPortrait from '@/assets/team/kc-mittal.jpg';
 import './experts.css';
 
 const capabilities = [
@@ -36,17 +41,12 @@ const focusAreas = [
 const processSteps = ['MATERIAL', 'PROCESS', 'RESPONSE', 'CHARACTERISATION', 'DECISION'];
 const independenceSteps = ['CLIENT QUESTION', 'ADVISORY REVIEW', 'EVIDENCE', 'OPTIONS', 'DECISION'];
 
-function PortraitPlaceholder() {
+function PrincipalPortrait() {
   return (
-    <div className="ep-portrait" role="img" aria-label="Abstract, replaceable portrait placeholder for Dr Sonia Tikku Suresh">
-      <div className="ep-portrait-grid" />
-      <div className="ep-portrait-orbit ep-orbit-a" />
-      <div className="ep-portrait-orbit ep-orbit-b" />
-      <div className="ep-portrait-contour"><span /><span /><span /><span /><span /></div>
-      <div className="ep-portrait-core"><i /><i /><i /></div>
-      <span className="ep-portrait-tag">PORTRAIT SLOT / REPLACE WITH APPROVED IMAGE</span>
-      <span className="ep-portrait-coordinate">MATERIALS<br />PERSPECTIVE</span>
-    </div>
+    <figure className="ep-portrait ep-photo-frame">
+      <img src={soniaPortrait} alt="Dr Sonia Tikku Suresh" />
+      <figcaption><span>NEESON TECHNOLOGIES</span><strong>Founder and Managing Director</strong></figcaption>
+    </figure>
   );
 }
 
@@ -88,17 +88,43 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
           <div className="ep-hero-rule" />
         </section>
 
+        <section className="ep-inspiration section" aria-labelledby="ep-inspiration-title">
+          <div className="wrap">
+            <div className="ep-inspiration-heading">
+              <p className="eyebrow">PERSONAL AND TECHNICAL LINEAGE</p>
+              <h2 id="ep-inspiration-title">Our Inspiration and Eternal Guides</h2>
+              <p>A personal tribute, held apart from Neeson’s current advisory work.</p>
+            </div>
+            <div className="ep-inspiration-portraits">
+              <figure className="ep-inspiration-portrait ep-inspiration-vk">
+                <img src={vkTikkuPortrait} alt="Late Dr V. K. Tikku" />
+                <figcaption><span>TECHNICAL HERITAGE</span><strong>Late Dr V. K. Tikku</strong></figcaption>
+              </figure>
+              <figure className="ep-inspiration-portrait ep-inspiration-parents">
+                <img src={parentsTikkuPortrait} alt="Late Mrs Neelam and Dr V. K. Tikku" />
+                <figcaption><span>INSPIRATION</span><strong>Late Mrs Neelam and Dr V. K. Tikku</strong></figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         <section className="ep-principal section" aria-labelledby="ep-principal-title">
           <div className="wrap">
+            <div className="ep-team-heading">
+              <p className="eyebrow">THE PEOPLE BEHIND THE WORK</p>
+              <h2>Our Team</h2>
+            </div>
             <div className="ep-profile-grid">
-              <PortraitPlaceholder />
+              <PrincipalPortrait />
               <div className="ep-profile-copy">
                 <p className="eyebrow">CURRENT PRINCIPAL</p>
                 <h2 id="ep-principal-title">Dr Sonia Tikku Suresh</h2>
-                <p className="ep-role">Principal, Neeson Technologies</p>
+                <p className="ep-role">Founder and Managing Director</p>
                 <span className="ep-status"><span />CURRENT PRINCIPAL</span>
                 <p className="ep-positioning">Dr Sonia Tikku Suresh leads every current client conversation and advisory review.</p>
                 <p className="ep-bio">Her work centres on specialist knowledge in materials science, radiation processing and industrial applications, with hands-on materials and characterisation experience informing the advice.</p>
+                <p className="ep-bio ep-deck-bio">She has a bachelor's in chemical engineering from AC Tech, Anna University, Chennai, a master's from Drexel University, Philadelphia, and a PhD in chemical engineering from IIT Bombay. She received the DST Woman Scientist Fellowship in 2004 and completed her PhD while working as a scientist at IIT Bombay. After working with UBE Technical Centre (Asia) Limited in Rayong, Thailand, she returned to India and began consulting in advanced materials.</p>
+                <p className="ep-bio ep-deck-bio">She has also conducted outreach programmes in nanoscience and nanotechnology for high school students. Her stated mission is to bridge the gap between academia and industry in India and around the world.</p>
 
                 <div className="ep-education">
                   <div className="ep-subheading"><BookOpen size={17} /><h3>Education</h3></div>
@@ -112,6 +138,30 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="ep-team-roster" aria-label="Neeson Technologies team profiles">
+              <article className="ep-roster-card">
+                <figure className="ep-roster-photo"><img src={sureshPortrait} alt="Mr Suresh Kumar S" /></figure>
+                <div className="ep-roster-copy">
+                  <p className="eyebrow">CO-FOUNDER AND DIRECTOR</p>
+                  <h3>Mr Suresh Kumar S</h3>
+                  <p className="ep-roster-summary">Teaching, R&amp;D, training and development, and school management.</p>
+                  <p>A seasoned professional with 20 years of experience across teaching, training and development, and school administration in the education sector.</p>
+                  <p>His experience includes curriculum development for different learning styles, mentoring students through interactive discussion and hands-on learning, faculty appraisal and training, event management, and parent-pupil relations.</p>
+                </div>
+              </article>
+              <article className="ep-roster-card ep-roster-advisor">
+                <figure className="ep-roster-photo"><img src={mittalPortrait} alt="Dr K C Mittal" /></figure>
+                <div className="ep-roster-copy">
+                  <p className="eyebrow">ADVISOR</p>
+                  <h3>Dr K C Mittal</h3>
+                  <p className="ep-roster-summary">Electron-beam generation and applications.</p>
+                  <p>He completed an M.Sc. (Hons) in Physics at Punjab University, Chandigarh, in 1974 and was selected for the BARC Training School that year. He joined the Plasma Physics Division of BARC as a Scientific Officer in 1975 and completed his Ph.D. at Bombay University in 1986. His thesis was on the generation of intense impulse gigawatt electron beams in vacuum and gas-filled diodes.</p>
+                  <p>During 1989–1991 he worked as a postdoctoral fellow at Cornell University and the University of New Mexico, Albuquerque. He was an invited professor at University of Paris 6 in September 1991 and was invited again at Ecole Polytechnique in 2007.</p>
+                  <p>His research field has included high-power DC, RF and impulse electron-beam generation and applications in research, industry and defence. His team developed DC and RF electron accelerators from 500 keV to 10 MeV and up to 30 kW beam power. Industrial applications such as cross-linking were demonstrated, and pulse-power systems were employed for HPM and flash X-ray applications.</p>
+                </div>
+              </article>
             </div>
 
             <div className="ep-capabilities">

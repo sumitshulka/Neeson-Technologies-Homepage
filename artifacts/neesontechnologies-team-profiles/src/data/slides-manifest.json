@@ -1,0 +1,42 @@
+[
+  {
+    "id": "neeson-inspiration-vk-tikku",
+    "position": 1,
+    "kind": "jsx",
+    "filepath": "src/pages/slides/Slide1.tsx",
+    "title": "Late Dr V K Tikku",
+    "description": "Visionary behind Neeson Technologies."
+  },
+  {
+    "id": "neeson-inspiration-parents",
+    "position": 2,
+    "kind": "jsx",
+    "filepath": "src/pages/slides/Slide2.tsx",
+    "title": "Our Inspiration",
+    "description": "Late Mrs Neelam and Dr V K Tikku."
+  },
+  {
+    "id": "neeson-team-sonia",
+    "position": 3,
+    "kind": "jsx",
+    "filepath": "src/pages/slides/Slide3.tsx",
+    "title": "Dr Sonia Tikku Suresh",
+    "description": "Founder and Managing Director profile."
+  },
+  {
+    "id": "neeson-team-suresh",
+    "position": 4,
+    "kind": "jsx",
+    "filepath": "src/pages/slides/Slide4.tsx",
+    "title": "Mr Suresh Kumar S",
+    "description": "Co-Founder and Director profile."
+  },
+  {
+    "id": "neeson-team-mittal",
+    "position": 5,
+    "kind": "jsx",
+    "filepath": "src/pages/slides/Slide5.tsx",
+    "title": "Dr K C Mittal",
+    "description": "Advisor profile."
+  }
+]

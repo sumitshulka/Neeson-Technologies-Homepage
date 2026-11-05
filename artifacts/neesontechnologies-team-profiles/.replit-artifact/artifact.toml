@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/neesontechnologies-team-profiles/"
+title = "Neeson Team Profiles"
+description = "Imported reference presentation containing Neeson Technologies team profiles and photos."
+version = "1.0.0"
+id = "artifacts/neesontechnologies-team-profiles"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/neesontechnologies-team-profiles/" ]
+localPort = 23290
+
+[services.development]
+run = "pnpm --filter @workspace/neesontechnologies-team-profiles run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/neesontechnologies-team-profiles", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/neesontechnologies-team-profiles/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23290"
+BASE_PATH = "/neesontechnologies-team-profiles/"

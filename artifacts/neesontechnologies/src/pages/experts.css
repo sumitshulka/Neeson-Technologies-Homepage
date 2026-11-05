@@ -157,6 +157,265 @@
   .neeson-extract .ep-page *, .neeson-extract .ep-page *::before, .neeson-extract .ep-page *::after { transition-duration:.01ms!important; }
 }
 
+/* Portrait-led team and family lineage */
+.neeson-extract .ep-inspiration {
+  color: #18384d;
+  background: #eaf0f3;
+  border-bottom: 1px solid #d5e0e6;
+}
+.neeson-extract .ep-inspiration-heading {
+  max-width: 740px;
+  margin-bottom: 28px;
+}
+.neeson-extract .ep-inspiration-heading h2,
+.neeson-extract .ep-team-heading h2 {
+  margin: 0;
+  color: #17364b;
+  font: 800 clamp(2rem, 3.7vw, 2.9rem)/1.06 var(--app-font-serif);
+  letter-spacing: -.055em;
+}
+.neeson-extract .ep-inspiration-heading > p:last-child,
+.neeson-extract .ep-team-heading > p:last-child {
+  margin: 11px 0 0;
+  color: #647987;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.neeson-extract .ep-inspiration-portraits {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 15px;
+}
+.neeson-extract .ep-inspiration-portrait {
+  height: 310px;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 48% 63%, rgba(216, 195, 156, .25), transparent 56%),
+    linear-gradient(145deg, #d7e0e4, #c6d2d7);
+  border: 1px solid rgba(27, 61, 81, .13);
+}
+.neeson-extract .ep-inspiration-portrait::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 12px;
+  border: 1px solid rgba(34, 75, 97, .16);
+  pointer-events: none;
+}
+.neeson-extract .ep-inspiration-portrait img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  filter: saturate(.9) contrast(1.03);
+}
+.neeson-extract .ep-inspiration-portrait::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(128deg, rgba(7, 30, 47, .1), transparent 44%, rgba(101, 62, 145, .08));
+}
+.neeson-extract .ep-inspiration-vk img {
+  object-position: center 57%;
+}
+.neeson-extract .ep-inspiration-parents img {
+  object-position: center 58%;
+}
+.neeson-extract .ep-inspiration-portrait figcaption {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  display: grid;
+  gap: 5px;
+  padding: 34px 20px 16px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(7, 27, 42, .84));
+}
+.neeson-extract .ep-inspiration-portrait figcaption span,
+.neeson-extract .ep-photo-frame figcaption span {
+  color: #f3cd7d;
+  font: 700 8px var(--app-font-mono);
+  letter-spacing: .13em;
+}
+.neeson-extract .ep-inspiration-portrait figcaption strong {
+  font: 700 18px var(--app-font-serif);
+}
+.neeson-extract .ep-team-heading {
+  margin-bottom: 32px;
+}
+.neeson-extract .ep-photo-frame {
+  min-height: 405px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  background: #e9e8e3;
+  border-color: #d1d9dc;
+}
+.neeson-extract .ep-photo-frame > img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(.9) contrast(1.03);
+}
+.neeson-extract .ep-photo-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(145deg, rgba(8, 32, 50, .07), transparent 48%, rgba(116, 76, 152, .08));
+}
+.neeson-extract .ep-photo-frame figcaption {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  padding: 38px 20px 17px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(7, 27, 42, .78));
+}
+.neeson-extract .ep-photo-frame figcaption strong {
+  font: 700 13px var(--app-font-serif);
+}
+.neeson-extract .ep-deck-bio {
+  margin-top: 10px;
+}
+.neeson-extract .ep-team-roster {
+  display: grid;
+  gap: 16px;
+  margin-top: 58px;
+  border-top: 1px solid #d6e0e6;
+  padding-top: 23px;
+}
+.neeson-extract .ep-roster-card {
+  display: grid;
+  grid-template-columns: minmax(210px, .62fr) minmax(0, 1.38fr);
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #dce5ea;
+}
+.neeson-extract .ep-roster-photo {
+  position: relative;
+  isolation: isolate;
+  min-height: 330px;
+  margin: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 75%, rgba(224, 213, 190, .45), transparent 50%),
+    #e3e7e4;
+}
+.neeson-extract .ep-roster-photo img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(.9) contrast(1.03);
+}
+.neeson-extract .ep-roster-photo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(140deg, rgba(8, 32, 50, .06), transparent 58%, rgba(105, 67, 144, .07));
+}
+.neeson-extract .ep-roster-card:first-child .ep-roster-photo img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+.neeson-extract .ep-roster-copy {
+  align-self: center;
+  padding: clamp(22px, 4vw, 42px);
+}
+.neeson-extract .ep-roster-copy .eyebrow {
+  margin-bottom: 9px;
+}
+.neeson-extract .ep-roster-copy h3 {
+  margin: 0;
+  color: #17364b;
+  font: 800 clamp(1.55rem, 2.7vw, 2.15rem)/1.08 var(--app-font-serif);
+  letter-spacing: -.045em;
+}
+.neeson-extract .ep-roster-copy p:not(.eyebrow) {
+  margin: 12px 0 0;
+  color: #617582;
+  font-size: 12px;
+  line-height: 1.72;
+}
+.neeson-extract .ep-roster-copy .ep-roster-summary {
+  color: #2b536a !important;
+  font: 700 15px/1.5 var(--app-font-serif) !important;
+}
+
+@media (max-width: 700px) {
+  .neeson-extract .ep-inspiration-portraits {
+    grid-template-columns: 1fr;
+  }
+  .neeson-extract .ep-inspiration-portrait {
+    height: min(76vw, 315px);
+    min-height: 245px;
+  }
+  .neeson-extract .ep-inspiration-vk img {
+    object-position: center 56%;
+  }
+  .neeson-extract .ep-team-heading {
+    margin-bottom: 25px;
+  }
+  .neeson-extract .ep-team-roster {
+    margin-top: 42px;
+  }
+  .neeson-extract .ep-roster-card {
+    grid-template-columns: 1fr;
+  }
+  .neeson-extract .ep-roster-photo {
+    min-height: 270px;
+    height: 72vw;
+    max-height: 360px;
+  }
+  .neeson-extract .ep-roster-card:first-child .ep-roster-photo {
+    height: 62vw;
+    min-height: 230px;
+  }
+  .neeson-extract .ep-roster-copy {
+    padding: 23px 21px 26px;
+  }
+}
+@media (max-width: 420px) {
+  .neeson-extract .ep-inspiration-portrait {
+    height: 270px;
+    min-height: 0;
+  }
+  .neeson-extract .ep-inspiration-portrait figcaption {
+    padding-inline: 16px;
+  }
+  .neeson-extract .ep-photo-frame {
+    min-height: 310px;
+  }
+  .neeson-extract .ep-roster-photo {
+    height: 275px;
+  }
+}
+
 /* Page 4 refinement: quieter scientific detail, more portrait-led composition,
    and clearer visual separation between current practice and heritage. */
 .neeson-extract .ep-page {
