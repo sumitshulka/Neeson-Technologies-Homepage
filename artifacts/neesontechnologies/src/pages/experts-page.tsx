@@ -14,6 +14,7 @@ import {
   Zap,
 } from 'lucide-react';
 import vkTikkuPortrait from '@/assets/team/vk-tikku.png';
+import vkTikkuHeritagePortrait from '@/assets/team/vk-tikku-heritage.png';
 import parentsTikkuPortrait from '@/assets/team/parents-tikku.png';
 import soniaPortrait from '@/assets/team/sonia-tikku.jpg';
 import sureshPortrait from '@/assets/team/suresh-kumar.png';
@@ -50,15 +51,11 @@ function PrincipalPortrait() {
   );
 }
 
-function HeritageGraphic() {
+function HeritagePortrait() {
   return (
-    <div className="ep-heritage-graphic" role="img" aria-label="Abstract technical graphic showing cable layers, electron-beam processing and a path to current advisory">
-      <div className="ep-heritage-grid" />
-      <span className="ep-graphic-label">TECHNICAL LINEAGE / MATERIALS</span>
-      <div className="ep-cable-cross"><i /><i /><i /><i /></div>
-      <div className="ep-beam-trace"><span /><span /><span /><span /></div>
-      <div className="ep-heritage-caption">CABLE CROSS-SECTION / PROCESSING ABSTRACTION</div>
-    </div>
+    <figure className="ep-heritage-photo">
+      <img src={vkTikkuHeritagePortrait} alt="Late Dr V. K. Tikku" />
+    </figure>
   );
 }
 
@@ -241,7 +238,7 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
               <p>Neeson Technologies draws on a technical heritage connected to the early development of electron-beam processing in the Indian cable industry.</p>
             </div>
             <div className="ep-heritage-grid">
-              <HeritageGraphic />
+              <HeritagePortrait />
               <div className="ep-heritage-profile">
                 <span className="ep-heritage-badge">TECHNICAL HERITAGE<br /><b>NOT A CURRENT CLIENT ADVISOR</b></span>
                 <h3>Dr V. K. Tikku</h3>
