@@ -249,6 +249,13 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
                   <ShieldCheck size={21} aria-hidden="true" />
                   <strong>Dr V. K. Tikku does not participate in current client engagements.</strong>
                 </div>
+                <Link
+                  href="/technical-heritage"
+                  className="ep-expertise-link ep-heritage-page-link"
+                  data-testid="link-technical-heritage-section"
+                >
+                  Explore Technical Heritage <ArrowRight size={15} aria-hidden="true" />
+                </Link>
               </div>
             </div>
             <div className="ep-lineage" aria-label="Early technical development leads to technical heritage and modern evidence-led advisory">
