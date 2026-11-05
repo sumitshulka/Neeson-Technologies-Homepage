@@ -239,7 +239,7 @@
   border-radius: 3px;
   font-size: 11px;
 }
-.cp-call-facts { gap: 0 22px; }
+.cp-call-facts { grid-template-columns: repeat(3,minmax(0,1fr));gap: 0 22px; }
 .cp-call-facts li {
   min-height: 49px;
   gap: 11px;
@@ -408,4 +408,10 @@
   .cp-timeline-item { padding: 15px; }
   .cp-boundary-grid article { padding: 17px; }
   .cp-final-actions .button { min-height: 46px; }
+}
+@media(max-width:1000px) {
+  .cp-call-facts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:480px) {
+  .cp-call-facts { grid-template-columns: 1fr; }
 }

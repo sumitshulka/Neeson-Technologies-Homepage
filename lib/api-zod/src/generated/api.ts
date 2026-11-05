@@ -39,6 +39,8 @@ export const submitContactEnquiryBodyEmailMax = 254;
 
 export const submitContactEnquiryBodyCompanyMax = 160;
 
+export const submitContactEnquiryBodyPhoneMax = 40;
+
 export const submitContactEnquiryBodyRoleMax = 120;
 
 export const submitContactEnquiryBodyQuestionMin = 10;
@@ -56,6 +58,7 @@ export const SubmitContactEnquiryBody = zod.object({
   "name": zod.string().min(1).max(submitContactEnquiryBodyNameMax),
   "email": zod.string().email().max(submitContactEnquiryBodyEmailMax),
   "company": zod.string().min(1).max(submitContactEnquiryBodyCompanyMax),
+  "phone": zod.string().max(submitContactEnquiryBodyPhoneMax).optional(),
   "role": zod.string().max(submitContactEnquiryBodyRoleMax).optional(),
   "question": zod.string().min(submitContactEnquiryBodyQuestionMin).max(submitContactEnquiryBodyQuestionMax),
   "timing": zod.string().max(submitContactEnquiryBodyTimingMax).optional(),

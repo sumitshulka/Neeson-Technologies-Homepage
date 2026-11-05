@@ -111,6 +111,9 @@ components:
           type: string
           minLength: 1
           maxLength: 160
+        phone:
+          type: string
+          maxLength: 40
         role:
           type: string
           maxLength: 120

@@ -16,9 +16,8 @@ const enquirySchema = z.object({
   name: z.string().trim().min(1, 'Enter your name.'),
   email: z.string().trim().email('Enter a valid work email.'),
   company: z.string().trim().min(1, 'Enter your company.'),
-  role: z.string().optional(),
+  phone: z.string().max(40, 'Phone number must be 40 characters or fewer.').optional(),
   question: z.string().trim().min(10, 'Please add at least 10 characters.'),
-  timing: z.string().optional(),
   website: z.string().optional(),
 });
 type EnquiryValues = z.infer<typeof enquirySchema>;
@@ -151,7 +150,7 @@ function EnquiryForm() {
   const [captchaMessage, setCaptchaMessage] = useState('');
   const form = useForm<EnquiryValues>({
     resolver: zodResolver(enquirySchema),
-    defaultValues: { name: '', email: '', company: '', role: '', question: '', timing: '', website: '' },
+    defaultValues: { name: '', email: '', company: '', phone: '', question: '', website: '' },
   });
 
   useEffect(() => {
@@ -195,8 +194,10 @@ function EnquiryForm() {
     setCaptchaMessage('');
     try {
       const recaptchaToken = await executeRecaptcha(captchaConfig.siteKey);
+      const { phone, ...enquiry } = values;
       await submitContactEnquiry({
-        ...values,
+        ...enquiry,
+        ...(phone?.trim() ? { phone: phone.trim() } : {}),
         recaptchaToken,
       });
       setState('success');
@@ -230,17 +231,16 @@ function EnquiryForm() {
   }
   return <Form {...form}>
     <form className="cp-form" onSubmit={form.handleSubmit(submit)} noValidate>
-      {state === 'success' ? <div className="cp-form-result success" role="status"><Check size={20} /><div><strong>Thank you. Your enquiry has been received.</strong><p>{contactConfig.typicalResponse}</p></div></div> : <>
+      {state === 'success' ? <div className="cp-form-result success" role="status"><Check size={20} /><div><strong>Thank you. Your enquiry has been sent to Neeson Technologies.</strong><p>{contactConfig.typicalResponse}</p></div></div> : <>
         <div className="cp-field-grid">
-          <FormField control={form.control} name="name" render={({ field }) => <FormItem><FormLabel>Your name <span>*</span></FormLabel><FormControl><input autoComplete="name" placeholder="Name" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
-          <FormField control={form.control} name="email" render={({ field }) => <FormItem><FormLabel>Work email <span>*</span></FormLabel><FormControl><input type="email" autoComplete="email" placeholder="you@company.com" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
+          <FormField control={form.control} name="name" render={({ field }) => <FormItem><FormLabel>Name <span>*</span></FormLabel><FormControl><input autoComplete="name" placeholder="Your name" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
           <FormField control={form.control} name="company" render={({ field }) => <FormItem><FormLabel>Company <span>*</span></FormLabel><FormControl><input autoComplete="organization" placeholder="Company name" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
-          <FormField control={form.control} name="role" render={({ field }) => <FormItem><FormLabel>Role <small>Optional</small></FormLabel><FormControl><input autoComplete="organization-title" placeholder="Your role" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
-          <FormField control={form.control} name="question" render={({ field }) => <FormItem className="cp-full"><FormLabel>Your question, in one or two sentences <span>*</span></FormLabel><FormControl><textarea rows={3} placeholder="What decision is your team facing?" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
-          <FormField control={form.control} name="timing" render={({ field }) => <FormItem className="cp-full"><FormLabel>Decision timing <small>Optional</small></FormLabel><FormControl><input placeholder="When does the decision need to be made?" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
+          <FormField control={form.control} name="email" render={({ field }) => <FormItem><FormLabel>Work email <span>*</span></FormLabel><FormControl><input type="email" autoComplete="email" placeholder="you@company.com" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
+          <FormField control={form.control} name="phone" render={({ field }) => <FormItem><FormLabel>Phone number <small>Optional</small></FormLabel><FormControl><input type="tel" autoComplete="tel" maxLength={40} placeholder="Optional" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
+          <FormField control={form.control} name="question" render={({ field }) => <FormItem className="cp-full"><FormLabel>Your question <span>*</span></FormLabel><FormControl><textarea rows={3} placeholder="What are you considering, and when is the decision expected?" {...field} /></FormControl><FormMessage role="alert" /></FormItem>} />
           <FormField control={form.control} name="website" render={({ field }) => <FormItem className="cp-honeypot" aria-hidden="true"><FormLabel>Website</FormLabel><FormControl><input tabIndex={-1} autoComplete="off" {...field} /></FormControl></FormItem>} />
         </div>
-        <div className="cp-confidential" role="note"><ShieldCheck size={19} /><p><strong>Please do not include confidential technical details or upload documents at this stage.</strong><span>Document review and substantive technical advice are undertaken through an agreed paid engagement.</span></p></div>
+        <div className="cp-confidential" role="note"><ShieldCheck size={19} /><p><strong>Please share only a brief, non-confidential summary at this stage.</strong><span>Document review and detailed technical assessment are scoped separately.</span></p></div>
         <div className="cp-captcha" aria-live="polite">
           {captchaConfig?.captchaConfigured && captchaConfig.siteKey ? <>
             {captchaStatus === 'loading' && <p className="cp-captcha-message">Google reCAPTCHA is checking this submission…</p>}
@@ -310,12 +310,10 @@ export function ContactPageContent() {
     <section className="cp-hero">
       <div className="wrap cp-hero-grid">
         <div className="cp-hero-copy">
-          <p className="eyebrow">CONTACT &amp; BOOKING</p>
-          <h1>Book a <span>30-minute</span><br />discovery call</h1>
-          <p className="cp-hero-lede">Tell us the decision your team is facing and when it needs to be made.</p>
-          <p className="cp-hero-detail">The call establishes whether Neeson is the right fit and what a scoped next step could involve.</p>
-          <p className="cp-hero-boundary">Document review and substantive technical advice are undertaken through an agreed paid engagement.</p>
-          <div className="cp-hero-actions"><a className="button button-gold" href="#booking">Choose a time <ArrowRight size={15} /></a><a className="cp-text-link" href="#enquiry">Prefer email? Send an enquiry <ArrowRight size={14} /></a></div>
+          <p className="eyebrow">CONTACT US</p>
+          <h1>Contact Us</h1>
+          <p className="cp-hero-lede">Discuss your question with Neeson Technologies.</p>
+          <div className="cp-hero-actions"><a className="button button-gold" href="#booking">Book a discovery call <ArrowRight size={15} /></a><a className="cp-text-link" href="#enquiry">Send an enquiry <ArrowRight size={14} /></a></div>
         </div>
         <div className="cp-hero-visual">
           <img src={`${import.meta.env.BASE_URL}contact-hero.jpg`} alt="Two people reviewing a cable sample beside a notebook during a technical discussion" />
@@ -329,16 +327,15 @@ export function ContactPageContent() {
 
     <section className="cp-conversion" id="booking">
       <div className="wrap">
-        <div className="cp-conversion-heading"><p className="eyebrow">START WITH ONE LIVE QUESTION</p><h2>Find the right next step.</h2><p>Speak directly with Dr Sonia Tikku Suresh. The first conversation is about fit, the decision ahead and appropriate scope.</p></div>
+        <div className="cp-conversion-heading"><p className="eyebrow">BOOK A CALL</p><h2>Book a discovery call</h2><p>Book a free 30-minute discovery call with Dr Sonia Tikku Suresh to discuss your question and agree a suitable next step.</p></div>
         <div className="cp-main-grid">
           <article className="cp-panel cp-booking">
             <div className="cp-panel-heading"><span className="cp-panel-index">01 / BOOK A CALL</span><h2>Choose a time</h2><p>Any available times will be shown in Asia/Kolkata (IST).</p></div>
             {bookingUrl ? <div className="cp-scheduler"><p>Choose a time for a 30-minute discovery call.</p><a className="button button-gold" href={bookingUrl} target="_blank" rel="noreferrer">Open booking calendar <ArrowRight size={15} /></a></div> : <div className="cp-scheduler cp-scheduler-empty"><div className="cp-calendar-mark"><CalendarDays size={28} /></div><span className="cp-status-pill">BOOKING LINK PENDING</span><h3>Online booking is being configured.</h3><p>Prefer to contact us directly?</p><div className="cp-scheduler-channels">{email ? <a href={`mailto:${email}`}><Mail size={15} />Email Neeson</a> : <span aria-disabled="true"><Mail size={15} />Email coming soon</span>}{whatsapp ? <a href={`https://wa.me/${whatsapp}`}><MessageCircle size={15} />WhatsApp</a> : <span aria-disabled="true"><MessageCircle size={15} />WhatsApp coming soon</span>}</div></div>}
-            <ul className="cp-call-facts"><li><Clock3 size={16} /><span>30 minutes</span></li><li><UserRound size={16} /><span>Discovery call with Dr Sonia Tikku Suresh</span></li><li><FileText size={16} /><span>One live question</span></li><li><ShieldCheck size={16} /><span>No document review or substantive technical advice</span></li></ul>
-            <p className="cp-confidential-inline">Please do not send confidential technical details at this stage.</p>
+            <ul className="cp-call-facts"><li><Clock3 size={16} /><span>30 minutes</span></li><li><UserRound size={16} /><span>Discovery call with Dr Sonia Tikku Suresh</span></li><li><FileText size={16} /><span>One live question</span></li></ul>
           </article>
           <article className="cp-panel cp-enquiry" id="enquiry">
-            <div className="cp-panel-heading"><span className="cp-panel-index">02 / SEND AN ENQUIRY</span><h2>Tell us about your question</h2><p>Keep it brief. One or two sentences are enough for the first conversation.</p></div>
+            <div className="cp-panel-heading"><span className="cp-panel-index">02 / SEND AN ENQUIRY</span><h2>Send an enquiry</h2><p>Tell us what you are considering, the decision you need to make and your expected timeline. We will help establish whether Neeson is the right fit.</p></div>
             <EnquiryForm />
           </article>
         </div>
@@ -364,18 +361,6 @@ export function ContactPageContent() {
             ['04', 'WORK STARTS WITH AGREED SCOPE', 'Paid technical work begins only after scope, timing and fees are agreed.'],
           ].map(([number, title, text]) => <article className="cp-timeline-item" key={number}><span className="cp-step-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
         </div>
-      </div>
-    </section>
-
-    <section className="cp-boundaries">
-      <div className="wrap">
-        <div className="cp-section-head"><p className="eyebrow">CLEAR EXPECTATIONS</p><h2>What the call is not.</h2></div>
-        <div className="cp-boundary-grid">
-          <article><FileText size={20} /><span>01</span><h3>NO DOCUMENT REVIEW</h3><p>We do not review documents during the discovery call.</p></article>
-          <article><ShieldCheck size={20} /><span>02</span><h3>NO SUBSTANTIVE TECHNICAL ADVICE</h3><p>Detailed technical advice is undertaken through an agreed paid engagement.</p></article>
-          <article><MessageCircle size={20} /><span>03</span><h3>NO CONFIDENTIAL MATERIAL</h3><p>Please do not send confidential technical details at this stage.</p></article>
-        </div>
-        <p className="cp-role-boundary">Neeson does not provide equipment supply, plant operation, radiation safety, regulatory submissions or formal technical sign-off.</p>
       </div>
     </section>
 

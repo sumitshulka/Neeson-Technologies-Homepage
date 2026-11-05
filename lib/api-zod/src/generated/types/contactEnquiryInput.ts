@@ -19,6 +19,8 @@ export interface ContactEnquiryInput {
      * @maxLength 160
      */
   company: string;
+  /** @maxLength 40 */
+  phone?: string;
   /** @maxLength 120 */
   role?: string;
   /**

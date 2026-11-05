@@ -124,7 +124,7 @@ router.post("/contact/enquiries", async (req, res): Promise<void> => {
     return;
   }
 
-  const { name, email, company, role, question, timing } = enquiry;
+  const { name, email, company, phone, role, question, timing } = enquiry;
   try {
     const receiverResponse = await fetch(receiver, {
       method: "POST",
@@ -132,7 +132,7 @@ router.post("/contact/enquiries", async (req, res): Promise<void> => {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, company, role, question, timing }),
+      body: JSON.stringify({ name, email, company, phone, role, question, timing }),
       redirect: "error",
       signal: AbortSignal.timeout(10_000),
     });
