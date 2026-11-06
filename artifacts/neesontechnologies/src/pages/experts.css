@@ -401,6 +401,19 @@
   color: #2b536a !important;
   font: 700 15px/1.5 var(--app-font-serif) !important;
 }
+.neeson-extract .ep-roster-mohit {
+  background: linear-gradient(115deg, #fff, #f6f9fc 72%, #f4f1fb);
+}
+.neeson-extract .ep-roster-mohit .ep-roster-photo {
+  background: linear-gradient(145deg, #e8edf2, #dce4ed);
+}
+.neeson-extract .ep-roster-mohit .ep-roster-photo img {
+  object-position: center top;
+  filter: saturate(.88) contrast(1.04);
+}
+.neeson-extract .ep-roster-mohit .ep-roster-copy .eyebrow {
+  color: #7653bd;
+}
 
 @media (max-width: 700px) {
   .neeson-extract .ep-inspiration-portraits {
@@ -430,6 +443,10 @@
   .neeson-extract .ep-roster-card:first-child .ep-roster-photo {
     height: 62vw;
     min-height: 230px;
+  }
+  .neeson-extract .ep-roster-mohit .ep-roster-photo {
+    height: min(100vw, 420px);
+    min-height: 0;
   }
   .neeson-extract .ep-roster-copy {
     padding: 23px 21px 26px;

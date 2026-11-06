@@ -19,6 +19,7 @@ import parentsTikkuPortrait from '@/assets/team/parents-tikku.png';
 import soniaPortrait from '@/assets/team/sonia-tikku.jpg';
 import sureshPortrait from '@/assets/team/suresh-kumar.png';
 import mittalPortrait from '@/assets/team/kc-mittal.jpg';
+import mohitPortrait from '@/assets/team/mohit-arora.jpeg';
 import './experts.css';
 
 const capabilities = [
@@ -157,6 +158,16 @@ export function ExpertsPageContent({ BookLink }: { BookLink: ComponentType<{ chi
                   <p>He completed an M.Sc. (Hons) in Physics at Punjab University, Chandigarh, in 1974 and was selected for the BARC Training School that year. He joined the Plasma Physics Division of BARC as a Scientific Officer in 1975 and completed his Ph.D. at Bombay University in 1986. His thesis was on the generation of intense impulse gigawatt electron beams in vacuum and gas-filled diodes.</p>
                   <p>During 1989–1991 he worked as a postdoctoral fellow at Cornell University and the University of New Mexico, Albuquerque. He was an invited professor at University of Paris 6 in September 1991 and was invited again at Ecole Polytechnique in 2007.</p>
                   <p>His research field has included high-power DC, RF and impulse electron-beam generation and applications in research, industry and defence. His team developed DC and RF electron accelerators from 500 keV to 10 MeV and up to 30 kW beam power. Industrial applications such as cross-linking were demonstrated, and pulse-power systems were employed for HPM and flash X-ray applications.</p>
+                </div>
+              </article>
+              <article className="ep-roster-card ep-roster-mohit">
+                <figure className="ep-roster-photo"><img src={mohitPortrait} alt="Mohit Arora" /></figure>
+                <div className="ep-roster-copy">
+                  <p className="eyebrow">BUSINESS &amp; STRATEGY ADVISOR</p>
+                  <h3>Mohit Arora</h3>
+                  <p className="ep-roster-summary">Business &amp; Strategy Advisor</p>
+                  <p>Mohit Arora brings more than 33 years of commercial and business leadership experience across India and international markets. A six-time entrepreneur, he works as a startup mentor and incubation consultant.</p>
+                  <p>At Neeson Technologies, he advises on business strategy, service definition, pricing and go-to-market. He works with Dr Sonia Tikku Suresh to translate the practice’s technical capabilities into clearly scoped consulting engagements aligned with customer needs and commercial priorities.</p>
                 </div>
               </article>
             </div>
